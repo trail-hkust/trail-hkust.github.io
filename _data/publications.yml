@@ -11,14 +11,14 @@ main19:
 
 
 main18:
-  - title: DeKeyNLU：Enhancing Natural Language to SQL Generation through Task Decomposition and Keyword Extraction
+  - title: ClimateIQA：A New Dataset and Benchmark to Advance Vision-Language Models in Meteorology Anomalies Analysis
     authors: Jian Chen, Zhenyan Chen, Xuming Hu, Peilin Zhou, Yining Hua, Han Fang, Cissy Hing Yee Choy, Xinmei Ke, Jingfeng Luo, <strong>Zixuan Yuan†</strong>
     conference_short: EMNLP 2025
     conference2: Findings of the Association for Computational Linguistics: EMNLP 2025
     pdf: 
     web:
     bibtex:
-    image: ./assets/files/DeKeyNLU.jpg
+    image: ./assets/files/climateqa.jpg
     notes: Published
 
 
