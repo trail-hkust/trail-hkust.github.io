@@ -28,10 +28,10 @@ main17:
     conference_short: KDD 2025 (Datasets and Benchmarks Track)
     conference2: The 31th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
     pdf:
-    web:
+    web: https://dl.acm.org/doi/10.1145/3711896.3737406
     bibtex:
     image: ./assets/files/climateqa.jpg
-    notes: Accepted
+    notes: Published
 
 
 main0_added:
@@ -39,11 +39,11 @@ main0_added:
     authors2: Kaichen Zhang,<strong>Zixuan Yuan</strong>, Hui Xiong†
     conference_short2: WINE 2024
     conference2: The 20th Conference on Web and Internet Economics
-    pdf2:
+    pdf2: https://arxiv.org/abs/2311.07071
     web2:
     bibtex2:
     image2: ./assets/files/frame_wine2024.png
-    notes2: Accepted
+    notes2: Published
 
 main:
   - title: Killing Two Birds with One Stone：Cross-modal Reinforced Prompting for Graph and Language Tasks
