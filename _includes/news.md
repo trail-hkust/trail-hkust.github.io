@@ -4,7 +4,7 @@
 
 <ul>
 <!-- <li><strong>[Nov. 2023]</strong> <strong style="color:#39c"><a href="https://hitchhiker.azurewebsites.net/?/I-V/">I-V Measurement System</a></strong> has been released.</li> -->
-<li><strong>[Nov. 2025]</strong> One paper got accepted to <span style="color:#e74d3c"><a href="https://kdd2026.kdd.org/">KDD’26.</a></span> </li>
+<li><strong>[Dec. 2025]</strong> One paper got accepted to <span style="color:#e74d3c"><a href="https://kdd2026.kdd.org/">KDD’26.</a></span> </li>
 <li><strong>[Nov. 2025]</strong> One paper got accepted to <span style="color:#e74d3c"><a href="https://aclanthology.org">EMNLP 2025</a></span> </li>
 <li><strong>[May. 2025]</strong> One paper on datasets and benchmarks track got accepted to <span style="color:#e74d3c"><a href="https://kdd2025.kdd.org/">KDD’25.</a></span> </li>
 <li><strong>[Sep. 2024]</strong> One papers got accepted to <span style="color:#e74d3c"><a href="https://kdd2024.kdd.org/">WINE’24.</a></span> </li>
