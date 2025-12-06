@@ -11,11 +11,11 @@ main19:
 
 
 main18:
-  - title: DeKeyNLU： Enhancing Natural Language to SQL Generation through Task Decomposition and Keyword Extraction
+  - title: DeKeyNLU：Enhancing Natural Language to SQL Generation through Task Decomposition and Keyword Extraction
     authors: Jian Chen, Zhenyan Chen, Xuming Hu, Peilin Zhou, Yining Hua, Han Fang, Cissy Hing Yee Choy, Xinmei Ke, Jingfeng Luo, <strong>Zixuan Yuan†</strong>
     conference_short: EMNLP 2025
     conference2: Findings of the Association for Computational Linguistics: EMNLP 2025
-    pdf: https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.1312.pdf
+    pdf: 
     web:
     bibtex:
     image: ./assets/files/DeKeyNLU.jpg
