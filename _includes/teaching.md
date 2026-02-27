@@ -4,8 +4,9 @@
 
 <ul>
 <strong style="color: #39c;">Past Courses</strong><br>
-<li><strong>Hong Kong University of Science and Technology (Guangzhou)</strong><br>
-<strong>[2023 Fall]</strong> FTEC 5050 Machine Learning and Artificial Intelligence<br></li>
+<li><strong>Sole Instructor, FinTech Thrust, Hong Kong University of Science and Technology (Guangzhou)</strong><br>
+Postgraduate course: FTEC 5050, Machine Learning and Artificial Intelligence, <strong>Fall 2023</strong>
+(4.92/5.0), <strong>Fall 2024</strong> (4.81/5.0), <strong>Fall 2025</strong> (4.89/5.0)<br></li>
 <li><strong>Rutgers University</strong><br>
 <strong>[2023 Spring]</strong> 29:623:335:01 Data Warehousing and Data Mining<br></li>
 <strong>[2022 Summer]</strong> 29:623:311:B7 Production and Operations Management<br>
