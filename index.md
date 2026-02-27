@@ -6,16 +6,20 @@ layout: homepage
 
 <h2 style="margin: 60px 0px 10px;">Short Bio</h2>
 
-Zixuan Yuan is an Assistant Professor at the FinTech Thrust, HKUST (Guangzhou). He received his Ph.D. in Management (Information Technology track) from Rutgers University. His research interests lie in the general area of **data mining** and **artificial intelligence**, particularly in **text mining**, **graph learning**, **self-supervised learning**, and **model interpretability**, as well as their applications in **analyst report analysis**, **quantitative trading**, **event-driven investing**, and **knowledge graph construction & reasoning**. He has research experience in multiple industrial research labs, such as **IBM Research**, **Baidu Research**, and **RavenPack**. He has published in refereed journals and conference proceedings, such as **IEEE TKDE**, **IEEE IOTJ**, **ACM SIGKDD**, **SIGIR**, **WWW**, **AAAI**, and **IJCAI**. Most recently, he has been working on a startup project~
+Zixuan Yuan​ is currently an Assistant Professor at the FinTech Thrust, HKUST (Guangzhou). His research integrates advanced AI methodologies​ with critical financial challenges, focusing on developing scalable and impactful solutions for AI-driven wealth management, quantitative trading, and regulatory technology (RegTech). Key areas of exploration include
+**Financial Text Analytics**, **LLM Reasoning**, **Agentic Orchestration**, **Cost-effective Vertical RAG**, **Model Interpretability**.
+His work bridges theoretical innovation and practical deployment through industrial collaborations with leading tech/fintech institutions, such as Baidu Research, IBM Research, RavenPack, HSBC, CITIC Group, and China Merchants Fund Management. He has also co-founded Guangzhou Lingyue Technology, an AI-powered wealth management startup that translates cutting-edge AI research into commercial applications for institutional and individual investors.
+Prof. Yuan’s research contributions are further recognized through publications in premier venues including IEEE TKDE, IEEE IOTJ, ACM SIGKDD, SIGIR, WWW, AAAI, and IJCAI.
 
 **<span style="color:#e74d3c">Multiple positions are available for self-motivated Ph.D. students and RAs. Visiting students are also welcome. Please check here for more information. Thanks!</span>**
 
 ## Research Interest:
 
-- **LLM-driven Financial Text Mining**
-- **Graph Learning**
-- **Self-supervised Learning**
-- **Interpretable AI**
+- **Financial Text Analytics**
+- **LLM Reasoning**
+- **Agentic Orchestration**
+- **Cost-effective Vertical RAG**
+- **Model Interpretability**
 
 {% include_relative _includes/education.md %}
 
