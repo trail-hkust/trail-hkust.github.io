@@ -8,8 +8,8 @@ layout: homepage
 
 Zixuan Yuan​ is currently an Assistant Professor at the FinTech Thrust, HKUST (Guangzhou). His research integrates advanced AI methodologies​ with critical financial challenges, focusing on developing scalable and impactful solutions for AI-driven wealth management, quantitative trading, and regulatory technology (RegTech). Key areas of exploration include
 **Financial Text Analytics**, **LLM Reasoning**, **Agentic Orchestration**, **Cost-effective Vertical RAG**, and **Model Interpretability**.
-His work bridges theoretical innovation and practical deployment through industrial collaborations with leading tech/fintech institutions, such as Baidu Research, IBM Research, RavenPack, HSBC, CITIC Group, and China Merchants Fund Management. He has also co-founded Guangzhou Lingyue Technology, an AI-powered wealth management startup that translates cutting-edge AI research into commercial applications for institutional and individual investors.
-Dr. Yuan’s research contributions are further recognized through publications in premier venues including IEEE TKDE, IEEE IOTJ, ACM SIGKDD, SIGIR, WWW, AAAI, and IJCAI.
+Dr. Yuan has published 20+ papers in premier venues, including IEEE TKDE, IEEE IOTJ, ACM SIGKDD, SIGIR, WWW, AAAI, and IJCAI.
+His work bridges theoretical innovation and practical deployment through industrial collaborations with leading tech/fintech institutions, such as Baidu Research, IBM Research, RavenPack, HSBC, CITIC Group, and China Merchants Fund Management. Dr. Yuan has also co-founded Guangzhou Lingyue Technology, an AI-powered wealth management startup that translates cutting-edge AI research into commercial applications for institutional and individual investors.
 
 **<span style="color:#e74d3c">Multiple positions are available for self-motivated Ph.D. students and RAs. Visiting students are also welcome. Please check here for more information. Thanks!</span>**
 
