@@ -2,7 +2,7 @@ main19:
   - title: Compliance-to-Code： Enhancing Financial Compliance Checking via Code Generation
     authors: Siyuan Li, Jian Chen, Rui Yao, Xuming Hu, Peilin Zhou, Weihua Qiu, Simin Zhang, Chucheng Dong, Zhiyao Li, Qipeng Xie, <strong>Zixuan Yuan†</strong>
     conference_short: KDD 2026
-    conference2: The 32th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    conference: The 32th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
     pdf: https://arxiv.org/abs/2505.19804
     web:
     bibtex:
