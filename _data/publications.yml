@@ -1,6 +1,6 @@
 main20:
   - title: Accelerating LLM Fine-Tuning via Embedding Knowledge Transfer
-    authors: Meishu PENG, Ziyue ZHANG, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, Denghui Zhang
+    authors: Meishu PENG*, Ziyue ZHANG*, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, Denghui Zhang
     conference_short: ACL 2026
     conference: Findings of the Association for Computational Linguistics: ACL 2026
     pdf: 
