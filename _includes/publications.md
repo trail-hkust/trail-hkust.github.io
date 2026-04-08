@@ -7,7 +7,7 @@
 
 <div class="publications">
 <ol class="bibliography">
- {% for link in site.data.publications.main20 %}
+{% for link in site.data.publications.main20 %}
 {% if forloop.counter == 3 %}
         {% break %}
     {% endif %}
@@ -49,6 +49,7 @@
 
 </li>
 {% endfor %}
+
 
 {% for link in site.data.publications.main19 %}
 {% if forloop.counter == 3 %}
