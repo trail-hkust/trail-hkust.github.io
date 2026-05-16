@@ -1,15 +1,14 @@
 
 main21:
-  - title2: Beyond Black Boxes：An Energy-Based Unified Framework for Interpretable Stock Selection
-    authors2: Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, <strong>Hui Xiong†</strong>
-    conference_short2: KDD 2026 (Research Track)
-    conference2: The 32th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
-    #abstract: ……
-    pdf2: 
-    web2: 
-    bibtex2: 
-    image2: ./assets/files/MAP_EBM_KDD_2026.png
-    notes2: Accepted
+  - title2: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
+    authors2: "Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, <strong>Hui Xiong†</strong>"
+    conference_short2: "KDD 2026 (Research Track)"
+    conference2: "The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+    pdf2:
+    web2:
+    bibtex2:
+    image2: "/assets/files/MAP_EBM_KDD_2026.png"
+    notes2: "Accepted"
 
     
 
