@@ -1,3 +1,16 @@
+main21:
+  - title: Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection
+    authors: Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, <strong>Hui Xiong†</strong>
+    conference_short: KDD 2026 (Research Track)
+    conference: The 32th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    pdf: 
+    web:
+    bibtex:
+    image: ./assets/files/MAP_EBM_KDD_2026.png
+    notes: Accepted
+
+    
+
 main20:
   - title: Accelerating LLM Fine-Tuning via Embedding Knowledge Transfer
     authors2: Meishu PENG*, Ziyue ZHANG*, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, Denghui Zhang
