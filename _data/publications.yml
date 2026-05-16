@@ -7,7 +7,7 @@ main21:
     pdf2:
     web2:
     bibtex2:
-    image2: "/assets/files/MAP_EBM_KDD_2026.png"
+    image2: ./assets/files/MAP_EBM_KDD_2026.png
     notes2: "Accepted"
 
     
