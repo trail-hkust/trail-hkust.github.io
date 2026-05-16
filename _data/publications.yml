@@ -1,7 +1,7 @@
 
 main21:
   - title2: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
-    authors2: "Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, <strong>Hui Xiong†</strong>"
+    authors2: "Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, Hui Xiong†"
     conference_short2: "KDD 2026 (Research Track)"
     conference2: "The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
     pdf2:
@@ -14,7 +14,7 @@ main21:
 
 main20:
   - title2: Accelerating LLM Fine-Tuning via Embedding Knowledge Transfer
-    authors2: Meishu PENG*, Ziyue ZHANG*, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, <strong>Denghui Zhang†</strong>
+    authors2: Meishu PENG*, Ziyue ZHANG*, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, Denghui Zhang†
     conference_short2: ACL 2026
     conference2: "Findings of the Association for Computational Linguistics: ACL 2026"
     #abstract: ……
