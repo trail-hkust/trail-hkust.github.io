@@ -33,7 +33,7 @@
 </div>
 
 <div style="margin-bottom:20px;">
-  <strongYuhan Xu</strong>, MPhil. Student (Fall 2025)<br>
+  <strong>Yuhan Xu</strong>, MPhil. Student (Fall 2025)<br>
   Research Area: TMT Investment.<br>
   Previous Internship: Investment Associate Intern, Industrial Capital Management Co., Ltd.
 </div>
