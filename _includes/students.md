@@ -20,7 +20,7 @@
 
 
 <div style="margin-bottom:20px;">
-  <li><strong>Youhang Li</strong>, Ph.D. Student (Fall 2025)<br>
+  <li><strong>Youhang LI</strong>, Ph.D. Student (Fall 2025)<br>
   Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
   M.S. from Renmin University of China
 </div>
@@ -36,12 +36,12 @@
 </div>
 
 <div style="margin-bottom:20px;">
-  <li><strong>Binghao Liu</strong>, MPhil. Student (Fall 2025)<br>
+  <li><strong>Binghao LIU</strong>, MPhil. Student (Fall 2025)<br>
   Research Area: AI-Driven Market Digital Twins for Sector-Level Portfolio Allocation with Graph-Quality-Aware Multimodal Reinforcement Learning.<br>
 </div>
 
 <div style="margin-bottom:20px;">
-  <li><strong>Yuhan Xu</strong>, MPhil. Student (Fall 2025)<br>
+  <li><strong>Yuhan XU</strong>, MPhil. Student (Fall 2025)<br>
   Research Area: TMT Investment.<br>
   Previous Internship: Investment Associate Intern, Industrial Capital Management Co., Ltd.
 </div>
@@ -50,13 +50,13 @@
 <h3 style="margin: 25px 0px 10px;">Past Members</h3>
 
 <div style="margin-bottom:20px;">
-  <li><strong>Ziyue Zhang</strong>, MPhil. (Fall 2023)<br>
+  <li><strong>Ziyue ZHANG</strong>, MPhil. (Fall 2023)<br>
   Research Area: AI-driven Startup Success Prediction.<br>
   Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
 </div>
 
 <div style="margin-bottom:20px;">
-  <li><strong>Xin Qing</strong>, MPhil. (Fall 2023)<br>
+  <li><strong>Xin QING</strong>, MPhil. (Fall 2023)<br>
   Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
   Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd.
 </div>
