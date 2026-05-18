@@ -58,7 +58,7 @@
 <div style="margin-bottom:20px;">
   <li><strong>Xin Qing</strong>, MPhil. (Fall 2023)<br>
   Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
-  Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd
+  Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd.
 </div>
 
 
