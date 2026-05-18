@@ -6,15 +6,23 @@
 <h3 style="margin: 25px 0px 10px;">Current Ph.D. Students</h3>
 
 <div style="margin-bottom:20px;">
-  <strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
+  <li><strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
   Research Area: Regulatory Technology (Regtech).<br>
   M.Phil. from HKUST(GZ)
 </div>
 
 <div style="margin-bottom:20px;">
-  <strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
+  <li><strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
   Research Area:LLM Fine-Tuning and Mechanistic Interpretability.<br>
   Master from ShenZhen University
+</div>
+
+
+
+<div style="margin-bottom:20px;">
+  <li><strong>Youhang Li</strong>, Ph.D. Student (Fall 2025)<br>
+  Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
+  Master from Renmin University of China
 </div>
 
 
@@ -22,18 +30,18 @@
 <h3 style="margin: 25px 0px 10px;">Current M.Phil. Students</h3>
 
 <div style="margin-bottom:20px;">
-  <strong>Siyuan LI</strong>, MPhil. Student (Fall 2024)<br>
+  <li><strong>Siyuan LI</strong>, MPhil. Student (Fall 2024)<br>
   Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
   Undergraduate from Sun Yat-sen University
 </div>
 
 <div style="margin-bottom:20px;">
-  <strong>Binghao Liu</strong>, MPhil. Student (Fall 2025)<br>
+  <li><strong>Binghao Liu</strong>, MPhil. Student (Fall 2025)<br>
   Research Area: AI-Driven Market Digital Twins for Sector-Level Portfolio Allocation with Graph-Quality-Aware Multimodal Reinforcement Learning.<br>
 </div>
 
 <div style="margin-bottom:20px;">
-  <strong>Yuhan Xu</strong>, MPhil. Student (Fall 2025)<br>
+  <li><strong>Yuhan Xu</strong>, MPhil. Student (Fall 2025)<br>
   Research Area: TMT Investment.<br>
   Previous Internship: Investment Associate Intern, Industrial Capital Management Co., Ltd.
 </div>
@@ -42,13 +50,13 @@
 <h3 style="margin: 25px 0px 10px;">Past Members</h3>
 
 <div style="margin-bottom:20px;">
-  <strong>Ziyue Zhang</strong>, MPhil. (Fall 2023)<br>
+  <li><strong>Ziyue Zhang</strong>, MPhil. (Fall 2023)<br>
   Research Area: AI-driven Startup Success Prediction.<br>
   Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
 </div>
 
 <div style="margin-bottom:20px;">
-  <strong>Xin Qing</strong>, MPhil. (Fall 2023)<br>
+  <li><strong>Xin Qing</strong>, MPhil. (Fall 2023)<br>
   Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
   Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd
 </div>
