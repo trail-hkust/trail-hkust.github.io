@@ -42,13 +42,15 @@
 <h3 style="margin: 25px 0px 10px;">Past Members</h3>
 
 <div style="margin-bottom:20px;">
+  <strong>Ziyue Zhang</strong>, MPhil. (Fall 2023)<br>
+  Research Area: AI-driven Startup Success Prediction.<br>
+  Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
+</div>
+
+<div style="margin-bottom:20px;">
   <strong>Xin Qing</strong>, MPhil. (Fall 2023)<br>
   Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
   Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd
 </div>
 
-<div style="margin-bottom:20px;">
-  <strong>Ziyue Zhang</strong>, MPhil. (Fall 2023)<br>
-  Research Area: AI-driven Startup Success Prediction.<br>
-  Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
-</div>
+
