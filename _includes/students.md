@@ -5,60 +5,69 @@
 <!-- Current Ph.D. Students -->
 <h3 style="margin: 25px 0px 10px;">Current Ph.D. Students</h3>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
-  Research Area: Regulatory Technology (Regtech).<br>
-  M.Phil. from HKUST(GZ)
-</div>
+<ul>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
-  Research Area:LLM Fine-Tuning and Mechanistic Interpretability.<br>
-  M.S. from Shenzhen University
-</div>
+  <li style="margin-bottom:20px;">
+    <strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
+    Research Area: Regulatory Technology (Regtech).<br>
+    M.Phil. from HKUST(GZ)
+  </li>
 
+  <li style="margin-bottom:20px;">
+    <strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
+    Research Area:LLM Fine-Tuning and Mechanistic Interpretability.<br>
+    M.S. from Shenzhen University
+  </li>
 
+  <li style="margin-bottom:20px;">
+    <strong>Youhang LI</strong>, Ph.D. Student (Fall 2025)<br>
+    Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
+    M.S. from Renmin University of China
+  </li>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Youhang LI</strong>, Ph.D. Student (Fall 2025)<br>
-  Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
-  M.S. from Renmin University of China
-</div>
+</ul>
 
 
 <!-- Current M.Phil. Students -->
 <h3 style="margin: 25px 0px 10px;">Current M.Phil. Students</h3>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Siyuan LI</strong>, MPhil. Student (Fall 2024)<br>
-  Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
-  B.S. from Sun Yat-sen University
-</div>
+<ul>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Binghao LIU</strong>, MPhil. Student (Fall 2025)<br>
-  Research Area: AI-Driven Market Digital Twins for Sector-Level Portfolio Allocation with Graph-Quality-Aware Multimodal Reinforcement Learning.<br>
-</div>
+  <li style="margin-bottom:20px;">
+    <strong>Siyuan LI</strong>, MPhil. Student (Fall 2024)<br>
+    Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
+    B.S. from Sun Yat-sen University
+  </li>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Yuhan XU</strong>, MPhil. Student (Fall 2025)<br>
-  Research Area: TMT Investment.<br>
-  Previous Internship: Investment Associate Intern, Industrial Capital Management Co., Ltd.
-</div>
+  <li style="margin-bottom:20px;">
+    <strong>Binghao LIU</strong>, MPhil. Student (Fall 2025)<br>
+    Research Area: AI-Driven Market Digital Twins for Sector-Level Portfolio Allocation with Graph-Quality-Aware Multimodal Reinforcement Learning.<br>
+  </li>
+
+  <li style="margin-bottom:20px;">
+    <strong>Yuhan XU</strong>, MPhil. Student (Fall 2025)<br>
+    Research Area: TMT Investment.<br>
+    Previous Internship: Investment Associate Intern, Industrial Capital Management Co., Ltd.
+  </li>
+
+</ul>
+
 
 <!-- Past Members -->
 <h3 style="margin: 25px 0px 10px;">Past Members</h3>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Ziyue ZHANG</strong>, MPhil. (Fall 2023)<br>
-  Research Area: AI-driven Startup Success Prediction.<br>
-  Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
-</div>
+<ul>
 
-<div style="margin-bottom:20px;">
-  <li><strong>Xin QING</strong>, MPhil. (Fall 2023)<br>
-  Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
-  Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd.
-</div>
+  <li style="margin-bottom:20px;">
+    <strong>Ziyue ZHANG</strong>, MPhil. (Fall 2023)<br>
+    Research Area: AI-driven Startup Success Prediction.<br>
+    Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
+  </li>
 
+  <li style="margin-bottom:20px;">
+    <strong>Xin QING</strong>, MPhil. (Fall 2023)<br>
+    Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
+    Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd.
+  </li>
 
+</ul>
