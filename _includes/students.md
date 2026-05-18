@@ -14,7 +14,7 @@
 <div style="margin-bottom:20px;">
   <li><strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
   Research Area:LLM Fine-Tuning and Mechanistic Interpretability.<br>
-  Master from ShenZhen University
+  M.S. from Shenzhen University
 </div>
 
 
@@ -22,7 +22,7 @@
 <div style="margin-bottom:20px;">
   <li><strong>Youhang Li</strong>, Ph.D. Student (Fall 2025)<br>
   Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
-  Master from Renmin University of China
+  M.S. from Renmin University of China
 </div>
 
 
@@ -32,7 +32,7 @@
 <div style="margin-bottom:20px;">
   <li><strong>Siyuan LI</strong>, MPhil. Student (Fall 2024)<br>
   Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
-  Undergraduate from Sun Yat-sen University
+  B.S. from Sun Yat-sen University
 </div>
 
 <div style="margin-bottom:20px;">
