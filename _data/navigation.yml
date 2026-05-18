@@ -7,6 +7,9 @@ main:
   - title: "Prospective Students"
     url: ./#prospective_students
 
+  - title: "Students"
+    url: ./#Students
+
   - title: "Publications"
     url: ./#publications
 
