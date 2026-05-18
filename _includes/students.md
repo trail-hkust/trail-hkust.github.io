@@ -40,6 +40,12 @@
   </li>
 
   <li style="margin-bottom:20px;">
+    <strong>Yidan SHEN</strong>, MPhil. Student (Fall 2024)<br>
+    Research Areas: Fake News Detection, Natural Language Processing (NLP)<br>
+    M.S. from HKUST
+  </li>
+
+  <li style="margin-bottom:20px;">
     <strong>Binghao LIU</strong>, MPhil. Student (Fall 2025)<br>
     Research Area: AI-Driven Market Digital Twins for Sector-Level Portfolio Allocation with Graph-Quality-Aware Multimodal Reinforcement Learning.<br>
   </li>
