@@ -8,6 +8,12 @@
 <ul>
 
   <li style="margin-bottom:20px;">
+    <strong>Wenwei WU</strong>, Ph.D. Student (Fall 2024)<br>
+    Research Area: Multimodal Evidence-Graph and Agentic Collaborative Deep Reasoning for Finance.<br>
+    M.S. from HKBU
+  </li>
+
+  <li style="margin-bottom:20px;">
     <strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
     Research Area: Regulatory Technology (Regtech).<br>
     M.Phil. from HKUST(GZ)
