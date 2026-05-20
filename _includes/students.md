@@ -10,25 +10,31 @@
   <li style="margin-bottom:20px;">
     <strong>Wenwei WU</strong>, Ph.D. Student (Fall 2024)<br>
     Research Area: Multimodal Evidence-Graph and Agentic Collaborative Deep Reasoning for Finance.<br>
-    M.S. from HKBU
+    M.S. from HKBU.
   </li>
 
   <li style="margin-bottom:20px;">
     <strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
     Research Area: Regulatory Technology (Regtech).<br>
-    M.Phil. from HKUST(GZ)
+    M.Phil. from HKUST(GZ).
   </li>
 
   <li style="margin-bottom:20px;">
     <strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
     Research Area:LLM Fine-Tuning and Mechanistic Interpretability.<br>
-    M.S. from Shenzhen University
+    M.S. from Shenzhen University.
   </li>
 
   <li style="margin-bottom:20px;">
     <strong>Youhang LI</strong>, Ph.D. Student (Fall 2025)<br>
     Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
-    M.S. from Renmin University of China
+    M.S. from Renmin University of China.
+  </li>
+
+  <li style="margin-bottom:20px;">
+    <strong>Siyuan LI</strong>, in coming PhD Student (Fall 2026)<br>
+    Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
+    Undergraduate from Sun Yat-sen University, M.Phil. from HKUST(GZ).
   </li>
 
 </ul>
@@ -40,15 +46,9 @@
 <ul>
 
   <li style="margin-bottom:20px;">
-    <strong>Siyuan LI</strong>, MPhil. Student (Fall 2024)<br>
-    Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
-    B.S. from Sun Yat-sen University
-  </li>
-
-  <li style="margin-bottom:20px;">
     <strong>Yidan SHEN</strong>, MPhil. Student (Fall 2024)<br>
     Research Areas: Fake News Detection, Natural Language Processing (NLP)<br>
-    M.S. from HKUST
+    M.S. from HKUST.
   </li>
 
   <li style="margin-bottom:20px;">
