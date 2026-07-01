@@ -29,8 +29,8 @@ main20:
     conference_short2: ACL 2026
     conference2: "Findings of the Association for Computational Linguistics: ACL 2026"
     #abstract: ……
-    pdf2: https://aclanthology.org/2026.findings-acl.5/
-    web2: 
+    pdf2: https://aclanthology.org/2026.findings-acl.5.pdf
+    web2: https://aclanthology.org/2026.findings-acl.5/
     bibtex2: 
     image2: ./assets/files/Pen2Sword.png
     notes2: Published
