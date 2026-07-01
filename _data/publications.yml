@@ -7,7 +7,7 @@ main22:
     pdf2:
     web2:
     bibtex2:
-    image2: .assets/files/From-Statute-to-Control-Flow.png
+    image2: ./assets/files/From-Statute-to-Control-Flow.png
     notes2: "Accepted"
 
 main21:
