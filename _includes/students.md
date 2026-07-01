@@ -85,7 +85,7 @@
   <li style="margin-bottom:20px;">
     <strong>Runhao SHA</strong>, MPhil. (Fall 2023)<br>
     Research Area: Agentic RAG, LLMs Memory, Responsible LLMs.<br>
-    Placement: AI Product Manager & Engineer, ByteDance Ltd.
+    Placement: AI Product Manager, JD.com
   </li>
   
 
