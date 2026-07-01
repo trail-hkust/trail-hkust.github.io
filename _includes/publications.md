@@ -11,7 +11,7 @@
 {% for link in site.data.publications.main22 %}
 <li>
         <div class="publication-entry" style="margin-bottom: 30px;">
-          <div class="col-sm-12 abbr" style="position: relative; text-align: center; padding: 15px;height: 290px;">
+          <div class="col-sm-12 abbr" style="position: relative; text-align: center; padding: 15px;height: 200px;">
               <img src="{{ link.image2 }}" class="teaser img-fluid z-depth-1" style="width: 100%; max-width: 550px; height: auto; object-fit: contain; margin-bottom: 20px;">
               <abbr class="badge" style="position: absolute; top: 10px; left: 10px; background: #002D72; color: white; padding: 5px; margin-left: 40px">{{ link.conference_short2 }}</abbr>
           </div>
