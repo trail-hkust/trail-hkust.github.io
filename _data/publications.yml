@@ -4,8 +4,8 @@ main22:
     authors2: "Jian Chen*, Siyuan Li*, Chucheng Wan, <strong>Zixuan Yuan†</strong>"
     conference_short2: "KDD 2026 (Datasets and Benchmarks Track)"
     conference2: "The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
-    pdf2:"https://dl.acm.org/doi/epdf/10.1145/3770855.3817491"
-    web2:"https://dl.acm.org/doi/10.1145/3770855.3817491"
+    pdf2: "https://dl.acm.org/doi/epdf/10.1145/3770855.3817491"
+    web2: "https://dl.acm.org/doi/10.1145/3770855.3817491"
     bibtex2:
     image2: ./assets/files/From-Statute-to-Control-Flow.png
     notes2: "Published"
@@ -15,8 +15,8 @@ main21:
     authors2: "Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, Hui Xiong†"
     conference_short2: "KDD 2026 (Research Track)"
     conference2: "The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
-    pdf2:"https://dl.acm.org/doi/epdf/10.1145/3770855.3817795"
-    web2:"https://dl.acm.org/doi/10.1145/3770855.3817795"
+    pdf2: "https://dl.acm.org/doi/epdf/10.1145/3770855.3817795"
+    web2: "https://dl.acm.org/doi/10.1145/3770855.3817795"
     bibtex2:
     image2: ./assets/files/MAP_EBM_KDD_2026.png
     notes2: "Published"
