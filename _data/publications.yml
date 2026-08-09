@@ -33,7 +33,7 @@ main20:
     web2: https://aclanthology.org/2026.findings-acl.5/
     bibtex2: 
     image2: ./assets/files/Pen2Sword.png
-    notes2: Published
+    notes2: "Published"
 
 
 
@@ -46,7 +46,7 @@ main19:
     web: "https://dl.acm.org/doi/abs/10.1145/3770854.3785703"
     bibtex:
     image: ./assets/files/Compliance-to-Code.jpg
-    notes: Published
+    notes: "Published"
 
 
 main18:
