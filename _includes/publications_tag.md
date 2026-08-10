@@ -45,7 +45,7 @@
   <strong style="font-weight: 600;">Topics:</strong>
 
   {% assign categories =
-    "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance"
+    "AI-driven Investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance"
     | split: "|"
   %}
 
@@ -74,7 +74,7 @@
 <!-- ========================================================= -->
 
 {% assign categories =
-  "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance"
+  "AI-driven Investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance"
   | split: "|"
 %}
 
