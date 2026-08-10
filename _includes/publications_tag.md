@@ -297,31 +297,32 @@ AI for Regulatory Compliance </a>
 
   {% if link.year %}
 
-    <em>
+    
       {{ link.year }}
-    </em>
+  
 
   {% endif %}
 
 
   {% if topic_id != "" %}
-
-    <span style="margin-left:10px;">
-
-      <a
-        href="javascript:void(0);"
-        class="publication-topic"
-        data-topic="{{ topic_id }}"
-        onclick="showPublicationTopic('{{ topic_id }}')"
-        style="
-          text-decoration:none;
-          cursor:pointer;
-        ">
-        {{ link.tag }}
-      </a>
-
-    </span>
-
+  
+  <span style="margin-left:10px;">
+  
+    <a
+      href="javascript:void(0);"
+      class="publication-topic"
+      data-topic="{{ topic_id }}"
+      onclick="showPublicationTopic('{{ topic_id }}')"
+      style="
+        text-decoration:none;
+        cursor:pointer;
+        color:inherit;
+      ">
+      {{ link.tag }}
+    </a>
+  
+  </span>
+  
   {% endif %}
 
 </div>
