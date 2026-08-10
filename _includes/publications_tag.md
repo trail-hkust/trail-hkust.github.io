@@ -27,7 +27,7 @@ ResearchGate
     display:flex;
     align-items:center;
     flex-wrap:wrap;
-    margin-bottom:25px;
+    margin-bottom:15px;
     line-height:1.8;
   ">
 
