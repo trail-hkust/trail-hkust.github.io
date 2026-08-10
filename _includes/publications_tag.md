@@ -324,8 +324,6 @@ AI for Regulatory Compliance </a>
       {{ link.tag }}
     </a>
   
-  </span>
-  
   {% endif %}
 
 </div>
