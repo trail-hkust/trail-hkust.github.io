@@ -9,7 +9,7 @@
 
   <li style="margin-bottom:20px;">
     <strong>Wenwei WU</strong>, Ph.D. Student (Fall 2024)<br>
-    Research Area: Multimodal Evidence-Graph and Agentic Collaborative Deep Reasoning for Finance.<br>
+    Research Area: Multimodal Evidence-Graph, Agentic Collaborative Deep Reasoning for Finance.<br>
     M.S. from HKBU.
   </li>
 
@@ -21,19 +21,19 @@
 
   <li style="margin-bottom:20px;">
     <strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
-    Research Area:LLM Fine-Tuning and Mechanistic Interpretability.<br>
+    Research Area:LLM Fine-Tuning, Mechanistic Interpretability.<br>
     M.S. from Shenzhen University.
   </li>
 
   <li style="margin-bottom:20px;">
     <strong>Youhang LI</strong>, Ph.D. Student (Fall 2025)<br>
-    Research Area: Agentic Retrieval-Augmented Generation and Post-Training for Long-Horizon LLM Agents<br>
+    Research Area: Agentic Retrieval-Augmented Generation, Post-Training for Long-Horizon LLM Agents<br>
     M.S. from Renmin University of China.
   </li>
 
   <li style="margin-bottom:20px;">
     <strong>Siyuan LI</strong>, Ph.D. Student (Fall 2026)<br>
-    Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
+    Research Area: LLM in Finance, LLM Agents for Investment, Regulation Technology.<br>
     Undergraduate from Sun Yat-sen University, M.Phil. from HKUST(GZ).
   </li>
 
