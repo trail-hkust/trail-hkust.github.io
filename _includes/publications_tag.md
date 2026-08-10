@@ -783,81 +783,73 @@
 
   window.showPublicationTopic =
     function (topic) {
-
-      /*
-       * IMPORTANT:
-       *
-       * Replace the current topic.
-       *
-       * Do NOT add the topic to an array.
-       * Do NOT keep previous topics.
-       */
-
+  
+      /* ===================================================
+         Save selected topic
+         =================================================== */
+  
       currentPublicationTopic = topic;
-
-
-      /* =================================================
-         UPDATE TOPIC BUTTON STYLE
-         ================================================= */
-
+  
+  
+      /* ===================================================
+         Update TOPIC buttons
+         =================================================== */
+  
       var topicButtons =
         document.querySelectorAll(
           ".topic-filter"
         );
-
-
-      topicButtons.forEach(function (button) {
-
-        var buttonTopic =
-          button.getAttribute(
-            "data-topic"
-          );
-
-
-        if (
-          buttonTopic ===
-          currentPublicationTopic
-        ) {
-
-          /* ---------------------------------------------
-             ACTIVE
-             --------------------------------------------- */
-
-          button.style.fontWeight =
-            "600";
-
-          button.style.borderBottom =
-            "2px solid currentColor";
-
-          button.style.paddingBottom =
-            "2px";
-
-        } else {
-
-          /* ---------------------------------------------
-             INACTIVE
-             --------------------------------------------- */
-
-          button.style.fontWeight =
-            "400";
-
-          button.style.borderBottom =
-            "2px solid transparent";
-
-          button.style.paddingBottom =
-            "2px";
-
+  
+  
+      topicButtons.forEach(
+        function (button) {
+  
+          var buttonTopic =
+            button.getAttribute(
+              "data-topic"
+            );
+  
+  
+          if (buttonTopic === topic) {
+  
+            /* ---------------------------------------------
+               Selected
+               --------------------------------------------- */
+  
+            button.style.fontWeight = "600";
+  
+            button.style.borderBottom =
+              "2px solid currentColor";
+  
+            button.style.paddingBottom =
+              "2px";
+  
+          } else {
+  
+            /* ---------------------------------------------
+               Not selected
+               --------------------------------------------- */
+  
+            button.style.fontWeight = "400";
+  
+            button.style.borderBottom =
+              "2px solid transparent";
+  
+            button.style.paddingBottom =
+              "2px";
+  
+          }
+  
         }
-
-      });
-
-
-      /* =================================================
-         APPLY FILTERS
-         ================================================= */
-
+      );
+  
+  
+      /* ===================================================
+         Apply filters
+         =================================================== */
+  
       applyPublicationFilters();
-
+  
     };
 
 
