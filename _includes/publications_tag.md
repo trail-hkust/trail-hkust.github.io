@@ -253,34 +253,31 @@ AI for Regulatory Compliance </a>
      line-height:1.5;
      font-size:14px;
      ">
-
-  {% assign conference_year =
-     link.conference_short
-     | split: " "
-     | last %}
-
-  {% if conference_year contains "202" %}
-
-    <em>{{ conference_year | remove: ")" }}</em>
-
+  
+  {% if link.year %}
+  
+  <em>{{ link.year }}</em>
+  
   {% endif %}
-
-
+  
   {% if topic_id != "" %}
-
+  
     <span style="margin-left:10px;">
-
-      <a href="javascript:void(0);"
-         onclick="showPublicationTopic('{{ topic_id }}')"
-         style="
-           text-decoration:none;
-         ">
-        {{ link.tag }}
-      </a>
-
+  
+  ```
+  <a href="javascript:void(0);"
+     onclick="showPublicationTopic('{{ topic_id }}')"
+     style="
+       text-decoration:none;
+     ">
+    {{ link.tag }}
+  </a>
+  ```
+  
     </span>
-
+  
   {% endif %}
+  
 
 </div>
 
@@ -295,131 +292,89 @@ AI for Regulatory Compliance </a>
      ">
 
   {% if link.conference_short %}
-
+  
     <strong>
       {{ link.conference_short }}
     </strong>
-
+  
   {% endif %}
-
-
+  
   {% if link.pdf %}
-
+  
     <span style="margin-left:8px;">
       /
     </span>
-
-    <a href="{{ link.pdf }}"
-       target="_blank"
-       style="
-         display:inline-block;
-         padding:2px 7px;
-         margin-left:5px;
-         border:1px solid #cccccc;
-         border-radius:3px;
-         font-size:12px;
-         text-decoration:none;
-       ">
-      PDF
-    </a>
-
+  
+  <a
+   href="{{ link.pdf }}"
+   target="_blank"
+   style="
+     margin-left:5px;
+     text-decoration:none;
+   ">
+  PDF </a>
+  
   {% endif %}
-
-
+  
   {% if link.web %}
-
+  
     <span style="margin-left:5px;">
       /
     </span>
-
-    <a href="{{ link.web }}"
-       target="_blank"
-       style="
-         display:inline-block;
-         padding:2px 7px;
-         margin-left:5px;
-         border:1px solid #cccccc;
-         border-radius:3px;
-         font-size:12px;
-         text-decoration:none;
-       ">
-      Website
-    </a>
-
+  
+  <a
+   href="{{ link.web }}"
+   target="_blank"
+   style="
+     margin-left:5px;
+     text-decoration:none;
+   ">
+  Website </a>
+  
   {% endif %}
-
-
+  
   {% if link.code %}
-
+  
     <span style="margin-left:5px;">
       /
     </span>
-
-    <a href="{{ link.code }}"
-       target="_blank"
-       style="
-         display:inline-block;
-         padding:2px 7px;
-         margin-left:5px;
-         border:1px solid #cccccc;
-         border-radius:3px;
-         font-size:12px;
-         text-decoration:none;
-       ">
-      Code
-    </a>
-
+  
+  <a
+   href="{{ link.code }}"
+   target="_blank"
+   style="
+     margin-left:5px;
+     text-decoration:none;
+   ">
+  Code </a>
+  
   {% endif %}
-
-
+  
   {% if link.bibtex %}
-
+  
     <span style="margin-left:5px;">
       /
     </span>
-
-    <a href="{{ link.bibtex }}"
-       target="_blank"
-       style="
-         display:inline-block;
-         padding:2px 7px;
-         margin-left:5px;
-         border:1px solid #cccccc;
-         border-radius:3px;
-         font-size:12px;
-         text-decoration:none;
-       ">
-      BibTeX
-    </a>
-
+  
+  <a
+   href="{{ link.bibtex }}"
+   target="_blank"
+   style="
+     margin-left:5px;
+     text-decoration:none;
+   ">
+  BibTeX </a>
+  
   {% endif %}
-
-
-  {% if link.notes %}
-
-    <strong style="margin-left:8px;">
-      <i style="color:#e74d3c;">
-        {{ link.notes }}
-      </i>
-    </strong>
-
-  {% endif %}
-
-
+  
   {% if link.others %}
-
-    {{ link.others }}
-
+  
+  {{ link.others }}
+  
   {% endif %}
+  
+  {% endfor %}
 
-</div>
-
-
-  </div>
-
-</div>
-
-{% endfor %}
 
 <!-- ===================================================== -->
 
