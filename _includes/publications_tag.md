@@ -1,103 +1,22 @@
 <h1 id="publications"></h1>
 
-<h2 style="margin: 30px 0px -15px;">
+<h2 style="margin: 30px 0px 5px;"> Publications
 
-  Publications
+<temp style="font-size:15px;">[</temp>
+<a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao" target="_blank" style="font-size:15px;">
+Google Scholar
+</a>
+<temp style="font-size:15px;">]</temp>
 
-  <temp style="font-size:15px;">[</temp>
-  <a
-    href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
-    target="_blank"
-    style="
-      font-size:15px;
-      text-decoration:none;
-    ">
-    Google Scholar
-  </a>
-  <temp style="font-size:15px;">]</temp>
-
-  <temp style="font-size:15px;">[</temp>
-  <a
-    href="https://www.researchgate.net/profile/Zixuan-Yuan-4"
-    target="_blank"
-    style="
-      font-size:15px;
-      text-decoration:none;
-    ">
-    ResearchGate
-  </a>
-  <temp style="font-size:15px;">]</temp>
-
-  <span style="
-    font-size:15px;
-    margin-left:15px;
-    font-weight:normal;
-  ">
-
-    <a
-      href="javascript:void(0);"
-      id="selected-btn"
-      onclick="setPublicationMode('selected')"
-      style="
-        text-decoration:none;
-      ">
-      <strong>Selected</strong>
-    </a>
-
-    <span style="margin:0 8px;">|</span>
-
-    <a
-      href="javascript:void(0);"
-      id="all-date-btn"
-      onclick="setPublicationMode('all')"
-      style="
-        text-decoration:none;
-      ">
-      All by date
-    </a>
-
-  </span>
+<temp style="font-size:15px;">[</temp>
+<a href="https://www.researchgate.net/profile/Zixuan-Yuan-4" target="_blank" style="font-size:15px;">
+ResearchGate
+</a>
+<temp style="font-size:15px;">]</temp>
 
 </h2>
 
 <br>
-
-<!-- ===================================================== -->
-
-<!-- SELECTED / ALL BY DATE                                -->
-
-<!-- ===================================================== -->
-
-<div
-  style="
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:0;
-    margin-bottom:12px;
-  ">
-
-<a
- href="javascript:void(0);"
- id="selected-btn"
- onclick="setPublicationMode('selected')"
- style="
-   margin-right:12px;
-   text-decoration:none;
-   cursor:pointer;
- "> <strong>Selected</strong> </a>
-
-<a
- href="javascript:void(0);"
- id="all-date-btn"
- onclick="setPublicationMode('all')"
- style="
-   text-decoration:none;
-   cursor:pointer;
- ">
-All by date </a>
-
-</div>
 
 <!-- ===================================================== -->
 
