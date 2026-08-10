@@ -52,11 +52,13 @@
           {% if link.image %}
           <img src="{{ link.image }}"
                class="teaser img-fluid z-depth-1"
-               style="width: 100%;
-                      max-width: 800px;
+               style="display: block;
+                      max-width: 90%;
+                      max-height: 320px;
+                      width: auto;
                       height: auto;
                       object-fit: contain;
-                      margin-bottom: 20px;">
+                      margin: 0 auto 20px auto;">
           {% endif %}
 
           <!-- Conference badge -->
