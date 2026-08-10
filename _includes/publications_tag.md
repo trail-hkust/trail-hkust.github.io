@@ -1,6 +1,6 @@
 <h1 id="publications"></h1>
 
-<h2 style="margin: 30px 0px 15px;"> Publications
+<h2 style="margin: 30px 0px 20px;"> Publications
 
 </h2>
 
