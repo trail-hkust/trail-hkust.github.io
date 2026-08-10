@@ -1,34 +1,28 @@
-```liquid
 <h1 id="publications"></h1>
 
 <h2 style="margin: 30px 0px -15px;">
   Publications
-  <span style="font-size:15px;">
-    [
-    <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
-       target="_blank"
-       style="font-size:15px;">
-      Google Scholar
-    </a>
-    ]
-  </span>
+  <temp style="font-size:15px;">[</temp>
+  <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
+     target="_blank"
+     style="font-size:15px;">
+    Google Scholar
+  </a>
+  <temp style="font-size:15px;">]</temp>
 
-  <span style="font-size:15px;">
-    [
-    <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
-       target="_blank"
-       style="font-size:15px;">
-      ResearchGate
-    </a>
-    ]
-  </span>
+  <temp style="font-size:15px;">[</temp>
+  <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
+     target="_blank"
+     style="font-size:15px;">
+    ResearchGate
+  </a>
+  <temp style="font-size:15px;">]</temp>
 </h2>
 
 <br>
 
-
 <!-- ========================================================= -->
-<!-- Topics navigation -->
+<!-- Topics -->
 <!-- ========================================================= -->
 
 <div style="
@@ -37,7 +31,7 @@
     line-height: 1.8;
 ">
 
-  <strong>Topics:</strong>
+  <strong style="font-weight: 600;">Topics:</strong>
 
   {% assign categories =
     "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance"
@@ -56,7 +50,7 @@
     </a>
 
     {% unless forloop.last %}
-      <span style="color:#aaa;">|</span>
+      <span style="color:#aaa;"> | </span>
     {% endunless %}
 
   {% endfor %}
@@ -64,35 +58,24 @@
 </div>
 
 
-<!-- ========================================================= -->
-<!-- Notes -->
-<!-- ========================================================= -->
-
-<div style="
-    margin-bottom: 25px;
-    font-size: 14px;
-">
-
-  * means equal contribution.
-  † means corresponding authors.
-
-</div>
+- means equal contribution.
+† means corresponding authors.
 
 
 <!-- ========================================================= -->
-<!-- Publications -->
+<!-- Publications by Topic -->
 <!-- ========================================================= -->
+
+{% assign categories =
+  "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance"
+  | split: "|"
+%}
+
 
 {% for category in categories %}
 
-  {% assign category_papers =
-      site.data.publications_tag.main
-      | where: "tag", category
-  %}
-
-
   <!-- ======================================================= -->
-  <!-- Topic heading -->
+  <!-- Topic Header -->
   <!-- ======================================================= -->
 
   <h3 id="topic-{{ category | slugify }}"
@@ -103,265 +86,241 @@
         border-bottom: 1px solid #ddd;
         font-weight: 600;
       ">
-
     {{ category }}
-
   </h3>
 
 
   <!-- ======================================================= -->
-  <!-- Papers under this topic -->
+  <!-- Get papers belonging to this topic -->
   <!-- ======================================================= -->
+
+  {% assign category_papers =
+    site.data.publications_tag.main
+    | where: "tag", category
+  %}
+
+
+  <ol class="bibliography">
 
   {% for link in category_papers %}
 
-  <li style="
-      list-style: none;
-      margin-bottom: 55px;
-  ">
+    <li style="margin-bottom: 45px;">
 
-    <div class="publication-entry"
-         style="
-           width: 100%;
-           overflow: visible;
-         ">
+      <div class="publication-entry"
+           style="
+             width: 100%;
+             overflow: hidden;
+           ">
 
 
-      <!-- =================================================== -->
-      <!-- IMAGE -->
-      <!-- =================================================== -->
+        <!-- ================================================= -->
+        <!-- Image -->
+        <!-- ================================================= -->
 
-      {% if link.image %}
+        {% if link.image %}
 
-      <div style="
-          width: 100%;
-          text-align: center;
-          margin: 0 auto 18px auto;
-          overflow: visible;
-      ">
-
-        <img src="{{ link.image }}"
-             alt="{{ link.title }}"
-             style="
-               display: block;
-               width: auto;
-               height: auto;
-               max-width: 100%;
-               max-height: 500px;
-               object-fit: contain;
-               margin: 0 auto;
-             ">
-
-      </div>
-
-      {% endif %}
-
-
-      <!-- =================================================== -->
-      <!-- CONFERENCE + LINKS -->
-      <!-- =================================================== -->
-
-      <div style="
-          text-align: center;
-          margin: 5px 0 12px 0;
-          font-size: 13px;
-          line-height: 1.6;
-      ">
-
-
-        <!-- Conference short -->
-
-        {% if link.conference_short %}
-
-        <span style="
-            color: #666;
-            margin-right: 12px;
-            font-weight: 500;
+        <div style="
+            width: 100%;
+            height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 20px;
         ">
-          {{ link.conference_short }}
-        </span>
+
+          <img src="{{ link.image }}"
+               class="teaser img-fluid z-depth-1"
+               style="
+                 display: block;
+                 max-width: 100%;
+                 max-height: 360px;
+                 width: auto;
+                 height: auto;
+                 object-fit: contain;
+                 margin: 0 auto;
+               ">
+
+        </div>
 
         {% endif %}
 
 
-        <!-- PDF -->
+        <!-- ================================================= -->
+        <!-- Publication Information -->
+        <!-- ================================================= -->
 
-        {% if link.pdf %}
-
-        <a href="{{ link.pdf }}"
-           target="_blank"
-           style="
-             margin-right: 10px;
-             text-decoration: none;
-           ">
-          PDF
-        </a>
-
-        {% endif %}
-
-
-        <!-- Website -->
-
-        {% if link.web %}
-
-        <a href="{{ link.web }}"
-           target="_blank"
-           style="
-             margin-right: 10px;
-             text-decoration: none;
-           ">
-          Website
-        </a>
-
-        {% endif %}
-
-
-        <!-- Code -->
-
-        {% if link.code %}
-
-        <a href="{{ link.code }}"
-           target="_blank"
-           style="
-             margin-right: 10px;
-             text-decoration: none;
-           ">
-          Code
-        </a>
-
-        {% endif %}
-
-
-        <!-- Project Page -->
-
-        {% if link.page %}
-
-        <a href="{{ link.page }}"
-           target="_blank"
-           style="
-             margin-right: 10px;
-             text-decoration: none;
-           ">
-          Project Page
-        </a>
-
-        {% endif %}
-
-
-        <!-- BibTeX -->
-
-        {% if link.bibtex %}
-
-        <a href="{{ link.bibtex }}"
-           target="_blank"
-           style="
-             margin-right: 10px;
-             text-decoration: none;
-           ">
-          BibTeX
-        </a>
-
-        {% endif %}
-
-
-        <!-- Notes -->
-
-        {% if link.notes %}
-
-        <span style="
-            color: #e74d3c;
-            margin-left: 3px;
+        <div style="
+            width: 100%;
+            padding: 0 10px;
+            text-align: center;
         ">
-          {{ link.notes }}
-        </span>
-
-        {% endif %}
 
 
-        <!-- Others -->
+          <!-- =============================================== -->
+          <!-- Title -->
+          <!-- =============================================== -->
 
-        {% if link.others %}
+          <div class="title"
+               style="
+                 margin-bottom: 8px;
+                 line-height: 1.5;
+               ">
 
-          {{ link.others }}
+            {% if link.pdf %}
 
-        {% endif %}
+              <a href="{{ link.pdf }}"
+                 target="_blank">
+                {{ link.title }}
+              </a>
 
+            {% else %}
 
-      </div>
-
-
-      <!-- =================================================== -->
-      <!-- PUBLICATION INFORMATION -->
-      <!-- =================================================== -->
-
-      <div style="
-          width: 100%;
-          text-align: center;
-          padding: 0 15px;
-          box-sizing: border-box;
-      ">
-
-
-        <!-- Title -->
-
-        <div class="title"
-             style="
-               margin-top: 5px;
-               margin-bottom: 8px;
-               line-height: 1.5;
-             ">
-
-          {% if link.pdf %}
-
-            <a href="{{ link.pdf }}"
-               target="_blank">
               {{ link.title }}
-            </a>
 
-          {% else %}
+            {% endif %}
 
-            {{ link.title }}
+          </div>
+
+
+          <!-- =============================================== -->
+          <!-- Authors -->
+          <!-- =============================================== -->
+
+          <div class="author"
+               style="
+                 margin-bottom: 6px;
+                 line-height: 1.5;
+               ">
+
+            {{ link.authors }}
+
+          </div>
+
+
+          <!-- =============================================== -->
+          <!-- Conference -->
+          <!-- =============================================== -->
+
+          {% if link.conference %}
+
+          <div class="periodical"
+               style="
+                 margin-bottom: 10px;
+                 line-height: 1.5;
+               ">
+
+            <em>{{ link.conference }}</em>
+
+          </div>
 
           {% endif %}
 
+
+          <!-- =============================================== -->
+          <!-- Links -->
+          <!-- =============================================== -->
+
+          <div class="links"
+               style="
+                 margin-top: 8px;
+                 line-height: 2;
+               ">
+
+
+            {% if link.pdf %}
+
+            <a href="{{ link.pdf }}"
+               class="btn btn-sm z-depth-0"
+               role="button"
+               target="_blank"
+               style="font-size:12px;">
+              PDF
+            </a>
+
+            {% endif %}
+
+
+            {% if link.web %}
+
+            <a href="{{ link.web }}"
+               class="btn btn-sm z-depth-0"
+               role="button"
+               target="_blank"
+               style="font-size:12px;">
+              Website
+            </a>
+
+            {% endif %}
+
+
+            {% if link.code %}
+
+            <a href="{{ link.code }}"
+               class="btn btn-sm z-depth-0"
+               role="button"
+               target="_blank"
+               style="font-size:12px;">
+              Code
+            </a>
+
+            {% endif %}
+
+
+            {% if link.page %}
+
+            <a href="{{ link.page }}"
+               class="btn btn-sm z-depth-0"
+               role="button"
+               target="_blank"
+               style="font-size:12px;">
+              Project Page
+            </a>
+
+            {% endif %}
+
+
+            {% if link.bibtex %}
+
+            <a href="{{ link.bibtex }}"
+               class="btn btn-sm z-depth-0"
+               role="button"
+               target="_blank"
+               style="font-size:12px;">
+              BibTex
+            </a>
+
+            {% endif %}
+
+
+            {% if link.notes %}
+
+            <strong style="margin-left: 5px;">
+              <i style="color:#e74d3c;">
+                {{ link.notes }}
+              </i>
+            </strong>
+
+            {% endif %}
+
+
+            {% if link.others %}
+
+              {{ link.others }}
+
+            {% endif %}
+
+
+          </div>
+
         </div>
-
-
-        <!-- Authors -->
-
-        <div class="author"
-             style="
-               margin-bottom: 7px;
-               line-height: 1.5;
-             ">
-
-          {{ link.authors }}
-
-        </div>
-
-
-        <!-- Conference / Journal -->
-
-        <div class="periodical"
-             style="
-               margin-bottom: 10px;
-               line-height: 1.5;
-             ">
-
-          <em>
-            {{ link.conference }}
-          </em>
-
-        </div>
-
 
       </div>
 
-    </div>
-
-  </li>
+    </li>
 
   {% endfor %}
 
+  </ol>
+
 {% endfor %}
-```
