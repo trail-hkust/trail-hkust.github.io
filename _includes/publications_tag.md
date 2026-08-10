@@ -99,7 +99,7 @@ AI for Regulatory Compliance </a>
 
 {% if link.tag == "Multi-Agent Learning & Reasoning" %}
 {% assign topic_id = "multi-agent" %}
-{% elsif link.tag == "Model Interpretation, Representation & Evaluation" %}
+{% elsif link.tag == "Model Interpretability, Representation & Evaluation" %}
 {% assign topic_id = "interpretability" %}
 {% elsif link.tag == "AI-driven Investment" %}
 {% assign topic_id = "investment" %}
@@ -131,7 +131,7 @@ AI for Regulatory Compliance </a>
        box-sizing:border-box;
        ">
 
-```
+
 {% if link.image %}
 
   <a href="{{ link.image }}"
@@ -166,7 +166,7 @@ AI for Regulatory Compliance </a>
   </a>
 
 {% endif %}
-```
+
 
   </div>
 
@@ -183,7 +183,7 @@ AI for Regulatory Compliance </a>
        padding:0;
        ">
 
-```
+
 <!-- TITLE -->
 
 <div class="title"
@@ -341,7 +341,7 @@ AI for Regulatory Compliance </a>
 
 
 </div>
-```
+
 
   </div>
 
