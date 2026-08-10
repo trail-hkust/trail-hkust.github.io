@@ -1,23 +1,66 @@
-<div style="margin-bottom:20px;">
+<h1 id="publications"></h1>
 
-<a
- href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
- target="_blank"
- style="
-   margin-right:18px;
-   text-decoration:none;
- ">
-Google Scholar </a>
+<h2 style="margin: 30px 0px -15px;">
 
-<a
- href="https://www.researchgate.net/profile/Zixuan-Yuan-4"
- target="_blank"
- style="
-   text-decoration:none;
- ">
-ResearchGate </a>
+  Publications
 
-</div>
+  <temp style="font-size:15px;">[</temp>
+  <a
+    href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
+    target="_blank"
+    style="
+      font-size:15px;
+      text-decoration:none;
+    ">
+    Google Scholar
+  </a>
+  <temp style="font-size:15px;">]</temp>
+
+  <temp style="font-size:15px;">[</temp>
+  <a
+    href="https://www.researchgate.net/profile/Zixuan-Yuan-4"
+    target="_blank"
+    style="
+      font-size:15px;
+      text-decoration:none;
+    ">
+    ResearchGate
+  </a>
+  <temp style="font-size:15px;">]</temp>
+
+  <span style="
+    font-size:15px;
+    margin-left:15px;
+    font-weight:normal;
+  ">
+
+    <a
+      href="javascript:void(0);"
+      id="selected-btn"
+      onclick="setPublicationMode('selected')"
+      style="
+        text-decoration:none;
+      ">
+      <strong>Selected</strong>
+    </a>
+
+    <span style="margin:0 8px;">|</span>
+
+    <a
+      href="javascript:void(0);"
+      id="all-date-btn"
+      onclick="setPublicationMode('all')"
+      style="
+        text-decoration:none;
+      ">
+      All by date
+    </a>
+
+  </span>
+
+</h2>
+
+<br>
 
 <!-- ===================================================== -->
 
