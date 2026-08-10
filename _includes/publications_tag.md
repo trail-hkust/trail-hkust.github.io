@@ -50,15 +50,22 @@
              style="position: relative; text-align: center; padding: 15px;">
 
           {% if link.image %}
-          <img src="{{ link.image }}"
-               class="teaser img-fluid z-depth-1"
-               style="display: block;
-                      max-width: 90%;
-                      max-height: 320px;
-                      width: auto;
-                      height: auto;
-                      object-fit: contain;
-                      margin: 0 auto 20px auto;">
+          <div style="width: 100%;
+                      height: 350px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-bottom: 20px;">
+          
+            <img src="{{ link.image }}"
+                 class="teaser img-fluid z-depth-1"
+                 style="max-width: 100%;
+                        max-height: 100%;
+                        width: auto;
+                        height: auto;
+                        object-fit: contain;">
+          
+          </div>
           {% endif %}
 
           <!-- Conference badge -->
