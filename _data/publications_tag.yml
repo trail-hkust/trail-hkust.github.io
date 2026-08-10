@@ -359,7 +359,7 @@ main:
 
 
   - title: Scalable Heterogeneous Graph Neural Networks for Predicting High-potential Early-stage Startups
-    authors: Shengming Zhang*, Hao Zhong, <strong>Zixuan Yuan</strong>, and Hui Xiong†
+    authors: Shengming Zhang, Hao Zhong†, <strong>Zixuan Yuan</strong>, and Hui Xiong†
     conference_short: KDD 2021 (Research Track)
     conference: The 27rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2021)
     #abstract: ……
