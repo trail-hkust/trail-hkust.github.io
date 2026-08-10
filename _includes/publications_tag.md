@@ -489,24 +489,6 @@ AI for Regulatory Compliance </a>
 <!-- NOTES                                             -->
 <!-- ================================================= -->
 
-{% if link.notes %}
-
-  <div
-    style="
-      margin-top:3px;
-      line-height:1.5;
-    ">
-
-    <strong>
-      <i style="color:#e74d3c;">
-        {{ link.notes }}
-      </i>
-    </strong>
-
-  </div>
-
-{% endif %}
-```
 
   </div>
 
