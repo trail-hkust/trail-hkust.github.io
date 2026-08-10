@@ -32,7 +32,7 @@ ResearchGate
   ">
 
   <span style="margin-right:12px;">
-    Topics:
+    <strong>Topics:</strong>
   </span>
 
   <!-- ALL -->
