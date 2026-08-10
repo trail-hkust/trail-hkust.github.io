@@ -9,8 +9,10 @@ main:
     bibtex:
     image: ./assets/files/From-Statute-to-Control-Flow.png
     notes: "Published"
+    
     tag: 
       -"AI for Regulatory Compliance"
+      
     selected: true
     year: 2026
     code: 
