@@ -1,4 +1,8 @@
 
+<!-- ===================================================== -->
+<!-- PUBLICATIONS                                          -->
+<!-- ===================================================== -->
+
 <h1 id="publications"></h1>
 
 <h2 style="margin: 30px 0px 20px;">
@@ -123,7 +127,6 @@
 </div>
 
 
-
 <!-- ===================================================== -->
 <!-- SEARCH + YEAR                                         -->
 <!-- ===================================================== -->
@@ -194,7 +197,7 @@
 
 
 <!-- ===================================================== -->
-<!-- CONVERT MULTIPLE TAGS INTO TOPIC IDS                  -->
+<!-- CONVERT TAGS TO TOPIC IDS                             -->
 <!-- ===================================================== -->
 
 {% assign topic_ids = "" %}
@@ -222,6 +225,7 @@
 {% endfor %}
 
 
+
 <!-- ===================================================== -->
 <!-- ONE PUBLICATION ITEM                                  -->
 <!-- ===================================================== -->
@@ -236,7 +240,7 @@
   data-topics="{{ topic_ids | strip }}"
 
   style="
-    display:flex;
+    display:none;
     width:100%;
     margin-bottom:30px;
     box-sizing:border-box;
@@ -245,7 +249,7 @@
 
 
   <!-- =================================================== -->
-  <!-- LEFT: IMAGE                                          -->
+  <!-- LEFT: IMAGE                                         -->
   <!-- =================================================== -->
 
   <div
@@ -299,7 +303,7 @@
 
 
   <!-- =================================================== -->
-  <!-- RIGHT: INFORMATION                                   -->
+  <!-- RIGHT: INFORMATION                                  -->
   <!-- =================================================== -->
 
   <div
@@ -367,7 +371,7 @@
 
 
     <!-- ================================================= -->
-    <!-- YEAR + MULTIPLE TOPICS                            -->
+    <!-- YEAR + TOPICS                                     -->
     <!-- ================================================= -->
 
     <div
@@ -399,9 +403,9 @@
         {% for tag in link.tag %}
 
 
-          <!-- ------------------------------------------- -->
+          <!-- =========================================== -->
           <!-- CONVERT TAG TO TOPIC ID                     -->
-          <!-- ------------------------------------------- -->
+          <!-- =========================================== -->
 
           {% assign tag_id = "" %}
 
@@ -425,9 +429,10 @@
           {% endif %}
 
 
-          <!-- ------------------------------------------- -->
+
+          <!-- =========================================== -->
           <!-- DISPLAY TAG                                 -->
-          <!-- ------------------------------------------- -->
+          <!-- =========================================== -->
 
           {% if tag_id != "" %}
 
@@ -454,9 +459,10 @@
           {% endif %}
 
 
-          <!-- ------------------------------------------- -->
-          <!-- SEPARATOR                                    -->
-          <!-- ------------------------------------------- -->
+
+          <!-- =========================================== -->
+          <!-- SEPARATOR                                   -->
+          <!-- =========================================== -->
 
           {% unless forloop.last %}
 
@@ -604,14 +610,22 @@
 <!-- ===================================================== -->
 
 <script>
+
 (function () {
+
 
   /* =====================================================
      CURRENT TOPIC
-     Only ONE topic can be active at a time.
+
+     IMPORTANT:
+     null = no topic selected yet
+
+     This means that when the page first loads,
+     NO publications are displayed.
      ===================================================== */
 
-  var currentPublicationTopic = "none";
+  var currentPublicationTopic = null;
+
 
 
   /* =====================================================
@@ -620,19 +634,44 @@
 
   function applyPublicationFilters() {
 
+
+    /* ---------------------------------------------------
+       Get search input
+       --------------------------------------------------- */
+
     var searchInput =
-      document.getElementById("publication-search");
+      document.getElementById(
+        "publication-search"
+      );
+
+
+    /* ---------------------------------------------------
+       Get year selector
+       --------------------------------------------------- */
 
     var yearSelect =
-      document.getElementById("publication-year");
+      document.getElementById(
+        "publication-year"
+      );
 
-    if (!searchInput || !yearSelect) {
+
+    /* ---------------------------------------------------
+       Safety check
+       --------------------------------------------------- */
+
+    if (
+      !searchInput ||
+      !yearSelect
+    ) {
+
       return;
+
     }
 
 
+
     /* ===================================================
-       SEARCH
+       SEARCH KEYWORD
        =================================================== */
 
     var keyword =
@@ -641,16 +680,18 @@
         .trim();
 
 
+
     /* ===================================================
-       YEAR
+       SELECTED YEAR
        =================================================== */
 
     var selectedYear =
       yearSelect.value;
 
 
+
     /* ===================================================
-       PUBLICATIONS
+       PUBLICATION ITEMS
        =================================================== */
 
     var items =
@@ -659,122 +700,174 @@
       );
 
 
+
     /* ===================================================
        FILTER EACH PUBLICATION
        =================================================== */
 
-    items.forEach(function (item) {
-
-      /* -----------------------------------------------
-         YEAR
-         ----------------------------------------------- */
-
-      var year =
-        (
-          item.getAttribute("data-year") || ""
-        )
-        .toLowerCase();
+    items.forEach(
+      function (item) {
 
 
-      /* -----------------------------------------------
-         TOPICS
-         ----------------------------------------------- */
+        /* ===============================================
+           IMPORTANT:
 
-      var topicString =
-        (
-          item.getAttribute("data-topics") || ""
-        )
-        .toLowerCase()
-        .trim();
+           If the user has NOT clicked any topic yet,
+           keep ALL publications hidden.
 
+           Search and Year do NOT override this.
+           =============================================== */
 
-      var topics =
-        topicString === ""
-          ? []
-          : topicString.split(/\s+/);
+        if (
+          currentPublicationTopic === null
+        ) {
 
+          item.style.display = "none";
 
-      /* -----------------------------------------------
-         FULL TEXT
-         ----------------------------------------------- */
+          return;
 
-      var fullText =
-        (
-          item.textContent || ""
-        )
-        .toLowerCase();
+        }
 
 
-      /* -----------------------------------------------
-         SEARCH MATCH
-         ----------------------------------------------- */
 
-      var matchesSearch =
-        keyword === "" ||
-        fullText.indexOf(keyword) !== -1;
+        /* ===============================================
+           TITLE
+           =============================================== */
 
-
-      /* -----------------------------------------------
-         YEAR MATCH
-         ----------------------------------------------- */
-
-      var matchesYear =
-        selectedYear === "all" ||
-        year === selectedYear;
+        var title =
+          (
+            item.getAttribute(
+              "data-title"
+            ) || ""
+          )
+          .toLowerCase();
 
 
-      /* -----------------------------------------------
-         TOPIC MATCH
-         -----------------------------------------------
 
-         IMPORTANT:
+        /* ===============================================
+           YEAR
+           =============================================== */
 
-         currentPublicationTopic contains ONLY ONE
-         topic.
-
-         Therefore clicking another topic REPLACES
-         the previous topic.
-
-         Example:
-
-         first click:
-             investment
-
-         second click:
-             interpretability
-
-         The second click does NOT remember
-         investment.
-         ----------------------------------------------- */
-
-      var matchesTopic =
-        currentPublicationTopic === "all" ||
-        topics.indexOf(
-          currentPublicationTopic
-        ) !== -1;
+        var year =
+          (
+            item.getAttribute(
+              "data-year"
+            ) || ""
+          )
+          .toLowerCase();
 
 
-      /* -----------------------------------------------
-         FINAL RESULT
-         ----------------------------------------------- */
 
-      if (
-        matchesSearch &&
-        matchesYear &&
-        matchesTopic
-      ) {
+        /* ===============================================
+           TOPICS
+           =============================================== */
 
-        item.style.display = "flex";
+        var topicString =
+          (
+            item.getAttribute(
+              "data-topics"
+            ) || ""
+          )
+          .toLowerCase()
+          .trim();
 
-      } else {
 
-        item.style.display = "none";
+
+        var topics =
+          topicString === ""
+            ? []
+            : topicString.split(/\s+/);
+
+
+
+        /* ===============================================
+           FULL TEXT
+           =============================================== */
+
+        var fullText =
+          (
+            item.textContent || ""
+          )
+          .toLowerCase();
+
+
+
+        /* ===============================================
+           SEARCH MATCH
+           =============================================== */
+
+        var matchesSearch =
+          keyword === "" ||
+          title.indexOf(keyword) !== -1 ||
+          fullText.indexOf(keyword) !== -1;
+
+
+
+        /* ===============================================
+           YEAR MATCH
+           =============================================== */
+
+        var matchesYear =
+          selectedYear === "all" ||
+          year === selectedYear;
+
+
+
+        /* ===============================================
+           TOPIC MATCH
+
+           IMPORTANT:
+
+           This is NOT cumulative.
+
+           If current topic is:
+
+           investment
+
+           then only investment is checked.
+
+           If user previously clicked:
+
+           multi-agent
+
+           and then clicks:
+
+           investment
+
+           multi-agent is completely ignored.
+           =============================================== */
+
+        var matchesTopic =
+          currentPublicationTopic === "all" ||
+          topics.indexOf(
+            currentPublicationTopic
+          ) !== -1;
+
+
+
+        /* ===============================================
+           FINAL RESULT
+           =============================================== */
+
+        if (
+          matchesSearch &&
+          matchesYear &&
+          matchesTopic
+        ) {
+
+          item.style.display = "flex";
+
+        } else {
+
+          item.style.display = "none";
+
+        }
 
       }
-
-    });
+    );
 
   }
+
 
 
   /* =====================================================
@@ -783,93 +876,223 @@
 
   window.showPublicationTopic =
     function (topic) {
-  
-      /* ===================================================
-         Save selected topic
-         =================================================== */
-  
-      currentPublicationTopic = topic;
-  
-  
-      /* ===================================================
-         Update TOPIC buttons
-         =================================================== */
-  
+
+
+      /* -------------------------------------------------
+         DIRECTLY REPLACE THE CURRENT TOPIC
+
+         This is the key point.
+
+         Clicking:
+
+         Multi-Agent
+         ↓
+         current = multi-agent
+
+         Then clicking:
+
+         Investment
+         ↓
+         current = investment
+
+         NOT:
+
+         multi-agent + investment
+         ------------------------------------------------- */
+
+      currentPublicationTopic =
+        topic;
+
+
+
+      /* -------------------------------------------------
+         Update topic button appearance
+         ------------------------------------------------- */
+
       var topicButtons =
         document.querySelectorAll(
           ".topic-filter"
         );
-  
-  
+
+
       topicButtons.forEach(
         function (button) {
-  
-          var buttonTopic =
+
+
+          if (
             button.getAttribute(
               "data-topic"
-            );
-  
-  
-          if (buttonTopic === topic) {
-  
-            /* ---------------------------------------------
-               Selected
-               --------------------------------------------- */
-  
-            button.style.fontWeight = "600";
-  
+            ) === topic
+          ) {
+
+
+            button.style.fontWeight =
+              "600";
+
             button.style.borderBottom =
               "2px solid currentColor";
-  
+
             button.style.paddingBottom =
               "2px";
-  
+
+
           } else {
-  
-            /* ---------------------------------------------
-               Not selected
-               --------------------------------------------- */
-  
-            button.style.fontWeight = "400";
-  
+
+
+            button.style.fontWeight =
+              "400";
+
             button.style.borderBottom =
               "2px solid transparent";
-  
+
             button.style.paddingBottom =
               "2px";
-  
+
           }
-  
+
         }
       );
-  
-  
-      /* ===================================================
-         Apply filters
-         =================================================== */
-  
+
+
+
+      /* -------------------------------------------------
+         Apply the newly selected topic
+         ------------------------------------------------- */
+
       applyPublicationFilters();
-  
+
     };
 
 
+
   /* =====================================================
-     SEARCH
+     SEARCH FUNCTION
      ===================================================== */
 
-  var searchInput =
-    document.getElementById(
-      "publication-search"
+  window.searchPublications =
+    function () {
+
+      applyPublicationFilters();
+
+    };
+
+
+
+  /* =====================================================
+     INITIALIZATION
+     ===================================================== */
+
+  function initializePublicationFilters() {
+
+
+    /* ===================================================
+       SEARCH INPUT
+       =================================================== */
+
+    var searchInput =
+      document.getElementById(
+        "publication-search"
+      );
+
+
+    if (searchInput) {
+
+      searchInput.addEventListener(
+        "input",
+        function () {
+
+          applyPublicationFilters();
+
+        }
+      );
+
+    }
+
+
+
+    /* ===================================================
+       YEAR SELECT
+       =================================================== */
+
+    var yearSelect =
+      document.getElementById(
+        "publication-year"
+      );
+
+
+    if (yearSelect) {
+
+      yearSelect.addEventListener(
+        "change",
+        function () {
+
+          applyPublicationFilters();
+
+        }
+      );
+
+    }
+
+
+
+    /* ===================================================
+       INITIAL TOPIC BUTTON STATE
+
+       IMPORTANT:
+
+       No topic is selected initially.
+
+       Therefore:
+       - All is NOT selected
+       - Multi-Agent is NOT selected
+       - Compliance is NOT selected
+       - Interpretability is NOT selected
+       - Investment is NOT selected
+       =================================================== */
+
+    var topicButtons =
+      document.querySelectorAll(
+        ".topic-filter"
+      );
+
+
+    topicButtons.forEach(
+      function (button) {
+
+        button.style.fontWeight =
+          "400";
+
+        button.style.borderBottom =
+          "2px solid transparent";
+
+        button.style.paddingBottom =
+          "2px";
+
+      }
     );
 
 
-  if (searchInput) {
 
-    searchInput.addEventListener(
-      "input",
-      function () {
+    /* ===================================================
+       INITIAL PUBLICATION STATE
 
-        applyPublicationFilters();
+       Explicitly hide everything.
+
+       This guarantees that the first page load
+       contains NO publication items.
+       =================================================== */
+
+    var items =
+      document.querySelectorAll(
+        ".publication-item"
+      );
+
+
+    items.forEach(
+      function (item) {
+
+        item.style.display =
+          "none";
 
       }
     );
@@ -877,36 +1100,15 @@
   }
 
 
-  /* =====================================================
-     YEAR
-     ===================================================== */
-
-  var yearSelect =
-    document.getElementById(
-      "publication-year"
-    );
-
-
-  if (yearSelect) {
-
-    yearSelect.addEventListener(
-      "change",
-      function () {
-
-        applyPublicationFilters();
-
-      }
-    );
-
-  }
-
 
   /* =====================================================
-     INITIAL STATE
+     START
      ===================================================== */
 
-  showPublicationTopic("all");
+  initializePublicationFilters();
+
 
 })();
+
 </script>
 
