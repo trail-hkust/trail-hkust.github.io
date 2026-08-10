@@ -38,7 +38,7 @@
     {{ category }}
   </h3>
 
-  {% assign category_papers = site.data.publications.main | where: "tag", category %}
+  {% assign category_papers = site.data.publications_tag.main | where: "tag", category %}
 
   {% if category_papers.size > 0 %}
 
