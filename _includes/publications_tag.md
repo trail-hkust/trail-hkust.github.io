@@ -1,19 +1,42 @@
 <h1 id="publications"></h1>
 
-<h2 style="margin: 30px 0px -5px;">
+<h2 style="margin: 30px 0px 10px;">
   Publications
-  <span style="font-size:15px;">[</span>
+
+  <temp style="font-size:15px; margin-left:15px;">[</temp>
   <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
      target="_blank"
      style="font-size:15px;">
     Google Scholar
   </a>
-  <span style="font-size:15px;">]</span>
+  <temp style="font-size:15px;">]</temp>
 
-<span style="font-size:15px;">[</span> <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
-  target="_blank"
-  style="font-size:15px;">
-ResearchGate </a> <span style="font-size:15px;">]</span>
+  <temp style="font-size:15px;">[</temp>
+  <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
+     target="_blank"
+     style="font-size:15px;">
+    ResearchGate
+  </a>
+  <temp style="font-size:15px;">]</temp>
+
+  <!-- Selected / All by date -->
+  <span style="font-size:15px; margin-left:25px; font-weight:normal;">
+
+    <a href="javascript:void(0);"
+       id="selected-btn"
+       onclick="setPublicationMode('selected')"
+       style="margin-right:12px; text-decoration:none;">
+      <strong>Selected</strong>
+    </a>
+
+    <a href="javascript:void(0);"
+       id="all-date-btn"
+       onclick="setPublicationMode('all')"
+       style="text-decoration:none;">
+      All by date
+    </a>
+
+  </span>
 
 </h2>
 
