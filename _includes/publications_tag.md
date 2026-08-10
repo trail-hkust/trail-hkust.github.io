@@ -2,18 +2,6 @@
 
 <h2 style="margin: 30px 0px 5px;"> Publications
 
-<temp style="font-size:15px;">[</temp>
-<a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao" target="_blank" style="font-size:15px;">
-Google Scholar
-</a>
-<temp style="font-size:15px;">]</temp>
-
-<temp style="font-size:15px;">[</temp>
-<a href="https://www.researchgate.net/profile/Zixuan-Yuan-4" target="_blank" style="font-size:15px;">
-ResearchGate
-</a>
-<temp style="font-size:15px;">]</temp>
-
 </h2>
 
 <!-- ===================================================== -->
