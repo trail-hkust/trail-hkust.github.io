@@ -1,607 +1,1133 @@
-```html
 <h1 id="publications"></h1>
 
-<h2 style="margin: 30px 0px -15px;">
+<h2 style="margin: 30px 0px -5px;">
   Publications
-  <temp style="font-size:15px;">[</temp>
-  <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
-     target="_blank"
-     style="font-size:15px;">
-    Google Scholar
-  </a>
-  <temp style="font-size:15px;">]</temp>
 
-  <temp style="font-size:15px;">[</temp>
-  <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
-     target="_blank"
-     style="font-size:15px;">
-    ResearchGate
-  </a>
-  <temp style="font-size:15px;">]</temp>
+  <span style="font-size:15px; font-weight:normal; margin-left:10px;">
+    [
+    <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
+       target="_blank">
+      Google Scholar
+    </a>
+    ]
+
+```
+[
+
+<a href="https://www.researchgate.net/profile/Zixuan-Yuan"
+   target="_blank">
+  ResearchGate
+</a>
+]
+```
+
+  </span>
 </h2>
 
-<br>
+<!-- =========================================================
+     PUBLICATION FILTERS
+     ========================================================= -->
+
+<div style="
+    margin: 20px 0 25px 0;
+    font-size: 14px;
+    line-height: 2;
+">
+
+  <!-- Selected / All by date -->
+
+  <div style="margin-bottom: 5px;">
+
+```
+<strong style="margin-right: 15px;">
+  Publications
+</strong>
+
+<a href="javascript:void(0);"
+   onclick="showPublicationMode('selected')"
+   id="selected-tab"
+   style="
+     margin-right: 15px;
+     text-decoration: none;
+     cursor: pointer;
+   ">
+  Selected
+</a>
+
+<a href="javascript:void(0);"
+   onclick="showPublicationMode('all')"
+   id="all-date-tab"
+   style="
+     text-decoration: none;
+     cursor: pointer;
+   ">
+  All by date
+</a>
+```
+
+  </div>
+
+  <!-- Topics -->
+
+  <div id="topic-filters"
+       style="
+         margin-top: 5px;
+         display: none;
+       ">
+
+```
+<strong style="margin-right: 12px;">
+  Topics:
+</strong>
 
 
-<!-- ========================= -->
-<!-- Publication Mode -->
-<!-- ========================= -->
+<!-- All -->
 
-<div style="margin-bottom: 8px;">
+<a href="javascript:void(0);"
+   onclick="filterPublications('all')"
+   class="topic-link active-topic"
+   data-topic="all">
+  All
+</a>
 
-  <button
-    id="selected-btn"
-    class="publication-mode active"
-    onclick="setPublicationMode('selected')">
-    Selected
-  </button>
 
-  <button
-    id="all-date-btn"
-    class="publication-mode"
-    onclick="setPublicationMode('all')">
-    All by date
-  </button>
+<span style="margin: 0 7px;">
+  |
+</span>
+
+
+<!-- Multi-Agent -->
+
+<a href="javascript:void(0);"
+   onclick="filterPublications('Multi-Agent Learning & Reasoning')"
+   class="topic-link"
+   data-topic="Multi-Agent Learning & Reasoning">
+  Multi-Agent Learning &amp; Reasoning
+</a>
+
+
+<span style="margin: 0 7px;">
+  |
+</span>
+
+
+<!-- Model Interpretation -->
+
+<a href="javascript:void(0);"
+   onclick="filterPublications('Model Interpretation, Representation & Evaluation')"
+   class="topic-link"
+   data-topic="Model Interpretation, Representation & Evaluation">
+  Model Interpretation, Representation &amp; Evaluation
+</a>
+
+
+<span style="margin: 0 7px;">
+  |
+</span>
+
+
+<!-- AI Investment -->
+
+<a href="javascript:void(0);"
+   onclick="filterPublications('AI-driven investment')"
+   class="topic-link"
+   data-topic="AI-driven investment">
+  AI for Investment
+</a>
+
+
+<span style="margin: 0 7px;">
+  |
+</span>
+
+
+<!-- Regulatory Compliance -->
+
+<a href="javascript:void(0);"
+   onclick="filterPublications('AI for regulatory compliance')"
+   class="topic-link"
+   data-topic="AI for Regulatory Compliance">
+  AI for Regulatory Compliance
+</a>
+```
+
+  </div>
 
 </div>
 
-
-<!-- ========================= -->
-<!-- Topics -->
-<!-- ========================= -->
-
-<div id="topics-container"
-     style="margin-bottom: 25px;">
-
-  <strong style="font-size: 15px;">
-    Topics:
-  </strong>
-
-  <button
-    class="topic-btn active"
-    data-topic="All"
-    onclick="filterTopic('All')">
-    All
-  </button>
-
-  <button
-    class="topic-btn"
-    data-topic="Multi-Agent Learning & Reasoning"
-    onclick="filterTopic('Multi-Agent Learning & Reasoning')">
-    Multi-Agent Learning & Reasoning
-  </button>
-
-  <button
-    class="topic-btn"
-    data-topic="Model Interpretability, Representation & Evaluation"
-    onclick="filterTopic('Model Interpretability, Representation & Evaluation')">
-    Model Interpretability, Representation & Evaluation
-  </button>
-
-  <button
-    class="topic-btn"
-    data-topic="AI for Investment"
-    onclick="filterTopic('AI for Investment')">
-    AI for Investment
-  </button>
-
-  <button
-    class="topic-btn"
-    data-topic="AI for Regulatory Compliance"
-    onclick="filterTopic('AI for Regulatory Compliance')">
-    AI for Regulatory Compliance
-  </button>
-
-</div>
-
-
-<!-- ========================= -->
-<!-- CSS -->
-<!-- ========================= -->
+<!-- =========================================================
+     CSS
+     ========================================================= -->
 
 <style>
 
-.publication-mode {
-  background: none;
-  border: none;
-  padding: 0;
-  margin-right: 20px;
-
-  font-size: 15px;
-  cursor: pointer;
-
-  color: #777;
-}
-
-.publication-mode:hover {
-  color: #000;
-}
-
-.publication-mode.active {
-  color: #000;
-  font-weight: 600;
-}
-
-
-.topic-btn {
-  background: none;
-  border: none;
-
-  padding: 0;
-  margin-left: 12px;
-  margin-bottom: 6px;
-
-  font-size: 14px;
-
-  color: #777;
-
-  cursor: pointer;
-}
-
-.topic-btn:hover {
-  color: #000;
-}
-
-.topic-btn.active {
-  color: #000;
-  font-weight: 600;
-}
-
-
-/* ========================= */
-/* Publication */
-/* ========================= */
+/* =========================================================
+   Publication layout
+   ========================================================= */
 
 .publication-item {
-  margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
 
-/* Image */
+.publication-entry {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   LEFT: IMAGE
+   30%
+   ========================================================= */
 
 .publication-image {
-  width: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 30%;
 
-  margin-bottom: 15px;
-}
+    flex: 0 0 30%;
 
-.publication-image img {
-  display: block;
+    padding-right: 25px;
 
-  max-width: 100%;
-  width: auto;
-  height: auto;
+    box-sizing: border-box;
 
-  object-fit: contain;
 }
 
 
-/* Information */
+/* =========================================================
+   RIGHT: INFORMATION
+   70%
+   ========================================================= */
 
 .publication-info {
-  text-align: center;
 
-  padding: 10px 15px;
+    width: 70%;
+
+    flex: 0 0 70%;
+
+    box-sizing: border-box;
+
 }
 
 
-/* Title */
+/* =========================================================
+   IMAGE PREVIEW BOX
+   ========================================================= */
+
+.publication-image-container {
+
+    width: 100%;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #f7f7f7;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+}
+
+
+/*
+ * The image fills the preview box.
+ *
+ * object-fit: cover
+ *
+ * means different aspect ratios are cropped
+ * instead of changing the box size.
+ */
+
+.publication-image-container img {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.2s ease;
+
+}
+
+
+/* Slight zoom on hover */
+
+.publication-image-container:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   FULL-SIZE IMAGE LIGHTBOX
+   ========================================================= */
+
+.image-lightbox {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 99999;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    cursor: zoom-out;
+
+}
+
+
+.image-lightbox img {
+
+    max-width: 95vw;
+
+    max-height: 95vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    cursor: default;
+
+}
+
+
+.image-lightbox-close {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 34px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+    line-height: 1;
+
+}
+
+
+.image-lightbox-close:hover {
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
 
 .publication-title {
-  font-size: 18px;
-  font-weight: 600;
 
-  margin-bottom: 8px;
+    font-size: 17px;
+
+    line-height: 1.45;
+
+    margin-bottom: 8px;
+
 }
 
 
-/* Authors */
+.publication-title a {
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   AUTHORS
+   ========================================================= */
 
 .publication-authors {
-  margin-bottom: 6px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 7px;
+
 }
 
 
-/* Conference */
+/* =========================================================
+   CONFERENCE
+   ========================================================= */
 
 .publication-conference {
-  margin-bottom: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+
 }
 
 
-/* Links */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
-.publication-links a {
-  display: inline-block;
+.publication-links {
 
-  padding: 3px 8px;
+    margin-top: 8px;
 
-  margin: 2px;
-
-  border: 1px solid #aaa;
-  border-radius: 3px;
-
-  font-size: 12px;
-
-  text-decoration: none;
 }
 
-.publication-links a:hover {
-  background-color: #f5f5f5;
+
+.publication-button {
+
+    display: inline-block;
+
+    padding: 2px 8px;
+
+    margin-right: 5px;
+
+    margin-bottom: 5px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 3px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-decoration: none !important;
+
+    background: transparent;
+
+}
+
+
+.publication-button:hover {
+
+    background: #f5f5f5;
+
+}
+
+
+/* =========================================================
+   PUBLISHED
+   ========================================================= */
+
+.publication-status {
+
+    font-size: 12px;
+
+    margin-left: 5px;
+
+    color: #e74d3c;
+
+}
+
+
+/* =========================================================
+   TOPICS
+   ========================================================= */
+
+.topic-link {
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.topic-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.active-topic {
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+    .publication-entry {
+
+        display: block;
+
+    }
+
+
+    .publication-image {
+
+        width: 100%;
+
+        padding-right: 0;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .publication-info {
+
+        width: 100%;
+
+    }
+
+
+    .publication-image-container {
+
+        height: 220px;
+
+    }
+
 }
 
 </style>
 
+<!-- =========================================================
+     PUBLICATIONS
+     ========================================================= -->
 
-<!-- ========================= -->
-<!-- Publications -->
-<!-- ========================= -->
+<div class="publications">
 
-<div id="publications-list">
+  <ol class="bibliography"
+      style="
+        padding-left: 0;
+        list-style: none;
+      ">
 
+```
 {% for link in site.data.publications_tag.main %}
 
-<div
-  class="publication-item"
-  data-tag="{{ link.tag }}"
-  data-selected="{% if link.selected == true %}true{% else %}false{% endif %}"
->
+
+<li class="publication-item"
+    data-topic="{{ link.tag }}">
 
 
-  <!-- Image -->
-
-  {% if link.image %}
-
-  <div class="publication-image">
-
-    <img
-      src="{{ link.image }}"
-      class="img-fluid z-depth-1"
-      alt="{{ link.title }}"
-    >
-
-  </div>
-
-  {% endif %}
+  <div class="publication-entry">
 
 
-  <!-- Information -->
+    <!-- =================================================
+         LEFT IMAGE
+         ================================================= -->
 
-  <div class="publication-info">
+    <div class="publication-image">
 
 
-    <!-- Title -->
+      {% if link.image %}
 
-    <div class="publication-title">
 
-      {% if link.pdf %}
+      <div class="publication-image-container"
+           onclick="openImageLightbox('{{ link.image }}')">
 
-      <a
-        href="{{ link.pdf }}"
-        target="_blank">
+
+        <img src="{{ link.image }}"
+             class="teaser img-fluid z-depth-1"
+             alt="{{ link.title }}">
+
+
+      </div>
+
+
+      {% endif %}
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         RIGHT INFORMATION
+         ================================================= -->
+
+    <div class="publication-info">
+
+
+      <!-- TITLE -->
+
+      <div class="publication-title">
+
+
+        {% if link.pdf %}
+
+
+        <a href="{{ link.pdf }}"
+           target="_blank">
+
+          {{ link.title }}
+
+        </a>
+
+
+        {% else %}
+
+
         {{ link.title }}
-      </a>
-
-      {% else %}
-
-      {{ link.title }}
-
-      {% endif %}
-
-    </div>
 
 
-    <!-- Authors -->
-
-    <div class="publication-authors">
-      {{ link.authors }}
-    </div>
+        {% endif %}
 
 
-    <!-- Conference -->
-
-    <div class="publication-conference">
-
-      <em>
-        {{ link.conference }}
-      </em>
-
-    </div>
+      </div>
 
 
-    <!-- Links -->
 
-    <div class="publication-links">
+      <!-- AUTHORS -->
 
+      <div class="publication-authors">
 
-      {% if link.pdf %}
+        {{ link.authors }}
 
-      <a
-        href="{{ link.pdf }}"
-        target="_blank">
-        PDF
-      </a>
-
-      {% endif %}
+      </div>
 
 
-      {% if link.web %}
 
-      <a
-        href="{{ link.web }}"
-        target="_blank">
-        Website
-      </a>
+      <!-- CONFERENCE -->
 
-      {% endif %}
+      <div class="publication-conference">
 
+        <em>
+          {{ link.conference }}
+        </em>
 
-      {% if link.bibtex %}
-
-      <a
-        href="{{ link.bibtex }}"
-        target="_blank">
-        BibTeX
-      </a>
-
-      {% endif %}
+      </div>
 
 
-      {% if link.code %}
 
-      <a
-        href="{{ link.code }}"
-        target="_blank">
-        Code
-      </a>
+      <!-- LINKS -->
 
-      {% endif %}
+      <div class="publication-links">
 
 
-      {% if link.page %}
+        <!-- PDF -->
 
-      <a
-        href="{{ link.page }}"
-        target="_blank">
-        Project Page
-      </a>
+        {% if link.pdf %}
 
-      {% endif %}
+        <a href="{{ link.pdf }}"
+           class="publication-button"
+           target="_blank">
+
+          PDF
+
+        </a>
+
+        {% endif %}
 
 
-      {% if link.notes %}
 
-      <strong style="margin-left: 5px;">
-        <i style="color:#e74d3c;">
+        <!-- WEBSITE -->
+
+        {% if link.web %}
+
+        <a href="{{ link.web }}"
+           class="publication-button"
+           target="_blank">
+
+          Website
+
+        </a>
+
+        {% endif %}
+
+
+
+        <!-- CODE -->
+
+        {% if link.code %}
+
+        <a href="{{ link.code }}"
+           class="publication-button"
+           target="_blank">
+
+          Code
+
+        </a>
+
+        {% endif %}
+
+
+
+        <!-- BIBTEX -->
+
+        {% if link.bibtex %}
+
+        <a href="{{ link.bibtex }}"
+           class="publication-button"
+           target="_blank">
+
+          BibTex
+
+        </a>
+
+        {% endif %}
+
+
+
+        <!-- PROJECT PAGE -->
+
+        {% if link.page %}
+
+        <a href="{{ link.page }}"
+           class="publication-button"
+           target="_blank">
+
+          Project Page
+
+        </a>
+
+        {% endif %}
+
+
+
+        <!-- NOTES -->
+
+        {% if link.notes %}
+
+        <span class="publication-status">
+
           {{ link.notes }}
-        </i>
-      </strong>
 
-      {% endif %}
+        </span>
+
+        {% endif %}
 
 
-      {% if link.others %}
 
-      {{ link.others }}
+        <!-- OTHERS -->
 
-      {% endif %}
+        {% if link.others %}
+
+          {{ link.others }}
+
+        {% endif %}
+
+
+      </div>
 
 
     </div>
+
 
   </div>
 
-</div>
+
+</li>
+
 
 {% endfor %}
+```
+
+  </ol>
 
 </div>
 
+<!-- =========================================================
+     IMAGE LIGHTBOX
+     ========================================================= -->
 
-<!-- ========================= -->
-<!-- JavaScript -->
-<!-- ========================= -->
+<div id="imageLightbox"
+     class="image-lightbox"
+     onclick="closeImageLightbox(event)">
+
+<span class="image-lightbox-close"
+     onclick="closeImageLightbox(event)">
+
+```
+&times;
+```
+
+  </span>
+
+<img id="lightboxImage"
+    src=""
+    alt="Full-size publication image"
+    onclick="event.stopPropagation();">
+
+</div>
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
 
 <script>
 
-let currentMode = "selected";
-let currentTopic = "All";
+
+/* =========================================================
+   Current filter state
+   ========================================================= */
+
+var currentMode = "selected";
+
+var currentTopic = "all";
 
 
-function updatePublications() {
 
-  const papers =
-    document.querySelectorAll(".publication-item");
+/* =========================================================
+   SELECTED / ALL BY DATE
+   ========================================================= */
 
-
-  papers.forEach(function(paper) {
-
-    const selected =
-      paper.getAttribute("data-selected") === "true";
-
-    const tag =
-      paper.getAttribute("data-tag");
+function showPublicationMode(mode) {
 
 
-    let show = true;
+    currentMode = mode;
 
 
-    /*
-     * Selected / All by date
-     */
+    var topicFilters =
+        document.getElementById("topic-filters");
 
-    if (currentMode === "selected") {
 
-      if (!selected) {
-        show = false;
-      }
+    var selectedTab =
+        document.getElementById("selected-tab");
+
+
+    var allDateTab =
+        document.getElementById("all-date-tab");
+
+
+
+    if (mode === "selected") {
+
+
+        /* Show Topics */
+
+        topicFilters.style.display = "block";
+
+
+        /* Highlight Selected */
+
+        selectedTab.style.fontWeight = "bold";
+
+        allDateTab.style.fontWeight = "normal";
+
+
+        /* Apply current topic */
+
+        filterPublications(currentTopic);
+
 
     }
 
 
+    else {
+
+
+        /* Hide Topics */
+
+        topicFilters.style.display = "none";
+
+
+        /* Highlight All by date */
+
+        selectedTab.style.fontWeight = "normal";
+
+        allDateTab.style.fontWeight = "bold";
+
+
+        /* Show all publications */
+
+        var papers =
+            document.querySelectorAll(".publication-item");
+
+
+        papers.forEach(function(paper) {
+
+            paper.style.display = "";
+
+        });
+
+
+    }
+
+}
+
+
+
+/* =========================================================
+   TOPIC FILTER
+   ========================================================= */
+
+function filterPublications(topic) {
+
+
+    currentTopic = topic;
+
+
+    currentMode = "selected";
+
+
+    var papers =
+        document.querySelectorAll(".publication-item");
+
+
+    papers.forEach(function(paper) {
+
+
+        var paperTopic =
+            paper.getAttribute("data-topic");
+
+
+        if (
+            topic === "all" ||
+            paperTopic === topic
+        ) {
+
+
+            paper.style.display = "";
+
+
+        }
+
+
+        else {
+
+
+            paper.style.display = "none";
+
+
+        }
+
+
+    });
+
+
+
+    /* Update active topic */
+
+    var topicLinks =
+        document.querySelectorAll(".topic-link");
+
+
+    topicLinks.forEach(function(link) {
+
+
+        var linkTopic =
+            link.getAttribute("data-topic");
+
+
+        if (linkTopic === topic) {
+
+
+            link.classList.add("active-topic");
+
+
+        }
+
+
+        else {
+
+
+            link.classList.remove("active-topic");
+
+
+        }
+
+
+    });
+
+
+
+    /* Make sure Selected is active */
+
+    document.getElementById(
+        "selected-tab"
+    ).style.fontWeight = "bold";
+
+
+    document.getElementById(
+        "all-date-tab"
+    ).style.fontWeight = "normal";
+
+
+    document.getElementById(
+        "topic-filters"
+    ).style.display = "block";
+
+}
+
+
+
+/* =========================================================
+   IMAGE LIGHTBOX
+   ========================================================= */
+
+function openImageLightbox(imageSrc) {
+
+
+    var lightbox =
+        document.getElementById("imageLightbox");
+
+
+    var image =
+        document.getElementById("lightboxImage");
+
+
+    image.src = imageSrc;
+
+
+    lightbox.style.display = "flex";
+
+
+    /* Prevent background scrolling */
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+
+/* =========================================================
+   CLOSE LIGHTBOX
+   ========================================================= */
+
+function closeImageLightbox(event) {
+
+
+    var lightbox =
+        document.getElementById("imageLightbox");
+
+
     /*
-     * Topic filter
+     * Close if:
      *
-     * Only applies to Selected mode
+     * 1. background is clicked
+     * 2. × is clicked
      */
 
     if (
-      currentMode === "selected" &&
-      currentTopic !== "All"
+        event.target.id === "imageLightbox" ||
+        event.target.classList.contains(
+            "image-lightbox-close"
+        )
     ) {
 
-      if (tag !== currentTopic) {
-        show = false;
-      }
+
+        lightbox.style.display = "none";
+
+
+        document.getElementById(
+            "lightboxImage"
+        ).src = "";
+
+
+        document.body.style.overflow = "";
 
     }
 
-
-    /*
-     * Display
-     */
-
-    if (show) {
-
-      paper.style.display = "";
-
-    } else {
-
-      paper.style.display = "none";
-
-    }
-
-  });
-
 }
 
 
-/* ========================= */
-/* Mode */
-/* ========================= */
 
-function setPublicationMode(mode) {
-
-  currentMode = mode;
-
-
-  /*
-   * Update mode buttons
-   */
-
-  document
-    .getElementById("selected-btn")
-    .classList.remove("active");
-
-  document
-    .getElementById("all-date-btn")
-    .classList.remove("active");
-
-
-  if (mode === "selected") {
-
-    document
-      .getElementById("selected-btn")
-      .classList.add("active");
-
-
-    /*
-     * Show Topics
-     */
-
-    document
-      .getElementById("topics-container")
-      .style.display = "";
-
-
-  } else {
-
-    document
-      .getElementById("all-date-btn")
-      .classList.add("active");
-
-
-    /*
-     * Hide Topics
-     */
-
-    document
-      .getElementById("topics-container")
-      .style.display = "none";
-
-  }
-
-
-  /*
-   * Reset topic when switching modes
-   */
-
-  currentTopic = "All";
-
-
-  document
-    .querySelectorAll(".topic-btn")
-    .forEach(function(button) {
-
-      button.classList.remove("active");
-
-      if (button.dataset.topic === "All") {
-        button.classList.add("active");
-      }
-
-    });
-
-
-  updatePublications();
-
-}
-
-
-/* ========================= */
-/* Topic */
-/* ========================= */
-
-function filterTopic(topic) {
-
-  currentTopic = topic;
-
-
-  document
-    .querySelectorAll(".topic-btn")
-    .forEach(function(button) {
-
-      button.classList.remove("active");
-
-      if (button.dataset.topic === topic) {
-
-        button.classList.add("active");
-
-      }
-
-    });
-
-
-  updatePublications();
-
-}
-
-
-/* ========================= */
-/* Initial state */
-/* ========================= */
+/* =========================================================
+   ESC KEY
+   ========================================================= */
 
 document.addEventListener(
-  "DOMContentLoaded",
-  function() {
+    "keydown",
+    function(event) {
 
-    setPublicationMode("selected");
 
-  }
+        if (event.key === "Escape") {
+
+
+            var lightbox =
+                document.getElementById(
+                    "imageLightbox"
+                );
+
+
+            if (
+                lightbox.style.display === "flex"
+            ) {
+
+
+                lightbox.style.display = "none";
+
+
+                document.getElementById(
+                    "lightboxImage"
+                ).src = "";
+
+
+                document.body.style.overflow = "";
+
+            }
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   INITIAL STATE
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        showPublicationMode("selected");
+
+    }
 );
 
 </script>
-```
