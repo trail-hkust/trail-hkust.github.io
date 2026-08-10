@@ -611,7 +611,7 @@
      Only ONE topic can be active at a time.
      ===================================================== */
 
-  var currentPublicationTopic = "all";
+  var currentPublicationTopic = "none";
 
 
   /* =====================================================
