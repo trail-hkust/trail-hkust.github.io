@@ -306,7 +306,9 @@ AI for Regulatory Compliance </a>
 
   {% if topic_id != "" %}
   
-  <span style="margin-left:10px;">
+  <span style="margin-left:6px; margin-right:6px;">
+    ·
+  </span>
   
     <a
       href="javascript:void(0);"
