@@ -38,7 +38,7 @@ main:
     bibtex: 
     image: ./assets/files/Pen2Sword.png
     notes: "Published"
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -81,7 +81,7 @@ main:
     bibtex:
     image: ./assets/files/climateqa.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -147,7 +147,7 @@ main:
     bibtex: ./assets/files/Self-Paced.txt
     image: ./assets/files/Self-Paced.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -214,7 +214,7 @@ main:
     bibtex: ./assets/files/multi-faceted.txt
     image: ./assets/files/multi-faceted.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -242,7 +242,7 @@ main:
     bibtex: ./assets/files/STGL.txt
     image: ./assets/files/STGL.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -256,7 +256,7 @@ main:
     bibtex: ./assets/files/domain.txt
     image: ./assets/files/domain.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -284,7 +284,7 @@ main:
     bibtex: ./assets/files/LG.txt
     image: ./assets/files/LG.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
 
 
@@ -313,5 +313,5 @@ main:
     bibtex: ./assets/files/STDGAT.txt
     image: ./assets/files/STDGAT2.jpg
     notes: Published
-    tag: "Model Interpretation, Representation & Evaluation"
+    tag: "Model Interpretability, Representation & Evaluation"
     selected: true
