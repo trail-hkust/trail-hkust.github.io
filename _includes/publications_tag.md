@@ -25,21 +25,28 @@ ResearchGate </a> <span style="font-size:15px;">]</span>
 
 <!-- ===================================================== -->
 
-<div style="margin-bottom: 8px; font-size: 14px;">
+<div style="
+     margin-bottom:8px;
+     font-size:14px;
+     ">
 
 <a href="javascript:void(0);"
   id="selected-btn"
   onclick="setPublicationMode('selected')"
-  style="margin-right: 18px;
-         text-decoration: none;
-         font-weight: 600;">
+  style="
+    margin-right:18px;
+    text-decoration:none;
+    font-weight:600;
+  ">
 Selected </a>
 
 <a href="javascript:void(0);"
   id="all-date-btn"
   onclick="setPublicationMode('all')"
-  style="text-decoration: none;
-         font-weight: 400;">
+  style="
+    text-decoration:none;
+    font-weight:400;
+  ">
 All by date </a>
 
 </div>
@@ -50,39 +57,51 @@ All by date </a>
 
 <!-- ===================================================== -->
 
-<div style="margin-bottom: 25px; font-size: 14px; line-height: 2;">
+<div style="
+     margin-bottom:25px;
+     font-size:14px;
+     line-height:2;
+     ">
 
-  <strong style="margin-right: 8px;">
+  <strong style="margin-right:8px;">
     Topics:
   </strong>
 
 <a href="javascript:void(0);"
   onclick="showPublicationTopic('all')"
-  style="margin-right: 15px;
-         text-decoration: none;">
+  style="
+    margin-right:15px;
+    text-decoration:none;
+  ">
 All </a>
 
 <a href="javascript:void(0);"
   onclick="showPublicationTopic('multi-agent')"
-  style="margin-right: 15px;
-         text-decoration: none;">
+  style="
+    margin-right:15px;
+    text-decoration:none;
+  ">
 Multi-Agent Learning & Reasoning </a>
 
 <a href="javascript:void(0);"
   onclick="showPublicationTopic('interpretability')"
-  style="margin-right: 15px;
-         text-decoration: none;">
+  style="
+    margin-right:15px;
+    text-decoration:none;
+  ">
 Model Interpretability, Representation & Evaluation </a>
 
 <a href="javascript:void(0);"
   onclick="showPublicationTopic('investment')"
-  style="margin-right: 15px;
-         text-decoration: none;">
+  style="
+    margin-right:15px;
+    text-decoration:none;
+  ">
 AI for Investment </a>
 
 <a href="javascript:void(0);"
   onclick="showPublicationTopic('compliance')"
-  style="text-decoration: none;">
+  style="text-decoration:none;">
 AI for Regulatory Compliance </a>
 
 </div>
@@ -107,14 +126,20 @@ AI for Regulatory Compliance </a>
 {% assign topic_id = "compliance" %}
 {% endif %}
 
+<!-- ===================================================== -->
+
+<!-- ONE PUBLICATION -->
+
+<!-- ===================================================== -->
+
 <div class="publication-item"
      data-topic="{{ topic_id }}"
      data-selected="{{ link.selected }}"
      style="
        display:flex;
        width:100%;
-       margin-bottom:35px;
        align-items:flex-start;
+       margin-bottom:35px;
        box-sizing:border-box;
      ">
 
@@ -131,7 +156,7 @@ AI for Regulatory Compliance </a>
        box-sizing:border-box;
        ">
 
-
+```
 {% if link.image %}
 
   <a href="{{ link.image }}"
@@ -147,8 +172,8 @@ AI for Regulatory Compliance </a>
        background:#f7f7f7;
        border:1px solid #e5e5e5;
        border-radius:4px;
-       text-decoration:none;
        box-sizing:border-box;
+       text-decoration:none;
      ">
 
     <img
@@ -166,7 +191,7 @@ AI for Regulatory Compliance </a>
   </a>
 
 {% endif %}
-
+```
 
   </div>
 
@@ -180,18 +205,19 @@ AI for Regulatory Compliance </a>
        width:70%;
        flex:0 0 70%;
        box-sizing:border-box;
-       padding:0;
        ">
 
-
+```
+<!-- ================================================= -->
 <!-- TITLE -->
+<!-- ================================================= -->
 
 <div class="title"
      style="
        font-size:17px;
        font-weight:600;
        line-height:1.45;
-       margin-bottom:8px;
+       margin-bottom:7px;
      ">
 
   {% if link.pdf %}
@@ -211,11 +237,13 @@ AI for Regulatory Compliance </a>
 </div>
 
 
+<!-- ================================================= -->
 <!-- AUTHORS -->
+<!-- ================================================= -->
 
 <div class="author"
      style="
-       margin-bottom:6px;
+       margin-bottom:5px;
        line-height:1.5;
      ">
 
@@ -224,36 +252,77 @@ AI for Regulatory Compliance </a>
 </div>
 
 
-<!-- CONFERENCE -->
+<!-- ================================================= -->
+<!-- YEAR + TOPIC -->
+<!-- ================================================= -->
 
-<div class="periodical"
-     style="
-       margin-bottom:10px;
-       line-height:1.5;
+<div style="
+     margin-bottom:7px;
+     line-height:1.5;
+     font-size:14px;
      ">
 
-  <em>{{ link.conference }}</em>
+  {% assign conference_year =
+     link.conference_short
+     | split: " "
+     | last %}
+
+  {% if conference_year contains "202" %}
+
+    <em>{{ conference_year | remove: ")" }}</em>
+
+  {% endif %}
+
+
+  {% if topic_id != "" %}
+
+    <span style="margin-left:10px;">
+
+      <a href="javascript:void(0);"
+         onclick="showPublicationTopic('{{ topic_id }}')"
+         style="
+           text-decoration:none;
+         ">
+        {{ link.tag }}
+      </a>
+
+    </span>
+
+  {% endif %}
 
 </div>
 
 
-<!-- LINKS -->
+<!-- ================================================= -->
+<!-- CONFERENCE SHORT + LINKS -->
+<!-- ================================================= -->
 
-<div class="links"
-     style="
-       margin-top:8px;
-       line-height:1.8;
+<div style="
+     line-height:1.8;
+     font-size:13px;
      ">
+
+  {% if link.conference_short %}
+
+    <strong>
+      {{ link.conference_short }}
+    </strong>
+
+  {% endif %}
 
 
   {% if link.pdf %}
+
+    <span style="margin-left:8px;">
+      /
+    </span>
 
     <a href="{{ link.pdf }}"
        target="_blank"
        style="
          display:inline-block;
-         padding:3px 8px;
-         margin-right:5px;
+         padding:2px 7px;
+         margin-left:5px;
          border:1px solid #cccccc;
          border-radius:3px;
          font-size:12px;
@@ -267,12 +336,16 @@ AI for Regulatory Compliance </a>
 
   {% if link.web %}
 
+    <span style="margin-left:5px;">
+      /
+    </span>
+
     <a href="{{ link.web }}"
        target="_blank"
        style="
          display:inline-block;
-         padding:3px 8px;
-         margin-right:5px;
+         padding:2px 7px;
+         margin-left:5px;
          border:1px solid #cccccc;
          border-radius:3px;
          font-size:12px;
@@ -286,12 +359,16 @@ AI for Regulatory Compliance </a>
 
   {% if link.code %}
 
+    <span style="margin-left:5px;">
+      /
+    </span>
+
     <a href="{{ link.code }}"
        target="_blank"
        style="
          display:inline-block;
-         padding:3px 8px;
-         margin-right:5px;
+         padding:2px 7px;
+         margin-left:5px;
          border:1px solid #cccccc;
          border-radius:3px;
          font-size:12px;
@@ -305,12 +382,16 @@ AI for Regulatory Compliance </a>
 
   {% if link.bibtex %}
 
+    <span style="margin-left:5px;">
+      /
+    </span>
+
     <a href="{{ link.bibtex }}"
        target="_blank"
        style="
          display:inline-block;
-         padding:3px 8px;
-         margin-right:5px;
+         padding:2px 7px;
+         margin-left:5px;
          border:1px solid #cccccc;
          border-radius:3px;
          font-size:12px;
@@ -324,7 +405,7 @@ AI for Regulatory Compliance </a>
 
   {% if link.notes %}
 
-    <strong style="margin-left:5px;">
+    <strong style="margin-left:8px;">
       <i style="color:#e74d3c;">
         {{ link.notes }}
       </i>
@@ -339,9 +420,8 @@ AI for Regulatory Compliance </a>
 
   {% endif %}
 
-
 </div>
-
+```
 
   </div>
 
@@ -359,7 +439,8 @@ AI for Regulatory Compliance </a>
 
 function showPublicationTopic(topic) {
 
-  var items = document.querySelectorAll(".publication-item");
+  var items =
+    document.querySelectorAll(".publication-item");
 
   items.forEach(function(item) {
 
@@ -370,9 +451,13 @@ function showPublicationTopic(topic) {
     } else {
 
       if (item.getAttribute("data-topic") === topic) {
+
         item.style.display = "flex";
+
       } else {
+
         item.style.display = "none";
+
       }
 
     }
@@ -384,7 +469,8 @@ function showPublicationTopic(topic) {
 
 function setPublicationMode(mode) {
 
-  var items = document.querySelectorAll(".publication-item");
+  var items =
+    document.querySelectorAll(".publication-item");
 
   var selectedButton =
     document.getElementById("selected-btn");
@@ -397,7 +483,9 @@ function setPublicationMode(mode) {
 
     items.forEach(function(item) {
 
-      if (item.getAttribute("data-selected") === "true") {
+      if (
+        item.getAttribute("data-selected") === "true"
+      ) {
 
         item.style.display = "flex";
 
@@ -431,7 +519,9 @@ function setPublicationMode(mode) {
 }
 
 
-/* Default: Selected */
+/* ===================================================== */
+/* DEFAULT MODE */
+/* ===================================================== */
 
 setPublicationMode("selected");
 
