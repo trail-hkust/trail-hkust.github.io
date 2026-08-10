@@ -166,52 +166,36 @@ AI for Investment </a>
 
 {% for link in site.data.publications_tag.main %}
 
-<div
-  class="publication-item"
-  data-title="{{ link.title | escape | downcase }}"
-  data-year="{{ link.year }}"
-  data-topic="{{ link.tag }}"
-  data-selected="{{ link.selected | default: false }}"
-  style="display:flex; margin-bottom:30px;"
->
-
-
-<!-- ===================================================== -->
-
-<!-- DETERMINE TOPIC ID                                    -->
-
-<!-- ===================================================== -->
-
 {% assign topic_id = "" %}
 
 {% if link.tag == "Multi-Agent Learning & Reasoning" %}
 
-{% assign topic_id = "multi-agent" %}
+  {% assign topic_id = "multi-agent" %}
 
 {% elsif link.tag == "Model Interpretability, Representation & Evaluation" %}
 
-{% assign topic_id = "interpretability" %}
+  {% assign topic_id = "interpretability" %}
 
 {% elsif link.tag == "AI-driven Investment" %}
 
-{% assign topic_id = "investment" %}
+  {% assign topic_id = "investment" %}
 
 {% elsif link.tag == "AI for Regulatory Compliance" %}
 
-{% assign topic_id = "compliance" %}
+  {% assign topic_id = "compliance" %}
 
+{% endif %}
 
 
 <!-- ===================================================== -->
-
-<!-- PUBLICATION ITEM                                      -->
-
+<!-- ONE PUBLICATION ITEM                                  -->
 <!-- ===================================================== -->
 
 <div
   class="publication-item"
+  data-title="{{ link.title | escape | downcase }}"
+  data-year="{{ link.year }}"
   data-topic="{{ topic_id }}"
-  data-selected="{{ link.selected }}"
   style="
     display:flex;
     width:100%;
@@ -219,10 +203,9 @@ AI for Investment </a>
     box-sizing:border-box;
   ">
 
+
   <!-- =================================================== -->
-
-  <!-- LEFT: IMAGE 30%                                     -->
-
+  <!-- LEFT: IMAGE                                          -->
   <!-- =================================================== -->
 
   <div
@@ -233,49 +216,46 @@ AI for Investment </a>
       box-sizing:border-box;
     ">
 
+    {% if link.image %}
 
-{% if link.image %}
+      <a
+        href="{{ link.image }}"
+        target="_blank"
+        style="
+          display:flex;
+          width:100%;
+          height:180px;
+          align-items:center;
+          justify-content:center;
+          overflow:hidden;
+          background:#f7f7f7;
+          border:1px solid #e5e5e5;
+          border-radius:4px;
+          text-decoration:none;
+          box-sizing:border-box;
+        ">
 
-  <a
-    href="{{ link.image }}"
-    target="_blank"
-    style="
-      display:flex;
-      width:100%;
-      height:180px;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      background:#f7f7f7;
-      border:1px solid #e5e5e5;
-      border-radius:4px;
-      text-decoration:none;
-      box-sizing:border-box;
-    ">
+        <img
+          src="{{ link.image }}"
+          alt="{{ link.title }}"
+          style="
+            display:block;
+            max-width:100%;
+            max-height:100%;
+            width:auto;
+            height:auto;
+            object-fit:contain;
+          ">
 
-    <img
-      src="{{ link.image }}"
-      alt="{{ link.title }}"
-      style="
-        display:block;
-        max-width:100%;
-        max-height:100%;
-        width:auto;
-        height:auto;
-        object-fit:contain;
-      ">
+      </a>
 
-  </a>
-
-
-
+    {% endif %}
 
   </div>
 
+
   <!-- =================================================== -->
-
-  <!-- RIGHT: INFORMATION 70%                              -->
-
+  <!-- RIGHT: INFORMATION                                   -->
   <!-- =================================================== -->
 
   <div
@@ -287,225 +267,204 @@ AI for Investment </a>
     ">
 
 
-<!-- ================================================= -->
-<!-- TITLE                                             -->
-<!-- ================================================= -->
+    <!-- ================================================= -->
+    <!-- TITLE                                             -->
+    <!-- ================================================= -->
 
-<div
-  class="title"
-  style="
-    font-size:17px;
-    font-weight:600;
-    line-height:1.45;
-    margin-bottom:8px;
-  ">
-
-  {% if link.pdf %}
-
-    <a
-      href="{{ link.pdf }}"
-      target="_blank"
+    <div
+      class="title"
       style="
-        text-decoration:none;
+        font-size:17px;
+        font-weight:600;
+        line-height:1.45;
+        margin-bottom:8px;
       ">
-      {{ link.title }}
-    </a>
 
-  {% else %}
+      {% if link.pdf %}
 
-    {{ link.title }}
+        <a
+          href="{{ link.pdf }}"
+          target="_blank"
+          style="
+            text-decoration:none;
+          ">
+          {{ link.title }}
+        </a>
 
-  
+      {% else %}
 
-</div>
+        {{ link.title }}
 
+      {% endif %}
 
-<!-- ================================================= -->
-<!-- AUTHORS                                           -->
-<!-- ================================================= -->
-
-<div
-  class="author"
-  style="
-    margin-bottom:6px;
-    line-height:1.5;
-  ">
-
-  {{ link.authors }}
-
-</div>
+    </div>
 
 
-<!-- ================================================= -->
-<!-- YEAR + TOPIC                                      -->
-<!-- ================================================= -->
+    <!-- ================================================= -->
+    <!-- AUTHORS                                           -->
+    <!-- ================================================= -->
 
-<div
-  style="
-    margin-bottom:6px;
-    line-height:1.5;
-  ">
-
-
-  {% if link.year %}
-
-    
-      {{ link.year }}
-  
-
-  
-
-
-  {% if topic_id != "" %}
-  
-  <span style="margin-left:6px; margin-right:6px;">
-    ·
-  </span>
-  
-    <a
-      href="javascript:void(0);"
-      class="publication-topic"
-      data-topic="{{ topic_id }}"
-      onclick="showPublicationTopic('{{ topic_id }}')"
+    <div
+      class="author"
       style="
-        text-decoration:none;
-        cursor:pointer;
-        color:inherit;
+        margin-bottom:6px;
+        line-height:1.5;
       ">
-      {{ link.tag }}
-    </a>
-  
-  {% endif %}
 
-</div>
+      {{ link.authors }}
+
+    </div>
 
 
-<!-- ================================================= -->
-<!-- CONFERENCE SHORT + LINKS                          -->
-<!-- ================================================= -->
+    <!-- ================================================= -->
+    <!-- YEAR + TOPIC                                      -->
+    <!-- ================================================= -->
 
-<div
-  class="periodical"
-  style="
-    margin-bottom:10px;
-    line-height:1.5;
-  ">
-
-
-  {% if link.conference_short %}
-
-    <strong>
-      {{ link.conference_short }}
-    </strong>
-
-  {% endif %}
-
-
-  <!-- PDF -->
-
-  {% if link.pdf %}
-
-    <span style="margin-left:8px;">
-      /
-    </span>
-
-    <a
-      href="{{ link.pdf }}"
-      target="_blank"
+    <div
       style="
-        margin-left:5px;
-        text-decoration:none;
+        margin-bottom:6px;
+        line-height:1.5;
       ">
-      PDF
-    </a>
 
-  {% endif %}
+      {% if link.year %}
+
+        {{ link.year }}
+
+      {% endif %}
 
 
-  <!-- WEBSITE -->
+      {% if topic_id != "" %}
 
-  {% if link.web %}
+        <span style="margin-left:6px; margin-right:6px;">
+          ·
+        </span>
 
-    <span style="margin-left:5px;">
-      /
-    </span>
+        <a
+          href="javascript:void(0);"
+          class="publication-topic"
+          data-topic="{{ topic_id }}"
+          onclick="showPublicationTopic('{{ topic_id }}')"
+          style="
+            text-decoration:none;
+            cursor:pointer;
+            color:inherit;
+          ">
+          {{ link.tag }}
+        </a>
 
-    <a
-      href="{{ link.web }}"
-      target="_blank"
+      {% endif %}
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- CONFERENCE + LINKS                                -->
+    <!-- ================================================= -->
+
+    <div
+      class="periodical"
       style="
-        margin-left:5px;
-        text-decoration:none;
+        margin-bottom:10px;
+        line-height:1.5;
       ">
-      Website
-    </a>
 
-  {% endif %}
+      {% if link.conference_short %}
 
+        <strong>
+          {{ link.conference_short }}
+        </strong>
 
-  <!-- CODE -->
-
-  {% if link.code %}
-
-    <span style="margin-left:5px;">
-      /
-    </span>
-
-    <a
-      href="{{ link.code }}"
-      target="_blank"
-      style="
-        margin-left:5px;
-        text-decoration:none;
-      ">
-      Code
-    </a>
-
-  {% endif %}
+      {% endif %}
 
 
-  <!-- BIBTEX -->
+      {% if link.pdf %}
 
-  {% if link.bibtex %}
+        <span style="margin-left:8px;">
+          /
+        </span>
 
-    <span style="margin-left:5px;">
-      /
-    </span>
+        <a
+          href="{{ link.pdf }}"
+          target="_blank"
+          style="
+            margin-left:5px;
+            text-decoration:none;
+          ">
+          PDF
+        </a>
 
-    <a
-      href="{{ link.bibtex }}"
-      target="_blank"
-      style="
-        margin-left:5px;
-        text-decoration:none;
-      ">
-      BibTeX
-    </a>
-
-  {% endif %}
+      {% endif %}
 
 
-  <!-- OTHERS -->
+      {% if link.web %}
 
-  {% if link.others %}
+        <span style="margin-left:5px;">
+          /
+        </span>
 
-    <span style="margin-left:8px;">
-      {{ link.others }}
-    </span>
+        <a
+          href="{{ link.web }}"
+          target="_blank"
+          style="
+            margin-left:5px;
+            text-decoration:none;
+          ">
+          Website
+        </a>
 
-  {% endif %}
-
-</div>
+      {% endif %}
 
 
-<!-- ================================================= -->
-<!-- NOTES                                             -->
-<!-- ================================================= -->
+      {% if link.code %}
 
+        <span style="margin-left:5px;">
+          /
+        </span>
+
+        <a
+          href="{{ link.code }}"
+          target="_blank"
+          style="
+            margin-left:5px;
+            text-decoration:none;
+          ">
+          Code
+        </a>
+
+      {% endif %}
+
+
+      {% if link.bibtex %}
+
+        <span style="margin-left:5px;">
+          /
+        </span>
+
+        <a
+          href="{{ link.bibtex }}"
+          target="_blank"
+          style="
+            margin-left:5px;
+            text-decoration:none;
+          ">
+          BibTeX
+        </a>
+
+      {% endif %}
+
+
+      {% if link.others %}
+
+        <span style="margin-left:8px;">
+          {{ link.others }}
+        </span>
+
+      {% endif %}
+
+    </div>
 
   </div>
 
-</div>
 </div>
 
 {% endfor %}
