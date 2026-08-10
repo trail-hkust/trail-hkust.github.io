@@ -10,6 +10,7 @@ main:
     image: ./assets/files/From-Statute-to-Control-Flow.png
     notes: "Published"
     tag: "AI for Regulatory Compliance"
+    selected: true
 
 
   - title: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
@@ -22,6 +23,7 @@ main:
     image: ./assets/files/MAP_EBM_KDD_2026.png
     notes: "Published"
     tag: "AI-driven Investment"
+    selected: true
 
     
 
@@ -37,6 +39,7 @@ main:
     image: ./assets/files/Pen2Sword.png
     notes: "Published"
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
 
@@ -51,6 +54,7 @@ main:
     image: ./assets/files/Compliance-to-Code.jpg
     notes: "Published"
     tag: "AI for Regulatory Compliance"
+    selected: true
 
 
 
@@ -64,6 +68,7 @@ main:
     image: ./assets/files/DeKeyNLU.jpg
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
+    selected: true
 
 
 
@@ -77,6 +82,7 @@ main:
     image: ./assets/files/climateqa.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
 
@@ -90,6 +96,7 @@ main:
     image: ./assets/files/frame_wine2024.png
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
   - title: Killing Two Birds with One Stone：Cross-modal Reinforced Prompting for Graph and Language Tasks
@@ -102,6 +109,7 @@ main:
     image: ./assets/files/frame.png
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
+    selected: true
 
   - title: Optimized Cost Per Click in Online Advertising：A Theoretical Analysis
     authors: Kaichen Zhang, <strong>Zixuan Yuan</strong>, Hui Xiong†
@@ -113,6 +121,7 @@ main:
     image: ./assets/files/OP.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
 
@@ -126,6 +135,7 @@ main:
     image: ./assets/files/IJCAI.png
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
+    selected: true
 
 
   - title: Self-Paced Unified Representation Learning for Hierarchical Multi-Label Classification
@@ -138,6 +148,7 @@ main:
     image: ./assets/files/Self-Paced.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
   - title: LEVER：Online Adaptive Sequence Learning Framework for High-Frequency Trading
@@ -150,6 +161,7 @@ main:
     image: ./assets/files/lever.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
 
@@ -163,6 +175,7 @@ main:
     image: ./assets/files/multi-domain.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
   - title: AlphaVC：A Reinforcement Learning-based Venture Capital Investment Strategy
@@ -175,6 +188,7 @@ main:
     image: ./assets/files/RL.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
   - title: Learning to Walk with Dual Agents for Knowledge Graph Reasoning
@@ -187,6 +201,7 @@ main:
     image: ./assets/files/two.jpg
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
+    selected: true
 
 
   - title: Multi-Faceted Knowledge-Driven Pre-training for Product Representation Learning
@@ -200,6 +215,7 @@ main:
     image: ./assets/files/multi-faceted.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
   - title: Self-Supervised Prototype Representation Learning for Event-Based Corporate Profiling
@@ -213,6 +229,7 @@ main:
     image: ./assets/files/self-supervised.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
   - title: Incremental Spatio-Temporal Graph Learning for Online Query-POI Matching
@@ -226,6 +243,7 @@ main:
     image: ./assets/files/STGL.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
   - title: Domain-oriented Language Modeling with Adaptive Hybrid Masking and Optimal Transport Alignment
@@ -239,6 +257,7 @@ main:
     image: ./assets/files/domain.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
   - title: Scalable Heterogeneous Graph Neural Networks for Predicting High-potential Early-stage Startups
@@ -252,6 +271,7 @@ main:
     image: ./assets/files/scalable.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
   - title: Learning Graph Structures with Transformer for Multivariate Time Series Anomaly Detection in IOT
@@ -265,6 +285,7 @@ main:
     image: ./assets/files/LG.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
 
 
   - title: E-BERT：Adapting BERT to E-commerce with Adaptive Hybrid Masking and Neighbor Product Reconstruction
@@ -278,6 +299,7 @@ main:
     image: ./assets/files/ebert.jpg
     notes: Published
     tag: "AI-driven Investment"
+    selected: true
 
 
 
@@ -292,3 +314,4 @@ main:
     image: ./assets/files/STDGAT2.jpg
     notes: Published
     tag: "Model Interpretation, Representation & Evaluation"
+    selected: true
