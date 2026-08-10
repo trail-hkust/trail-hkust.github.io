@@ -264,7 +264,7 @@ AI for Regulatory Compliance </a>
   
     <span style="margin-left:10px;">
   
-  ```
+  
   <a href="javascript:void(0);"
      onclick="showPublicationTopic('{{ topic_id }}')"
      style="
@@ -272,7 +272,7 @@ AI for Regulatory Compliance </a>
      ">
     {{ link.tag }}
   </a>
-  ```
+  
   
     </span>
   
