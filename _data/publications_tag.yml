@@ -9,7 +9,8 @@ main:
     bibtex:
     image: ./assets/files/From-Statute-to-Control-Flow.png
     notes: "Published"
-    tag: "AI for Regulatory Compliance"
+    tag: 
+      -"AI for Regulatory Compliance"
     selected: true
     year: 2026
     code: 
@@ -24,9 +25,11 @@ main:
     bibtex:
     image: ./assets/files/MAP_EBM_KDD_2026.png
     notes: "Published"
+    
     tag:
       - "AI for Investment"
       - "Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2026
     code: 
@@ -44,7 +47,10 @@ main:
     bibtex: 
     image: ./assets/files/Pen2Sword.png
     notes: "Published"
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2026
     code: https://github.com/pengmeishu/Pen2Sword
@@ -61,7 +67,10 @@ main:
     bibtex:
     image: ./assets/files/Compliance-to-Code.jpg
     notes: "Published"
-    tag: "AI for Regulatory Compliance"
+    
+    tag: 
+      -"AI for Regulatory Compliance"
+      
     selected: true
     year: 2026
     code: https://github.com/trail-lab-hkust/Compliance-to-Code
@@ -77,7 +86,10 @@ main:
     bibtex:
     image: ./assets/files/DeKeyNLU.jpg
     notes: Published
-    tag: "Multi-Agent Learning & Reasoning"
+    
+    tag: 
+      -"Multi-Agent Learning & Reasoning"
+      
     selected: true
     year: 2025
     code: https://github.com/trail-lab-hkust/DeKeyNLU
@@ -93,7 +105,10 @@ main:
     bibtex:
     image: ./assets/files/climateqa.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2025
     code: https://github.com/trail-lab-hkust/Climate-Zoo
@@ -109,7 +124,10 @@ main:
     bibtex:
     image: ./assets/files/frame_wine2024.png
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+    
     selected: true
     year: 2024
     code: 
@@ -124,7 +142,10 @@ main:
     bibtex:
     image: ./assets/files/frame.png
     notes: Published
-    tag: "Multi-Agent Learning & Reasoning"
+    
+    tag: 
+      -"Multi-Agent Learning & Reasoning"
+      
     selected: true
     year: 2024
     code: https://github.com/trail-lab-hkust/CMRP
@@ -138,7 +159,10 @@ main:
     bibtex:
     image: ./assets/files/OP.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+      
     selected: true
     year: 2024
     code: 
@@ -154,7 +178,10 @@ main:
     bibtex:
     image: ./assets/files/IJCAI.png
     notes: Published
-    tag: "Multi-Agent Learning & Reasoning"
+    
+    tag: 
+      -"Multi-Agent Learning & Reasoning"
+      
     selected: true
     year: 2024
     code: https://github.com/trail-lab-hkust/r2vmif
@@ -169,7 +196,10 @@ main:
     bibtex: ./assets/files/Self-Paced.txt
     image: ./assets/files/Self-Paced.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2024
     code: https://github.com/trail-lab-hkust/SPUR
@@ -184,7 +214,10 @@ main:
     bibtex: ./assets/files/lever.txt
     image: ./assets/files/lever.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+      
     selected: true
     year: 2023
     code: https://github.com/trail-lab-hkust/LEVER
@@ -200,7 +233,10 @@ main:
     bibtex: ./assets/files/multi-domain.txt
     image: ./assets/files/multi-domain.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+      
     selected: true
     year: 2023
     code: 
@@ -215,7 +251,10 @@ main:
     bibtex: 
     image: ./assets/files/RL.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+      
     selected: true
     year: 2022
     code: 
@@ -230,7 +269,10 @@ main:
     bibtex: 
     image: ./assets/files/two.jpg
     notes: Published
-    tag: "Multi-Agent Learning & Reasoning"
+    
+    tag: 
+      -"Multi-Agent Learning & Reasoning"
+      
     selected: true
     year: 2022
     code: https://github.com/trail-lab-hkust/DKGR
@@ -246,7 +288,10 @@ main:
     bibtex: 
     image: ./assets/files/multi-faceted.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+    
     selected: true
     year: 2022
     code: 
@@ -262,7 +307,10 @@ main:
     bibtex: 
     image: ./assets/files/self-supervised.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+      
     selected: true
     year: 2022
     code: https://github.com/trail-lab-hkust/SePaL
@@ -278,7 +326,10 @@ main:
     bibtex: 
     image: ./assets/files/STGL.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2021
     code: 
@@ -294,7 +345,10 @@ main:
     bibtex: 
     image: ./assets/files/domain.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+    
     selected: true
     year: 2021
     code: 
@@ -310,7 +364,10 @@ main:
     bibtex: 
     image: ./assets/files/scalable.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+      
     selected: true
     year: 2021
     code: https://github.com/trail-lab-hkust/SHGMNN
@@ -326,7 +383,10 @@ main:
     bibtex: 
     image: ./assets/files/LG.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2021
     code: 
@@ -342,7 +402,10 @@ main:
     bibtex: 
     image: ./assets/files/ebert.jpg
     notes: Published
-    tag: "AI-driven Investment"
+    
+    tag: 
+      -"AI-driven Investment"
+    
     selected: true
     year: 2021
     code: 
@@ -359,7 +422,10 @@ main:
     bibtex: 
     image: ./assets/files/STDGAT2.jpg
     notes: Published
-    tag: "Model Interpretability, Representation & Evaluation"
+    
+    tag: 
+      -"Model Interpretability, Representation & Evaluation"
+      
     selected: true
     year: 2020
     code: 
