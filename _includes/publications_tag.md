@@ -466,7 +466,7 @@
                 margin-right:6px;
               "
             >
-              /
+              ·
             </span>
 
           {% endunless %}
