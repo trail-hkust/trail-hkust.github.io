@@ -104,14 +104,64 @@ Model Interpretability, Representation & Evaluation </a>
  ">
 AI for Investment </a>
 
-
-
 </div>
 
 <!-- ===================================================== -->
+<!-- SEARCH + YEAR FILTER                                  -->
+<!-- ===================================================== -->
 
+<div
+  style="
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-left:20px;
+    margin-bottom:25px;
+  ">
+
+  <!-- Search -->
+  <input
+    type="text"
+    id="publication-search"
+    placeholder="Search publications..."
+    onkeyup="updatePublicationList()"
+    style="
+      width:100%;
+      max-width:500px;
+      padding:8px 12px;
+      font-size:14px;
+      border:1px solid #cccccc;
+      border-radius:4px;
+      box-sizing:border-box;
+    ">
+
+  <!-- Year -->
+  <select
+    id="publication-year"
+    onchange="updatePublicationList()"
+    style="
+      padding:8px 10px;
+      font-size:14px;
+      border:1px solid #cccccc;
+      border-radius:4px;
+      background:white;
+      cursor:pointer;
+    ">
+    <option value="all">Year: All</option>
+    <option value="2026">2026</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+  </select>
+
+</div>
+
+
+<!-- ===================================================== -->
 <!-- PUBLICATIONS                                          -->
-
 <!-- ===================================================== -->
 
 {% for link in site.data.publications_tag.main %}
