@@ -21,6 +21,27 @@
 
 <br>
 
+<div style="margin: 20px 0 25px 0;">
+
+  {% assign categories = "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance" | split: "|" %}
+
+  {% for category in categories %}
+
+    <a href="#{{ category | slugify }}"
+       style="display: inline-block;
+              margin: 5px 6px 5px 0;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-radius: 15px;
+              font-size: 13px;
+              text-decoration: none;">
+      {{ category }}
+    </a>
+
+  {% endfor %}
+
+</div>
+
 * means equal contribution.<br>
 † means corresponding authors.
 
