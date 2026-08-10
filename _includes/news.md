@@ -17,11 +17,11 @@
 <li><strong>[Oct. 2023]</strong> One paper on <span style="color:#e74d3c"><a href="https://ai-finance.org/icaif-23-accepted-papers/">earnings call analysis</a></span> got accepted to <span style="color:#e74d3c"><a href="https://ai-finance.org/icaif-23/">ACM ICAIF’23.</a></span> </li>
 <li><strong>[Aug. 2023]</strong> Invited as a <strong>PC member</strong> for <span style="color:#e74d3c"><a href="https://aaai.org/aaai-conference/">AAAI’24.</a></span> </li>
 <li><strong>[Nov. 2023]</strong> Joined <strong>HKUST</strong> as an <span style="color:#e74d3c"><a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=1689033759518887936">assistant professor</a></span> in FinTech Thrust. </li>
+<li> <a href="javascript:toggle_vis('newsmore')">Show more</a> </li>
+<div id="newsmore" style="display:none">
 <li><strong>[Aug. 2022]</strong> Invited as a <strong>PC member</strong> for <span style="color:#e74d3c"><a href="https://aaai-23.aaai.org/">AAAI’23.</a></span> </li>
 <li><strong>[Aug. 2022]</strong> One paper on <span style="color:#e74d3c"><a href="https://ieeexplore.ieee.org/document/9869708">product representation learning</a></span> got accepted to <span style="color:#e74d3c"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69">IEEE TKDE.</a></span> </li>
 <li><strong>[Apr. 2022]</strong> Served as a <strong>session chair</strong> at <span style="color:#e74d3c"><a href="https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar/2022-INFORMS-Annual-Meeting">INFORMS’22.</a></span> </li>
-<li> <a href="javascript:toggle_vis('newsmore')">Show more</a> </li>
-<div id="newsmore" style="display:none">
 <li><strong>[Dec. 2021]</strong> One paper on <span style="color:#e74d3c"><a href="https://aaai-2022.virtualchair.net/poster_aaai4569">KG reasoning</a></span> got accepted to <span style="color:#e74d3c"><a href="https://aaai.org/conference/aaai/aaai-22/">AAAI’22</a></span> <strong>(15% acceptance rate).</strong></li>
 <li><strong>[May. 2021]</strong> Two papers got accepted to <span style="color:#e74d3c"><a href="https://www.kdd.org/kdd2021/">KDD’21.</a></span> </li>
 <li><strong>[Mar. 2021]</strong> Passed my dissertation proposal defense, pleased to be Ph.D. candidate now! </li>
