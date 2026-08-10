@@ -477,15 +477,14 @@ AI for Investment </a>
 
 <script>
 
+/* =========================================================
+   TOPIC FILTER
+   ========================================================= */
+
 function showPublicationTopic(topic) {
 
   var items = document.querySelectorAll(".publication-item");
   var topicButtons = document.querySelectorAll(".topic-filter");
-
-
-  /* =======================================================
-     FILTER PUBLICATIONS
-     ======================================================= */
 
   items.forEach(function(item) {
 
@@ -506,9 +505,7 @@ function showPublicationTopic(topic) {
   });
 
 
-  /* =======================================================
-     UPDATE TOPIC APPEARANCE
-     ======================================================= */
+  /* Update selected topic */
 
   topicButtons.forEach(function(button) {
 
@@ -532,17 +529,86 @@ function showPublicationTopic(topic) {
 
 
 /* =========================================================
+   SEARCH + YEAR FILTER
+   ========================================================= */
+
+function searchPublications() {
+
+  var searchInput = document.getElementById("publication-search");
+  var yearSelect = document.getElementById("publication-year");
+
+  var keyword = searchInput.value.toLowerCase().trim();
+  var selectedYear = yearSelect.value;
+
+  var items = document.querySelectorAll(".publication-item");
+
+
+  items.forEach(function(item) {
+
+    /* -----------------------------------------
+       Search title only
+       ----------------------------------------- */
+
+    var title = item.getAttribute("data-title") || "";
+
+    /* -----------------------------------------
+       Year
+       ----------------------------------------- */
+
+    var year = item.getAttribute("data-year") || "";
+
+
+    /* -----------------------------------------
+       Check search
+       ----------------------------------------- */
+
+    var matchesSearch =
+      keyword === "" ||
+      title.includes(keyword);
+
+
+    /* -----------------------------------------
+       Check year
+       ----------------------------------------- */
+
+    var matchesYear =
+      selectedYear === "all" ||
+      year === selectedYear;
+
+
+    /* -----------------------------------------
+       Show / hide
+       ----------------------------------------- */
+
+    if (matchesSearch && matchesYear) {
+
+      item.style.display = "flex";
+
+    } else {
+
+      item.style.display = "none";
+
+    }
+
+  });
+
+}
+
+
+/* =========================================================
    INITIAL STATE
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function() {
 
   var items = document.querySelectorAll(".publication-item");
-  var topicButtons = document.querySelectorAll(".topic-filter");
+
+  var topicButtons =
+    document.querySelectorAll(".topic-filter");
 
 
   /* -----------------------------------------
-     Hide ALL publications initially
+     Initially hide all publications
      ----------------------------------------- */
 
   items.forEach(function(item) {
@@ -559,7 +625,10 @@ document.addEventListener("DOMContentLoaded", function() {
   topicButtons.forEach(function(button) {
 
     button.style.fontWeight = "400";
-    button.style.borderBottom = "2px solid transparent";
+
+    button.style.borderBottom =
+      "2px solid transparent";
+
     button.style.paddingBottom = "2px";
 
   });
