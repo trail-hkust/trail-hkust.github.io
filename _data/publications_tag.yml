@@ -9,7 +9,7 @@ main:
     bibtex:
     image: ./assets/files/From-Statute-to-Control-Flow.png
     notes: "Published"
-    tag: "AI for regulatory compliance"
+    tag: "AI for Regulatory Compliance"
 
 
   - title: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
@@ -50,7 +50,7 @@ main:
     bibtex:
     image: ./assets/files/Compliance-to-Code.jpg
     notes: "Published"
-    tag: "AI for regulatory compliance"
+    tag: "AI for Regulatory Compliance"
 
 
 
