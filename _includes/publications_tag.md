@@ -10,349 +10,338 @@
   </a>
   <temp style="font-size:15px;">]</temp>
 
-<temp style="font-size:15px;">[</temp> <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
-  target="_blank"
-  style="font-size:15px;">
-ResearchGate </a> <temp style="font-size:15px;">]</temp>
-
+  <temp style="font-size:15px;">[</temp>
+  <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
+     target="_blank"
+     style="font-size:15px;">
+    ResearchGate
+  </a>
+  <temp style="font-size:15px;">]</temp>
 </h2>
 
 <br>
 
 <!-- ================================================= -->
-
-<!-- SELECTED / ALL BY DATE -->
-
+<!-- Publication Mode -->
 <!-- ================================================= -->
 
-<div style="margin-bottom: 15px;">
+<div style="margin-bottom: 12px;">
 
-<button
- id="selected-btn"
- class="publication-mode active"
- onclick="setPublicationMode('selected')"
- style="background:none;
-        border:none;
-        padding:5px 12px;
-        margin-right:10px;
-        font-size:14px;
-        cursor:pointer;">
-Selected </button>
+  <button
+    id="selected-btn"
+    class="publication-mode active"
+    onclick="setPublicationMode('selected')"
+    style="border:none;
+           background:none;
+           padding:0;
+           margin-right:20px;
+           font-size:15px;
+           cursor:pointer;">
+    Selected
+  </button>
 
-<button
- id="all-date-btn"
- class="publication-mode"
- onclick="setPublicationMode('all')"
- style="background:none;
-        border:none;
-        padding:5px 12px;
-        margin-right:10px;
-        font-size:14px;
-        cursor:pointer;">
-All by date </button>
+  <button
+    id="all-date-btn"
+    class="publication-mode"
+    onclick="setPublicationMode('all')"
+    style="border:none;
+           background:none;
+           padding:0;
+           font-size:15px;
+           cursor:pointer;">
+    All by date
+  </button>
 
 </div>
 
-<!-- ================================================= -->
-
-<!-- TOPICS -->
 
 <!-- ================================================= -->
+<!-- Topics -->
+<!-- ================================================= -->
 
-<div id="publication-topics"
-     style="margin-bottom:25px;">
+<div style="margin-bottom: 25px;">
 
-  <strong style="margin-right:10px;">
+  <strong style="margin-right: 8px;">
     Topics:
   </strong>
 
-<a href="#topic-all"
-  class="topic-link active"
-  onclick="showTopic('all'); return false;"
-  style="margin-right:15px;
-         text-decoration:none;">
-All </a>
+  <a href="#topic-all"
+     onclick="showPublicationTopic('all'); return false;"
+     style="margin-right: 15px;
+            text-decoration:none;">
+    All
+  </a>
 
-<a href="#topic-multi-agent"
-  class="topic-link"
-  onclick="showTopic('multi-agent'); return false;"
-  style="margin-right:15px;
-         text-decoration:none;">
-Multi-Agent Learning & Reasoning </a>
+  <a href="#topic-multi-agent"
+     onclick="showPublicationTopic('multi-agent'); return false;"
+     style="margin-right: 15px;
+            text-decoration:none;">
+    Multi-Agent Learning &amp; Reasoning
+  </a>
 
-<a href="#topic-model"
-  class="topic-link"
-  onclick="showTopic('model'); return false;"
-  style="margin-right:15px;
-         text-decoration:none;">
-Model Interpretability, Representation & Evaluation </a>
+  <a href="#topic-interpretability"
+     onclick="showPublicationTopic('interpretability'); return false;"
+     style="margin-right: 15px;
+            text-decoration:none;">
+    Model Interpretability, Representation &amp; Evaluation
+  </a>
 
-<a href="#topic-investment"
-  class="topic-link"
-  onclick="showTopic('investment'); return false;"
-  style="margin-right:15px;
-         text-decoration:none;">
-AI for Investment </a>
+  <a href="#topic-investment"
+     onclick="showPublicationTopic('investment'); return false;"
+     style="margin-right: 15px;
+            text-decoration:none;">
+    AI for Investment
+  </a>
 
-<a href="#topic-compliance"
-  class="topic-link"
-  onclick="showTopic('compliance'); return false;"
-  style="text-decoration:none;">
-AI for Regulatory Compliance </a>
+  <a href="#topic-compliance"
+     onclick="showPublicationTopic('compliance'); return false;"
+     style="margin-right: 15px;
+            text-decoration:none;">
+    AI for Regulatory Compliance
+  </a>
 
 </div>
 
-<!-- ================================================= -->
-
-<!-- NOTES -->
 
 <!-- ================================================= -->
-
-<div style="margin-bottom:20px;">
-  * means equal contribution.
-  † means corresponding authors.
-</div>
-
+<!-- Publication List -->
 <!-- ================================================= -->
 
-<!-- PUBLICATIONS -->
+<div id="publication-list">
 
-<!-- ================================================= -->
+{% assign categories =
+"Multi-Agent Learning & Reasoning|
+Model Interpretability, Representation & Evaluation|
+AI-driven investment|
+AI for regulatory compliance"
+| split: "|" %}
 
-<div class="publications">
-
-{% assign categories = "Multi-Agent Learning & Reasoning|Model Interpretability, Representation & Evaluation|AI-driven investment|AI for regulatory compliance" | split: "|" %}
 
 {% for category in categories %}
 
-{% assign category_papers = site.data.publications_tag.main | where: "tag", category %}
+{% assign category_papers =
+site.data.publications_tag.main
+| where: "tag", category %}
+
 
 {% for link in category_papers %}
 
-<!-- ================================================= -->
+{% assign topic_id = "" %}
 
-<!-- ONE PUBLICATION -->
-
-<!-- ================================================= -->
-
-<div
-  class="publication-item"
-  data-tag="{{ link.tag }}"
-  data-mode="selected"
-  style="display:flex;
-         width:100%;
-         align-items:flex-start;
-         margin-bottom:35px;
-         padding-bottom:25px;
-         border-bottom:1px solid #eeeeee;
-         box-sizing:border-box;">
-
-  <!-- ================================================= -->
-
-  <!-- IMAGE: 30% -->
-
-  <!-- ================================================= -->
-
-  <div
-    style="width:30%;
-           flex:0 0 30%;
-           padding-right:25px;
-           box-sizing:border-box;">
-
-```
-{% if link.image %}
-
-<a
-  href="{{ link.image }}"
-  target="_blank"
-  style="display:block;
-         width:100%;
-         height:180px;
-         overflow:hidden;
-         border:1px solid #eeeeee;
-         border-radius:4px;
-         background:#f5f5f5;
-         box-sizing:border-box;">
-
-  <img
-    src="{{ link.image }}"
-    alt="{{ link.title }}"
-    style="display:block;
-           width:100%;
-           height:100%;
-           object-fit:cover;
-           object-position:center;">
-
-</a>
-
+{% if category == "Multi-Agent Learning & Reasoning" %}
+  {% assign topic_id = "multi-agent" %}
+{% elsif category == "Model Interpretability, Representation & Evaluation" %}
+  {% assign topic_id = "interpretability" %}
+{% elsif category == "AI-driven investment" %}
+  {% assign topic_id = "investment" %}
+{% elsif category == "AI for regulatory compliance" %}
+  {% assign topic_id = "compliance" %}
 {% endif %}
-```
+
+
+<!-- ================================================= -->
+<!-- ONE PUBLICATION -->
+<!-- ================================================= -->
+
+<div class="publication-item"
+     data-topic="{{ topic_id }}"
+     data-selected="true"
+     style="display:flex;
+            width:100%;
+            align-items:flex-start;
+            margin-bottom:35px;
+            padding-bottom:25px;
+            border-bottom:1px solid #eeeeee;
+            box-sizing:border-box;">
+
+
+  <!-- ================================================= -->
+  <!-- LEFT: IMAGE 30% -->
+  <!-- ================================================= -->
+
+  <div style="width:30%;
+              flex:0 0 30%;
+              padding-right:25px;
+              box-sizing:border-box;">
+
+    {% if link.image %}
+
+    <a href="{{ link.image }}"
+       target="_blank"
+       style="display:block;
+              width:100%;
+              height:180px;
+              overflow:hidden;
+              border:1px solid #e5e5e5;
+              border-radius:4px;
+              background:#f8f8f8;
+              text-decoration:none;">
+
+      <img
+        src="{{ link.image }}"
+        alt="{{ link.title }}"
+        style="display:block;
+               width:100%;
+               height:100%;
+               object-fit:cover;
+               object-position:center;">
+
+    </a>
+
+    {% endif %}
 
   </div>
 
-  <!-- ================================================= -->
-
-  <!-- INFORMATION: 70% -->
 
   <!-- ================================================= -->
+  <!-- RIGHT: INFORMATION 70% -->
+  <!-- ================================================= -->
 
-  <div
-    style="width:70%;
-           flex:0 0 70%;
-           box-sizing:border-box;">
-
-```
-<!-- TITLE -->
-
-<div
-  class="title"
-  style="font-size:17px;
-         font-weight:600;
-         line-height:1.45;
-         margin-bottom:8px;">
-
-  {% if link.pdf %}
-
-  <a
-    href="{{ link.pdf }}"
-    target="_blank">
-    {{ link.title }}
-  </a>
-
-  {% else %}
-
-  {{ link.title }}
-
-  {% endif %}
-
-</div>
+  <div style="width:70%;
+              flex:0 0 70%;
+              box-sizing:border-box;">
 
 
-<!-- AUTHORS -->
+    <!-- Title -->
 
-<div
-  class="author"
-  style="line-height:1.5;
-         margin-bottom:6px;">
+    <div class="title"
+         style="font-size:17px;
+                font-weight:600;
+                line-height:1.45;
+                margin-bottom:8px;">
 
-  {{ link.authors }}
+      {% if link.pdf %}
 
-</div>
+      <a href="{{ link.pdf }}"
+         target="_blank"
+         style="text-decoration:none;">
+        {{ link.title }}
+      </a>
 
+      {% else %}
 
-<!-- CONFERENCE -->
+        {{ link.title }}
 
-<div
-  class="periodical"
-  style="line-height:1.5;
-         margin-bottom:10px;">
+      {% endif %}
 
-  <em>
-    {{ link.conference }}
-  </em>
-
-</div>
-
-
-<!-- LINKS -->
-
-<div
-  class="links"
-  style="margin-top:8px;">
+    </div>
 
 
-  {% if link.pdf %}
+    <!-- Authors -->
 
-  <a
-    href="{{ link.pdf }}"
-    target="_blank"
-    style="display:inline-block;
-           padding:3px 8px;
-           margin-right:5px;
-           border:1px solid #cccccc;
-           border-radius:3px;
-           font-size:12px;
-           text-decoration:none;">
-    PDF
-  </a>
+    <div class="author"
+         style="margin-bottom:6px;
+                line-height:1.5;">
 
-  {% endif %}
+      {{ link.authors }}
+
+    </div>
 
 
-  {% if link.web %}
+    <!-- Conference -->
 
-  <a
-    href="{{ link.web }}"
-    target="_blank"
-    style="display:inline-block;
-           padding:3px 8px;
-           margin-right:5px;
-           border:1px solid #cccccc;
-           border-radius:3px;
-           font-size:12px;
-           text-decoration:none;">
-    Website
-  </a>
+    <div class="periodical"
+         style="margin-bottom:10px;
+                line-height:1.5;">
 
-  {% endif %}
+      <em>{{ link.conference }}</em>
+
+    </div>
 
 
-  {% if link.code %}
+    <!-- ================================================= -->
+    <!-- Links -->
+    <!-- ================================================= -->
 
-  <a
-    href="{{ link.code }}"
-    target="_blank"
-    style="display:inline-block;
-           padding:3px 8px;
-           margin-right:5px;
-           border:1px solid #cccccc;
-           border-radius:3px;
-           font-size:12px;
-           text-decoration:none;">
-    Code
-  </a>
+    <div class="links"
+         style="margin-top:8px;">
 
-  {% endif %}
+      {% if link.pdf %}
 
+      <a href="{{ link.pdf }}"
+         target="_blank"
+         style="display:inline-block;
+                padding:3px 8px;
+                margin-right:5px;
+                border:1px solid #cccccc;
+                border-radius:3px;
+                font-size:12px;
+                text-decoration:none;">
+        PDF
+      </a>
 
-  {% if link.bibtex %}
-
-  <a
-    href="{{ link.bibtex }}"
-    target="_blank"
-    style="display:inline-block;
-           padding:3px 8px;
-           margin-right:5px;
-           border:1px solid #cccccc;
-           border-radius:3px;
-           font-size:12px;
-           text-decoration:none;">
-    BibTeX
-  </a>
-
-  {% endif %}
+      {% endif %}
 
 
-  {% if link.notes %}
+      {% if link.web %}
 
-  <strong style="margin-left:5px;">
-    <i style="color:#e74d3c;">
-      {{ link.notes }}
-    </i>
-  </strong>
+      <a href="{{ link.web }}"
+         target="_blank"
+         style="display:inline-block;
+                padding:3px 8px;
+                margin-right:5px;
+                border:1px solid #cccccc;
+                border-radius:3px;
+                font-size:12px;
+                text-decoration:none;">
+        Website
+      </a>
 
-  {% endif %}
+      {% endif %}
 
 
-  {% if link.others %}
+      {% if link.code %}
 
-  {{ link.others }}
+      <a href="{{ link.code }}"
+         target="_blank"
+         style="display:inline-block;
+                padding:3px 8px;
+                margin-right:5px;
+                border:1px solid #cccccc;
+                border-radius:3px;
+                font-size:12px;
+                text-decoration:none;">
+        Code
+      </a>
 
-  {% endif %}
+      {% endif %}
 
 
-</div>
-```
+      {% if link.bibtex %}
+
+      <a href="{{ link.bibtex }}"
+         target="_blank"
+         style="display:inline-block;
+                padding:3px 8px;
+                margin-right:5px;
+                border:1px solid #cccccc;
+                border-radius:3px;
+                font-size:12px;
+                text-decoration:none;">
+        BibTeX
+      </a>
+
+      {% endif %}
+
+
+      {% if link.notes %}
+
+      <strong style="margin-left:5px;">
+        <i style="color:#e74d3c;">
+          {{ link.notes }}
+        </i>
+      </strong>
+
+      {% endif %}
+
+
+      {% if link.others %}
+
+        {{ link.others }}
+
+      {% endif %}
+
+    </div>
 
   </div>
 
@@ -364,157 +353,34 @@ AI for Regulatory Compliance </a>
 
 </div>
 
-<!-- ================================================= -->
-
-<!-- CSS -->
 
 <!-- ================================================= -->
-
-<style>
-
-.publication-mode.active {
-  font-weight:600 !important;
-  border-bottom:2px solid #000 !important;
-}
-
-.topic-link {
-  color:#777;
-}
-
-.topic-link:hover {
-  color:#000;
-}
-
-.topic-link.active {
-  color:#000;
-  font-weight:600;
-}
-
-
-/* ================================================= */
-/* MOBILE */
-/* ================================================= */
-
-@media (max-width:768px) {
-
-  .publication-item {
-    display:block !important;
-  }
-
-  .publication-item > div:first-child {
-    width:100% !important;
-    padding-right:0 !important;
-    margin-bottom:15px;
-  }
-
-  .publication-item > div:last-child {
-    width:100% !important;
-  }
-
-}
-
-</style>
-
-<!-- ================================================= -->
-
-<!-- JAVASCRIPT -->
-
+<!-- JavaScript -->
 <!-- ================================================= -->
 
 <script>
 
-function showTopic(topic) {
+function showPublicationTopic(topic) {
 
-  var items =
-    document.querySelectorAll(".publication-item");
-
-  var links =
-    document.querySelectorAll(".topic-link");
-
-
-  /* Remove active state */
-
-  links.forEach(function(link) {
-    link.classList.remove("active");
-  });
-
-
-  /* Set active topic */
-
-  if (topic === "all") {
-    links[0].classList.add("active");
-  }
-
-  if (topic === "multi-agent") {
-    links[1].classList.add("active");
-  }
-
-  if (topic === "model") {
-    links[2].classList.add("active");
-  }
-
-  if (topic === "investment") {
-    links[3].classList.add("active");
-  }
-
-  if (topic === "compliance") {
-    links[4].classList.add("active");
-  }
-
-
-  /* Filter publications */
+  var items = document.querySelectorAll(".publication-item");
 
   items.forEach(function(item) {
-
-    var tag =
-      item.getAttribute("data-tag");
-
 
     if (topic === "all") {
 
       item.style.display = "flex";
 
-    }
+    } else {
 
-    else if (
-      topic === "multi-agent" &&
-      tag === "Multi-Agent Learning & Reasoning"
-    ) {
+      if (item.getAttribute("data-topic") === topic) {
 
-      item.style.display = "flex";
+        item.style.display = "flex";
 
-    }
+      } else {
 
-    else if (
-      topic === "model" &&
-      tag === "Model Interpretability, Representation & Evaluation"
-    ) {
+        item.style.display = "none";
 
-      item.style.display = "flex";
-
-    }
-
-    else if (
-      topic === "investment" &&
-      tag === "AI-driven investment"
-    ) {
-
-      item.style.display = "flex";
-
-    }
-
-    else if (
-      topic === "compliance" &&
-      tag === "AI for regulatory compliance"
-    ) {
-
-      item.style.display = "flex";
-
-    }
-
-    else {
-
-      item.style.display = "none";
+      }
 
     }
 
@@ -523,47 +389,49 @@ function showTopic(topic) {
 }
 
 
-/* ================================================= */
-/* SELECTED / ALL BY DATE */
-/* ================================================= */
-
 function setPublicationMode(mode) {
 
-  var selectedBtn =
-    document.getElementById("selected-btn");
+  var items = document.querySelectorAll(".publication-item");
 
-  var allBtn =
-    document.getElementById("all-date-btn");
+  var selectedButton = document.getElementById("selected-btn");
+  var allDateButton = document.getElementById("all-date-btn");
 
 
   if (mode === "selected") {
 
-    selectedBtn.classList.add("active");
-    allBtn.classList.remove("active");
+    items.forEach(function(item) {
+
+      if (item.getAttribute("data-selected") === "true") {
+
+        item.style.display = "flex";
+
+      } else {
+
+        item.style.display = "none";
+
+      }
+
+    });
+
+    selectedButton.style.fontWeight = "600";
+    allDateButton.style.fontWeight = "400";
 
   }
 
-  else {
 
-    selectedBtn.classList.remove("active");
-    allBtn.classList.add("active");
+  if (mode === "all") {
+
+    items.forEach(function(item) {
+
+      item.style.display = "flex";
+
+    });
+
+    selectedButton.style.fontWeight = "400";
+    allDateButton.style.fontWeight = "600";
 
   }
 
 }
-
-
-/* ================================================= */
-/* INITIAL */
-/* ================================================= */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-
-    showTopic("all");
-
-  }
-);
 
 </script>
