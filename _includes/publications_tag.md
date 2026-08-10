@@ -179,7 +179,7 @@ AI for Regulatory Compliance </a>
        box-sizing:border-box;
        ">
 
-```
+
 {% if link.image %}
 
   <a href="{{ link.image }}"
@@ -214,7 +214,7 @@ AI for Regulatory Compliance </a>
   </a>
 
 {% endif %}
-```
+
 
   </div>
 
@@ -230,7 +230,7 @@ AI for Regulatory Compliance </a>
        box-sizing:border-box;
        ">
 
-```
+
 <!-- ================================================= -->
 <!-- TITLE -->
 <!-- ================================================= -->
@@ -444,7 +444,7 @@ AI for Regulatory Compliance </a>
   {% endif %}
 
 </div>
-```
+
 
   </div>
 
