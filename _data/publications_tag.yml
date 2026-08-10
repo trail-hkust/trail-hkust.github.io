@@ -1,0 +1,294 @@
+
+main:
+  - title2: "From Statute to Control Flow: Span-Grounded Deontic Trees for Defeasible Scope Parsing"
+    authors2: "Jian Chen*, Siyuan Li*, Chucheng Wan, <strong>Zixuan Yuan†</strong>"
+    conference_short2: "KDD 2026 (Datasets and Benchmarks Track)"
+    conference2: "The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+    pdf2: "https://dl.acm.org/doi/epdf/10.1145/3770855.3817491"
+    web2: "https://dl.acm.org/doi/10.1145/3770855.3817491"
+    bibtex2:
+    image2: ./assets/files/From-Statute-to-Control-Flow.png
+    notes2: "Published"
+    tag: "AI for regulatory compliance"
+
+
+  - title2: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
+    authors2: "Junren Xiao, Ruiyao Miao, <strong>Zixuan Yuan†</strong>, Hui Xiong†"
+    conference_short2: "KDD 2026 (Research Track)"
+    conference2: "The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
+    pdf2: "https://dl.acm.org/doi/epdf/10.1145/3770855.3817795"
+    web2: "https://dl.acm.org/doi/10.1145/3770855.3817795"
+    bibtex2:
+    image2: ./assets/files/MAP_EBM_KDD_2026.png
+    notes2: "Published"
+    tag: "AI-driven investment"
+
+    
+
+
+  - title2: Accelerating LLM Fine-Tuning via Embedding Knowledge Transfer
+    authors2: Meishu Peng*, Ziyue Zhang*, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, Denghui Zhang†
+    conference_short2: ACL 2026
+    conference2: "Findings of the Association for Computational Linguistics: ACL 2026"
+    #abstract: ……
+    pdf2: https://aclanthology.org/2026.findings-acl.5.pdf
+    web2: https://aclanthology.org/2026.findings-acl.5/
+    bibtex2: 
+    image2: ./assets/files/Pen2Sword.png
+    notes2: "Published"
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+
+
+  - title: Compliance-to-Code： Enhancing Financial Compliance Checking via Code Generation
+    authors: Siyuan Li*, Jian Chen*, Rui Yao, Xuming Hu, Peilin Zhou, Weihua Qiu, Simin Zhang, Chucheng Dong, Zhiyao Li, Qipeng Xie, <strong>Zixuan Yuan†</strong>
+    conference_short: KDD 2026 (Datasets and Benchmarks Track)
+    conference: The 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    pdf: "https://dl.acm.org/doi/epdf/10.1145/3770854.3785703"
+    web: "https://dl.acm.org/doi/abs/10.1145/3770854.3785703"
+    bibtex:
+    image: ./assets/files/Compliance-to-Code.jpg
+    notes: "Published"
+    tag: "AI for regulatory compliance"
+
+
+
+  - title: DeKeyNLU：Enhancing Natural Language to SQL Generation through Task Decomposition and Keyword Extraction
+    authors: Jian Chen, Zhenyan Chen, Xuming Hu, Peilin Zhou, Yining Hua, Han Fang, Cissy Hing Yee Choy, Xinmei Ke, Jingfeng Luo, <strong>Zixuan Yuan†</strong>
+    conference_short: EMNLP 2025
+    conference2: Findings of the Association for Computational Linguistics：EMNLP 2025
+    pdf: https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.1312.pdf
+    web:
+    bibtex:
+    image: ./assets/files/DeKeyNLU.jpg
+    notes: Published
+    tag: "Multi-Agent Learning & Reasoning"
+
+
+
+  - title: ClimateIQA：A New Dataset and Benchmark to Advance Vision-Language Models in Meteorology Anomalies Analysis
+    authors: Jian Chen, Peilin Zhou, Yining Hua, Dading Chong, Meng Cao, Yaowei Li, Wei Chen, Bing Zhu, Junwei Liang†, <strong>Zixuan Yuan†</strong>
+    conference_short: KDD 2025 (Datasets and Benchmarks Track)
+    conference: The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    pdf:
+    web: https://dl.acm.org/doi/10.1145/3711896.3737406
+    bibtex:
+    image: ./assets/files/climateqa.jpg
+    notes: Published
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+
+  - title2: The Impact of Generative Artificial Intelligence on Market Equilibrium：Evidence from a Natural Experiment
+    authors2: Kaichen Zhang,<strong>Zixuan Yuan</strong>, Hui Xiong†
+    conference_short2: WINE 2024
+    conference2: The 20th Conference on Web and Internet Economics
+    pdf2: https://arxiv.org/abs/2311.07071
+    web2:
+    bibtex2:
+    image2: ./assets/files/frame_wine2024.png
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+  - title: Killing Two Birds with One Stone：Cross-modal Reinforced Prompting for Graph and Language Tasks
+    authors: Wenyuan Jiang*, Wenwei Wu*, Le Zhang*, <strong>Zixuan Yuan†</strong>, Jian Xiang, Jingbo Zhou, Hui Xiong†
+    conference_short: KDD 2024 (Research Track)
+    conference: The 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    pdf:
+    web: https://dl.acm.org/doi/10.1145/3637528.3671742
+    bibtex:
+    image: ./assets/files/frame.png
+    notes: Published
+    tag: "Multi-Agent Learning & Reasoning"
+
+  - title: Optimized Cost Per Click in Online Advertising：A Theoretical Analysis
+    authors: Kaichen Zhang, <strong>Zixuan Yuan</strong>, Hui Xiong†
+    conference_short: KDD 2024 (Research Track)
+    conference: The 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+    pdf:
+    web:
+    bibtex:
+    image: ./assets/files/OP.jpg
+    notes: Published
+    tag: "AI-driven investment"
+
+
+
+  - title1: R2V-MIF：Rule-to-Vector Contrastive Learning and Multi-channel Information Fusion for Therapy Recommendation
+    authors1: Nengjun Zhu, Jieyun Huang, Jian Cao, Liang Hu, <strong>Zixuan Yuan</strong>, Huanjing Gao
+    conference_short1: IJCAI 2024
+    conference1: The 33rd International Joint Conference on Artificial Intelligence
+    pdf1:
+    web1:
+    bibtex1:
+    image1: ./assets/files/IJCAI.png
+    notes1: Published
+    tag: "Multi-Agent Learning & Reasoning"
+
+
+  - title2: Self-Paced Unified Representation Learning for Hierarchical Multi-Label Classification
+    authors2: <strong>Zixuan Yuan</strong>, Hao Liu, Haoyi Zhou, Denghui Zhang, Xiao Zhang, Hao Wang, Hui Xiong†
+    conference_short2: AAAI 2024
+    conference2: The 38th Annual AAAI Conference on Artificial Intelligence
+    pdf2: ./assets/files/Self-Paced.pdf
+    web2: https://ojs.aaai.org/index.php/AAAI/article/view/29601
+    bibtex2: ./assets/files/Self-Paced.txt
+    image2: ./assets/files/Self-Paced.jpg
+    notes2: Published
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+  - title2: LEVER：Online Adaptive Sequence Learning Framework for High-Frequency Trading
+    authors2: <strong>Zixuan Yuan</strong>, Junming Liu, Haoyi Zhou, Denghui Zhang, Hao Liu, Nengjun Zhu, Hui Xiong†
+    conference_short2: TKDE 2023
+    conference2: IEEE Transactions on Knowledge and Data Engineering
+    pdf2: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10345772
+    web2: https://ieeexplore.ieee.org/document/10345772
+    bibtex2: ./assets/files/lever.txt
+    image2: ./assets/files/lever.jpg
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+
+  - title2: Multi-Domain Transformer-Based Counterfactual Augmentation for Earnings Call Analysis
+    authors2: <strong>Zixuan Yuan</strong>, Yada Zhu, Wei Zhang, Hui Xiong†
+    conference_short2: ICAIF 2023
+    conference2: The 4th ACM International Conference on AI in Finance
+    pdf2: https://arxiv.org/pdf/2112.00963
+    web2: https://arxiv.org/abs/2112.00963
+    bibtex2: ./assets/files/multi-domain.txt
+    image2: ./assets/files/multi-domain.jpg
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+  - title2: AlphaVC：A Reinforcement Learning-based Venture Capital Investment Strategy
+    authors2: <strong>Ziyuan Xuan*</strong>, Denghui Zhang*, Hao Zhong, Shengming Zhang, Hui Xiong†
+    conference_short2: INFORMS 2022
+    conference2: INFORMS Workshop on Data Science 2022
+    pdf2: https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/203473b6-7ebe-4a1a-bc06-0a1883bab60f/content
+    web2: https://scholarspace.manoa.hawaii.edu/items/8ba36c1d-9603-4eae-af06-95d52d57b1ce
+    bibtex2: ./assets/files/vc.txt
+    image2: ./assets/files/RL.jpg
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+  - title2: Learning to Walk with Dual Agents for Knowledge Graph Reasoning
+    authors2: Denghui Zhang*, <strong>Zixuan Yuan*</strong>, Hao Liu, Xiaodong Lin, and Hui Xiong†
+    conference_short2: AAAI 2022
+    conference2: In Proceedings of the Thirty-Sixth AAAI Conference on Artificial Intelligence
+    pdf2: https://arxiv.org/pdf/2112.12876
+    web2: https://arxiv.org/abs/2112.12876
+    bibtex2: ./assets/files/learning.txt
+    image2: ./assets/files/two.jpg
+    notes2: Published
+    tag: "Multi-Agent Learning & Reasoning"
+
+
+  - title2: Multi-Faceted Knowledge-Driven Pre-training for Product Representation Learning
+    authors2: Denghui Zhang*, Yanchi Liu†, <strong>Zixuan Yuan</strong>, Yanjie Fu, Haifeng Chen, Hui Xiong†
+    conference_short2: TKDE 2022
+    conference2: IEEE Transactions on Knowledge and Data Engineering
+    #abstract: ……
+    pdf2: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9869708
+    web2: https://ieeexplore.ieee.org/document/9869708
+    bibtex2: ./assets/files/multi-faceted.txt
+    image2: ./assets/files/multi-faceted.jpg
+    notes2: Published
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+  - title2: Self-Supervised Prototype Representation Learning for Event-Based Corporate Profiling
+    authors2: <strong>Zixuan Yuan</strong>, Hao Liu†, Renjun Hu, Denghui Zhang, and Hui Xiong†
+    conference_short2: AAAI 2022
+    conference2: In Proceedings of the Thirty-Sixth AAAI Conference on Artificial Intelligence
+    #abstract: ……
+    pdf2: ./assets/files/self-supervised.pdf
+    web2: https://ojs.aaai.org/index.php/AAAI/article/view/16594
+    bibtex2: ./assets/files/self-supervised.txt
+    image2: ./assets/files/self-supervised.jpg
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+  - title2: Incremental Spatio-Temporal Graph Learning for Online Query-POI Matching
+    authors2: <strong>Zixuan Yuan</strong>, Hao Liu†, Junming Liu, Yanchi Liu, Yang Yang, Renjun Hu, and Hui Xiong†
+    conference_short2: WWW 2021
+    conference2: In Proceedings of the 28th World Wide Web Conference
+    #abstract: ……
+    pdf2: https://dl.acm.org/doi/pdf/10.1145/3442381.3449810
+    web2: https://dl.acm.org/doi/abs/10.1145/3442381.3449810?casa_token=B8b8_rGOp9oAAAAA:DL3l8hOiyYSZyCub3raogjFgotfGwTQ8B30nWIq2jYV66F0rSBR3313GAzPvNfOJXckPn9Pjbduc
+    bibtex2: ./assets/files/STGL.txt
+    image2: ./assets/files/STGL.jpg
+    notes2: Published
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+  - title2: Domain-oriented Language Modeling with Adaptive Hybrid Masking and Optimal Transport Alignment
+    authors2: Denghui Zhang*, <strong>Zixuan Yuan</strong>, Yanchi Liu†, Hao Liu, Zuohui Fu, Fuzhen Zhuang, Hui Xiong†, and Haifeng Chen
+    conference_short2: KDD 2021 (Research Track)
+    conference2: The 27rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2021) (Research Track)
+    #abstract: ……
+    pdf2: https://dl.acm.org/doi/pdf/10.1145/3447548.3467215
+    web2: https://dl.acm.org/doi/abs/10.1145/3447548.3467215?casa_token=vVhtjEfms0MAAAAA:zR_x1a4Ccil2l-296TCSdd0YqVFNV09bzXJlq_2ZSdOgKknefyq80ZXZqClpbzuP5rY6wgITpoQt
+    bibtex2: ./assets/files/domain.txt
+    image2: ./assets/files/domain.jpg
+    notes2: Published
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+  - title2: Scalable Heterogeneous Graph Neural Networks for Predicting High-potential Early-stage Startups
+    authors2: Shengming Zhang*, Hao Zhong, <strong>Zixuan Yuan</strong>, and Hui Xiong†
+    conference_short2: KDD 2021 (Research Track)
+    conference2: The 27rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2021) (Research Track)
+    #abstract: ……
+    pdf2: https://dl.acm.org/doi/pdf/10.1145/3447548.3467383
+    web2: https://dl.acm.org/doi/abs/10.1145/3447548.3467383?casa_token=sckoE4LzrGMAAAAA:A9lF2JzD_0vp-mMo2ela7PRHKB96ueUUwynBY8iUawoMmxlVcUBWCtVYdwWqiNiFtuqBqXeVRwpD
+    bibtex2: ./assets/files/scalable.txt
+    image2: ./assets/files/scalable.jpg
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+  - title2: Learning Graph Structures with Transformer for Multivariate Time Series Anomaly Detection in IOT
+    authors2: Zekai Chen, Dingshuo Chen, Xiao Zhang†, <strong>Zixuan Yuan</strong>, and Xiuzhen Cheng
+    conference_short2: IEEE 2021
+    conference2: IEEE Internet of Things Journal 2021
+    #abstract: ……
+    pdf2: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9497343
+    web2: https://ieeexplore.ieee.org/abstract/document/9497343
+    bibtex2: ./assets/files/LG.txt
+    image2: ./assets/files/LG.jpg
+    notes2: Published
+    tag: "Model Interpretation, Representation & Evaluation"
+
+
+  - title2: E-BERT：Adapting BERT to E-commerce with Adaptive Hybrid Masking and Neighbor Product Reconstruction
+    authors2: Denghui Zhang, <strong>Zixuan Yuan</strong>, Yanchi Liu, Zuohui Fu, Fuzhen Zhuang, Pengyang Wang, Haifeng Chen, Hui Xiong†
+    conference_short2: WWW 2021
+    conference2: In Proceedings of the 28th World Wide Web Conference
+    #abstract: ……
+    pdf2: https://arxiv.org/pdf/2009.02835
+    web2: https://arxiv.org/abs/2009.02835
+    bibtex2: ./assets/files/ebert.txt
+    image2: ./assets/files/ebert.jpg
+    notes2: Published
+    tag: "AI-driven investment"
+
+
+
+  - title2: Spatio-Temporal Dual Graph Attention Network for Query-POI Matching
+    authors2: <strong>Zixuan Yuan*</strong>, Hao Liu*†, Yanchi Liu, Denghui Zhang, Fei Yi, Nengjun Zhu, and Hui Xiong†
+    conference_short2: SIGIR 2020
+    conference2: Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 629-638. 2020.
+    #abstract: ……
+    pdf2: ./assets/files/STDGAT.pdf
+    web2: https://www.researchgate.net/publication/342215590_Spatio-Temporal_Dual_Graph_Attention_Network_for_Query-POI_Matching
+    bibtex2: ./assets/files/STDGAT.txt
+    image2: ./assets/files/STDGAT2.jpg
+    notes2: Published
+    tag: "Model Interpretation, Representation & Evaluation"
