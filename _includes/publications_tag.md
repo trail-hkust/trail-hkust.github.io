@@ -1,13 +1,13 @@
+```html
 <h1 id="publications"></h1>
 
-<h2 style="margin: 30px 0px 20px;"> Publications
-
+<h2 style="margin: 30px 0px 20px;">
+  Publications
 </h2>
 
+
 <!-- ===================================================== -->
-
 <!-- TOPIC FILTERS                                         -->
-
 <!-- ===================================================== -->
 
 <div
@@ -18,97 +18,114 @@
     margin-bottom:25px;
     padding-left:15px;
     line-height:1.8;
-  ">
+  "
+>
 
   <span style="margin-right:12px;">
     <strong>Topics:</strong>
   </span>
 
+
   <!-- ALL -->
 
-<a
- href="javascript:void(0);"
- class="topic-filter"
- data-topic="all"
- onclick="showPublicationTopic('all')"
- style="
-   margin-right:15px;
-   text-decoration:none;
-   cursor:pointer;
-   border-bottom:2px solid transparent;
-   padding-bottom:2px;
- ">
-All </a>
+  <a
+    href="javascript:void(0);"
+    class="topic-filter"
+    data-topic="all"
+    onclick="showPublicationTopic('all')"
+    style="
+      margin-right:15px;
+      text-decoration:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      padding-bottom:2px;
+    "
+  >
+    All
+  </a>
+
 
   <!-- MULTI-AGENT -->
 
-<a
- href="javascript:void(0);"
- class="topic-filter"
- data-topic="multi-agent"
- onclick="showPublicationTopic('multi-agent')"
- style="
-   margin-right:15px;
-   text-decoration:none;
-   cursor:pointer;
-   border-bottom:2px solid transparent;
-   padding-bottom:2px;
- ">
-Multi-Agent Learning & Reasoning </a>
+  <a
+    href="javascript:void(0);"
+    class="topic-filter"
+    data-topic="multi-agent"
+    onclick="showPublicationTopic('multi-agent')"
+    style="
+      margin-right:15px;
+      text-decoration:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      padding-bottom:2px;
+    "
+  >
+    Multi-Agent Learning &amp; Reasoning
+  </a>
+
 
   <!-- COMPLIANCE -->
 
-<a
- href="javascript:void(0);"
- class="topic-filter"
- data-topic="compliance"
- onclick="showPublicationTopic('compliance')"
- style="
-   text-decoration:none;
-   cursor:pointer;
-   border-bottom:2px solid transparent;
-   padding-bottom:2px;
- ">
-AI for Regulatory Compliance </a>
+  <a
+    href="javascript:void(0);"
+    class="topic-filter"
+    data-topic="compliance"
+    onclick="showPublicationTopic('compliance')"
+    style="
+      margin-right:15px;
+      text-decoration:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      padding-bottom:2px;
+    "
+  >
+    AI for Regulatory Compliance
+  </a>
 
 
   <!-- INTERPRETABILITY -->
 
-<a
- href="javascript:void(0);"
- class="topic-filter"
- data-topic="interpretability"
- onclick="showPublicationTopic('interpretability')"
- style="
-   margin-right:15px;
-   text-decoration:none;
-   cursor:pointer;
-   border-bottom:2px solid transparent;
-   padding-bottom:2px;
- ">
-Model Interpretability, Representation & Evaluation </a>
+  <a
+    href="javascript:void(0);"
+    class="topic-filter"
+    data-topic="interpretability"
+    onclick="showPublicationTopic('interpretability')"
+    style="
+      margin-right:15px;
+      text-decoration:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      padding-bottom:2px;
+    "
+  >
+    Model Interpretability, Representation &amp; Evaluation
+  </a>
+
 
   <!-- INVESTMENT -->
 
-<a
- href="javascript:void(0);"
- class="topic-filter"
- data-topic="investment"
- onclick="showPublicationTopic('investment')"
- style="
-   margin-right:15px;
-   text-decoration:none;
-   cursor:pointer;
-   border-bottom:2px solid transparent;
-   padding-bottom:2px;
- ">
-AI for Investment </a>
+  <a
+    href="javascript:void(0);"
+    class="topic-filter"
+    data-topic="investment"
+    onclick="showPublicationTopic('investment')"
+    style="
+      margin-right:15px;
+      text-decoration:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      padding-bottom:2px;
+    "
+  >
+    AI for Investment
+  </a>
 
 </div>
 
 
+
 <!-- ===================================================== -->
-<!-- PUBLICATION SEARCH                                   -->
+<!-- SEARCH + YEAR                                         -->
 <!-- ===================================================== -->
 
 <div
@@ -118,13 +135,16 @@ AI for Investment </a>
     gap:12px;
     margin-left:20px;
     margin-bottom:25px;
-  ">
+    flex-wrap:wrap;
+  "
+>
+
+  <!-- SEARCH -->
 
   <input
     type="text"
     id="publication-search"
     placeholder="Search publications..."
-    oninput="searchPublications()"
     style="
       width:300px;
       padding:7px 10px;
@@ -132,11 +152,14 @@ AI for Investment </a>
       border:1px solid #cccccc;
       border-radius:4px;
       box-sizing:border-box;
-    ">
+    "
+  >
+
+
+  <!-- YEAR -->
 
   <select
     id="publication-year"
-    onchange="searchPublications()"
     style="
       padding:7px 10px;
       font-size:14px;
@@ -144,9 +167,13 @@ AI for Investment </a>
       border-radius:4px;
       background:white;
       cursor:pointer;
-    ">
+    "
+  >
 
-    <option value="all">Year: All</option>
+    <option value="all">
+      Year: All
+    </option>
+
     <option value="2026">2026</option>
     <option value="2025">2025</option>
     <option value="2024">2024</option>
@@ -158,6 +185,7 @@ AI for Investment </a>
   </select>
 
 </div>
+
 
 
 <!-- ===================================================== -->
@@ -187,21 +215,27 @@ AI for Investment </a>
 {% endif %}
 
 
+
 <!-- ===================================================== -->
 <!-- ONE PUBLICATION ITEM                                  -->
 <!-- ===================================================== -->
 
 <div
   class="publication-item"
+
   data-title="{{ link.title | escape | downcase }}"
+
   data-year="{{ link.year }}"
+
   data-topic="{{ topic_id }}"
+
   style="
     display:flex;
     width:100%;
     margin-bottom:30px;
     box-sizing:border-box;
-  ">
+  "
+>
 
 
   <!-- =================================================== -->
@@ -214,7 +248,8 @@ AI for Investment </a>
       flex:0 0 30%;
       padding-right:25px;
       box-sizing:border-box;
-    ">
+    "
+  >
 
     {% if link.image %}
 
@@ -233,7 +268,8 @@ AI for Investment </a>
           border-radius:4px;
           text-decoration:none;
           box-sizing:border-box;
-        ">
+        "
+      >
 
         <img
           src="{{ link.image }}"
@@ -245,13 +281,15 @@ AI for Investment </a>
             width:auto;
             height:auto;
             object-fit:contain;
-          ">
+          "
+        >
 
       </a>
 
     {% endif %}
 
   </div>
+
 
 
   <!-- =================================================== -->
@@ -264,7 +302,8 @@ AI for Investment </a>
       flex:0 0 70%;
       box-sizing:border-box;
       padding:0;
-    ">
+    "
+  >
 
 
     <!-- ================================================= -->
@@ -278,7 +317,8 @@ AI for Investment </a>
         font-weight:600;
         line-height:1.45;
         margin-bottom:8px;
-      ">
+      "
+    >
 
       {% if link.pdf %}
 
@@ -287,7 +327,8 @@ AI for Investment </a>
           target="_blank"
           style="
             text-decoration:none;
-          ">
+          "
+        >
           {{ link.title }}
         </a>
 
@@ -300,6 +341,7 @@ AI for Investment </a>
     </div>
 
 
+
     <!-- ================================================= -->
     <!-- AUTHORS                                           -->
     <!-- ================================================= -->
@@ -309,11 +351,13 @@ AI for Investment </a>
       style="
         margin-bottom:6px;
         line-height:1.5;
-      ">
+      "
+    >
 
       {{ link.authors }}
 
     </div>
+
 
 
     <!-- ================================================= -->
@@ -324,7 +368,8 @@ AI for Investment </a>
       style="
         margin-bottom:6px;
         line-height:1.5;
-      ">
+      "
+    >
 
       {% if link.year %}
 
@@ -335,9 +380,15 @@ AI for Investment </a>
 
       {% if topic_id != "" %}
 
-        <span style="margin-left:6px; margin-right:6px;">
+        <span
+          style="
+            margin-left:6px;
+            margin-right:6px;
+          "
+        >
           ·
         </span>
+
 
         <a
           href="javascript:void(0);"
@@ -348,13 +399,15 @@ AI for Investment </a>
             text-decoration:none;
             cursor:pointer;
             color:inherit;
-          ">
+          "
+        >
           {{ link.tag }}
         </a>
 
       {% endif %}
 
     </div>
+
 
 
     <!-- ================================================= -->
@@ -366,7 +419,8 @@ AI for Investment </a>
       style="
         margin-bottom:10px;
         line-height:1.5;
-      ">
+      "
+    >
 
       {% if link.conference_short %}
 
@@ -389,7 +443,8 @@ AI for Investment </a>
           style="
             margin-left:5px;
             text-decoration:none;
-          ">
+          "
+        >
           PDF
         </a>
 
@@ -408,7 +463,8 @@ AI for Investment </a>
           style="
             margin-left:5px;
             text-decoration:none;
-          ">
+          "
+        >
           Website
         </a>
 
@@ -427,7 +483,8 @@ AI for Investment </a>
           style="
             margin-left:5px;
             text-decoration:none;
-          ">
+          "
+        >
           Code
         </a>
 
@@ -446,7 +503,8 @@ AI for Investment </a>
           style="
             margin-left:5px;
             text-decoration:none;
-          ">
+          "
+        >
           BibTeX
         </a>
 
@@ -469,170 +527,417 @@ AI for Investment </a>
 
 {% endfor %}
 
+
+
 <!-- ===================================================== -->
-
 <!-- JAVASCRIPT                                            -->
-
 <!-- ===================================================== -->
 
 <script>
 
-/* =========================================================
-   TOPIC FILTER
-   ========================================================= */
+(function () {
 
-function showPublicationTopic(topic) {
+  /* =======================================================
+     CURRENT TOPIC
+     ======================================================= */
 
-  var items = document.querySelectorAll(".publication-item");
-  var topicButtons = document.querySelectorAll(".topic-filter");
-
-  items.forEach(function(item) {
-
-    if (topic === "all") {
-
-      item.style.display = "flex";
-
-    } else if (item.getAttribute("data-topic") === topic) {
-
-      item.style.display = "flex";
-
-    } else {
-
-      item.style.display = "none";
-
-    }
-
-  });
+  var currentPublicationTopic = "all";
 
 
-  /* Update selected topic */
+  /* =======================================================
+     APPLY ALL FILTERS
+     ======================================================= */
 
-  topicButtons.forEach(function(button) {
+  function applyPublicationFilters() {
 
-    if (button.getAttribute("data-topic") === topic) {
+    var searchInput =
+      document.getElementById("publication-search");
 
-      button.style.fontWeight = "600";
-      button.style.borderBottom = "2px solid currentColor";
-      button.style.paddingBottom = "2px";
+    var yearSelect =
+      document.getElementById("publication-year");
 
-    } else {
 
-      button.style.fontWeight = "400";
-      button.style.borderBottom = "2px solid transparent";
-      button.style.paddingBottom = "2px";
+    if (!searchInput || !yearSelect) {
+
+      console.log(
+        "Publication search elements not found."
+      );
+
+      return;
 
     }
 
-  });
 
-}
+    /* -----------------------------------------------------
+       Search keyword
+       ----------------------------------------------------- */
 
-
-/* =========================================================
-   SEARCH + YEAR FILTER
-   ========================================================= */
-
-function searchPublications() {
-
-  var searchInput = document.getElementById("publication-search");
-  var yearSelect = document.getElementById("publication-year");
-
-  var keyword = searchInput.value.toLowerCase().trim();
-  var selectedYear = yearSelect.value;
-
-  var items = document.querySelectorAll(".publication-item");
+    var keyword =
+      searchInput.value
+        .toLowerCase()
+        .trim();
 
 
-  items.forEach(function(item) {
+    /* -----------------------------------------------------
+       Selected year
+       ----------------------------------------------------- */
 
-    /* -----------------------------------------
-       Search title only
-       ----------------------------------------- */
-
-    var title = item.getAttribute("data-title") || "";
-
-    /* -----------------------------------------
-       Year
-       ----------------------------------------- */
-
-    var year = item.getAttribute("data-year") || "";
+    var selectedYear =
+      yearSelect.value;
 
 
-    /* -----------------------------------------
-       Check search
-       ----------------------------------------- */
+    /* -----------------------------------------------------
+       Publications
+       ----------------------------------------------------- */
 
-    var matchesSearch =
-      keyword === "" ||
-      title.includes(keyword);
-
-
-    /* -----------------------------------------
-       Check year
-       ----------------------------------------- */
-
-    var matchesYear =
-      selectedYear === "all" ||
-      year === selectedYear;
+    var items =
+      document.querySelectorAll(
+        ".publication-item"
+      );
 
 
-    /* -----------------------------------------
-       Show / hide
-       ----------------------------------------- */
+    /* -----------------------------------------------------
+       Filter every publication
+       ----------------------------------------------------- */
 
-    if (matchesSearch && matchesYear) {
+    items.forEach(function (item) {
 
-      item.style.display = "flex";
 
-    } else {
+      /* ===================================================
+         TITLE
+         =================================================== */
 
-      item.style.display = "none";
+      var title =
+        (
+          item.getAttribute(
+            "data-title"
+          ) || ""
+        ).toLowerCase();
+
+
+
+      /* ===================================================
+         YEAR
+         =================================================== */
+
+      var year =
+        (
+          item.getAttribute(
+            "data-year"
+          ) || ""
+        ).toLowerCase();
+
+
+
+      /* ===================================================
+         TOPIC
+         =================================================== */
+
+      var topic =
+        (
+          item.getAttribute(
+            "data-topic"
+          ) || ""
+        ).toLowerCase();
+
+
+
+      /* ===================================================
+         FULL TEXT
+         =================================================== */
+
+      /*
+       * Search the complete publication text.
+       *
+       * This includes:
+       *
+       * - title
+       * - authors
+       * - year
+       * - topic
+       * - conference
+       * - other displayed information
+       */
+
+      var fullText =
+        (
+          item.textContent || ""
+        ).toLowerCase();
+
+
+
+      /* ===================================================
+         SEARCH MATCH
+         =================================================== */
+
+      var matchesSearch =
+        keyword === "" ||
+        title.indexOf(keyword) !== -1 ||
+        fullText.indexOf(keyword) !== -1;
+
+
+
+      /* ===================================================
+         YEAR MATCH
+         =================================================== */
+
+      var matchesYear =
+        selectedYear === "all" ||
+        year === selectedYear;
+
+
+
+      /* ===================================================
+         TOPIC MATCH
+         =================================================== */
+
+      var matchesTopic =
+        currentPublicationTopic === "all" ||
+        topic === currentPublicationTopic;
+
+
+
+      /* ===================================================
+         FINAL MATCH
+         =================================================== */
+
+      if (
+        matchesSearch &&
+        matchesYear &&
+        matchesTopic
+      ) {
+
+        item.style.display = "flex";
+
+      } else {
+
+        item.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+
+
+  /* =======================================================
+     TOPIC FILTER
+     ======================================================= */
+
+  window.showPublicationTopic =
+    function (topic) {
+
+
+      /* ---------------------------------------------------
+         Save selected topic
+         --------------------------------------------------- */
+
+      currentPublicationTopic =
+        topic;
+
+
+      /* ---------------------------------------------------
+         Update topic buttons
+         --------------------------------------------------- */
+
+      var topicButtons =
+        document.querySelectorAll(
+          ".topic-filter"
+        );
+
+
+      topicButtons.forEach(
+        function (button) {
+
+
+          if (
+            button.getAttribute(
+              "data-topic"
+            ) === topic
+          ) {
+
+
+            /* Selected */
+
+            button.style.fontWeight =
+              "600";
+
+            button.style.borderBottom =
+              "2px solid currentColor";
+
+            button.style.paddingBottom =
+              "2px";
+
+
+          } else {
+
+
+            /* Not selected */
+
+            button.style.fontWeight =
+              "400";
+
+            button.style.borderBottom =
+              "2px solid transparent";
+
+            button.style.paddingBottom =
+              "2px";
+
+          }
+
+        }
+      );
+
+
+      /* ---------------------------------------------------
+         Apply all filters again
+         --------------------------------------------------- */
+
+      applyPublicationFilters();
+
+    };
+
+
+
+  /* =======================================================
+     SEARCH FUNCTION
+     ======================================================= */
+
+  window.searchPublications =
+    function () {
+
+      applyPublicationFilters();
+
+    };
+
+
+
+  /* =======================================================
+     INITIALIZATION
+     ======================================================= */
+
+  function initializePublicationFilters() {
+
+
+    console.log(
+      "Publication filter initialized."
+    );
+
+
+    /* -----------------------------------------------------
+       Search input
+       ----------------------------------------------------- */
+
+    var searchInput =
+      document.getElementById(
+        "publication-search"
+      );
+
+
+    if (searchInput) {
+
+      searchInput.addEventListener(
+        "input",
+        function () {
+
+          applyPublicationFilters();
+
+        }
+      );
 
     }
 
-  });
-
-}
 
 
-/* =========================================================
-   INITIAL STATE
-   ========================================================= */
+    /* -----------------------------------------------------
+       Year selector
+       ----------------------------------------------------- */
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  var items = document.querySelectorAll(".publication-item");
-
-  var topicButtons =
-    document.querySelectorAll(".topic-filter");
+    var yearSelect =
+      document.getElementById(
+        "publication-year"
+      );
 
 
-  /* -----------------------------------------
-     Initially hide all publications
-     ----------------------------------------- */
+    if (yearSelect) {
 
-  items.forEach(function(item) {
+      yearSelect.addEventListener(
+        "change",
+        function () {
 
-    item.style.display = "none";
+          applyPublicationFilters();
 
-  });
+        }
+      );
+
+    }
 
 
-  /* -----------------------------------------
-     No topic selected initially
-     ----------------------------------------- */
 
-  topicButtons.forEach(function(button) {
+    /* -----------------------------------------------------
+       Initial topic button state
+       ----------------------------------------------------- */
 
-    button.style.fontWeight = "400";
+    var topicButtons =
+      document.querySelectorAll(
+        ".topic-filter"
+      );
 
-    button.style.borderBottom =
-      "2px solid transparent";
 
-    button.style.paddingBottom = "2px";
+    topicButtons.forEach(
+      function (button) {
 
-  });
+        button.style.fontWeight =
+          "400";
 
-});
+        button.style.borderBottom =
+          "2px solid transparent";
+
+        button.style.paddingBottom =
+          "2px";
+
+      }
+    );
+
+
+
+    /* -----------------------------------------------------
+       Initially show all publications
+       ----------------------------------------------------- */
+
+    var items =
+      document.querySelectorAll(
+        ".publication-item"
+      );
+
+
+    items.forEach(
+      function (item) {
+
+        item.style.display =
+          "flex";
+
+      }
+    );
+
+  }
+
+
+
+  /* =======================================================
+     START
+     ======================================================= */
+
+  /*
+   * The script is located AFTER the publications,
+   * so the DOM already exists.
+   */
+
+  initializePublicationFilters();
+
+
+})();
 
 </script>
+```
