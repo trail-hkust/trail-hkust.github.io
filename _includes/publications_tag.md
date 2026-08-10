@@ -1,3 +1,4 @@
+
 <h1 id="publications"></h1>
 
 <h2 style="margin: 30px 0px 20px;">
@@ -20,13 +21,6 @@
   "
 >
 
-  <span style="margin-right:12px;">
-    <strong>Topics:</strong>
-  </span>
-
-
-  <!-- ALL -->
-
   <a
     href="javascript:void(0);"
     class="topic-filter"
@@ -43,8 +37,6 @@
     All
   </a>
 
-
-  <!-- MULTI-AGENT -->
 
   <a
     href="javascript:void(0);"
@@ -63,8 +55,6 @@
   </a>
 
 
-  <!-- COMPLIANCE -->
-
   <a
     href="javascript:void(0);"
     class="topic-filter"
@@ -82,8 +72,6 @@
   </a>
 
 
-  <!-- INTERPRETABILITY -->
-
   <a
     href="javascript:void(0);"
     class="topic-filter"
@@ -100,8 +88,6 @@
     Model Interpretability, Representation &amp; Evaluation
   </a>
 
-
-  <!-- INVESTMENT -->
 
   <a
     href="javascript:void(0);"
@@ -122,7 +108,6 @@
 </div>
 
 
-
 <!-- ===================================================== -->
 <!-- SEARCH + YEAR                                         -->
 <!-- ===================================================== -->
@@ -131,10 +116,9 @@
   style="
     display:flex;
     align-items:center;
-    gap:12px;
-    margin-left:20px;
-    margin-bottom:25px;
     flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
   "
 >
 
@@ -180,7 +164,6 @@
 </div>
 
 
-
 <!-- ===================================================== -->
 <!-- PUBLICATIONS                                          -->
 <!-- ===================================================== -->
@@ -189,7 +172,7 @@
 
 
 <!-- ===================================================== -->
-<!-- CONVERT TAGS TO TOPIC IDS                             -->
+<!-- CONVERT TOPIC NAME TO TOPIC ID                        -->
 <!-- ===================================================== -->
 
 {% assign topic_ids = "" %}
@@ -217,345 +200,324 @@
 {% endfor %}
 
 
-
 <!-- ===================================================== -->
-<!-- ONE PUBLICATION                                       -->
+<!-- ONE PUBLICATION ITEM                                  -->
 <!-- ===================================================== -->
 
 <div
   class="publication-item"
-  data-title="{{ link.title | escape | downcase }}"
-  data-year="{{ link.year }}"
   data-topics="{{ topic_ids | strip }}"
+  data-year="{{ link.year }}"
   style="
-    display:none !important;
-    width:100%;
     margin-bottom:30px;
-    box-sizing:border-box;
   "
 >
 
 
-  <!-- =================================================== -->
-  <!-- IMAGE                                                -->
-  <!-- =================================================== -->
+  <!-- ================================================= -->
+  <!-- IMAGE                                             -->
+  <!-- ================================================= -->
 
-  <div
-    style="
-      width:30%;
-      flex:0 0 30%;
-      padding-right:25px;
-      box-sizing:border-box;
-    "
-  >
+  {% if link.image %}
 
-    {% if link.image %}
+    <a
+      href="{{ link.image }}"
+      target="_blank"
+      style="
+        display:flex;
+        width:100%;
+        height:180px;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+        background:#f7f7f7;
+        border:1px solid #e5e5e5;
+        border-radius:4px;
+        text-decoration:none;
+        box-sizing:border-box;
+      "
+    >
 
-      <a
-        href="{{ link.image }}"
-        target="_blank"
+      <img
+        src="{{ link.image }}"
+        alt="{{ link.title }}"
         style="
-          display:flex;
-          width:100%;
-          height:180px;
-          align-items:center;
-          justify-content:center;
-          overflow:hidden;
-          background:#f7f7f7;
-          border:1px solid #e5e5e5;
-          border-radius:4px;
-          text-decoration:none;
-          box-sizing:border-box;
+          display:block;
+          max-width:100%;
+          max-height:100%;
+          width:auto;
+          height:auto;
+          object-fit:contain;
         "
       >
 
-        <img
-          src="{{ link.image }}"
-          alt="{{ link.title }}"
-          style="
-            display:block;
-            max-width:100%;
-            max-height:100%;
-            width:auto;
-            height:auto;
-            object-fit:contain;
-          "
-        >
+    </a>
 
+  {% endif %}
+
+
+  <!-- ================================================= -->
+  <!-- TITLE                                             -->
+  <!-- ================================================= -->
+
+  <div
+    class="title"
+    style="
+      font-size:17px;
+      font-weight:600;
+      line-height:1.45;
+      margin-bottom:8px;
+    "
+  >
+
+    {% if link.pdf %}
+
+      <a
+        href="{{ link.pdf }}"
+        target="_blank"
+        style="
+          text-decoration:none;
+        "
+      >
+        {{ link.title }}
       </a>
+
+    {% else %}
+
+      {{ link.title }}
 
     {% endif %}
 
   </div>
 
 
+  <!-- ================================================= -->
+  <!-- AUTHORS                                           -->
+  <!-- ================================================= -->
 
-  <!-- =================================================== -->
-  <!-- INFORMATION                                         -->
-  <!-- =================================================== -->
+  <div
+    class="author"
+    style="
+      margin-bottom:6px;
+      line-height:1.5;
+    "
+  >
+    {{ link.authors }}
+  </div>
+
+
+  <!-- ================================================= -->
+  <!-- YEAR + TOPICS                                     -->
+  <!-- ================================================= -->
 
   <div
     style="
-      width:70%;
-      flex:0 0 70%;
-      box-sizing:border-box;
-      padding:0;
+      margin-bottom:6px;
+      line-height:1.5;
     "
   >
 
+    {% if link.year %}
 
-    <!-- TITLE -->
+      {{ link.year }}
 
-    <div
-      class="title"
-      style="
-        font-size:17px;
-        font-weight:600;
-        line-height:1.45;
-        margin-bottom:8px;
-      "
-    >
+    {% endif %}
 
-      {% if link.pdf %}
 
-        <a
-          href="{{ link.pdf }}"
-          target="_blank"
-          style="text-decoration:none;"
-        >
-          {{ link.title }}
-        </a>
+    {% if link.tag %}
 
-      {% else %}
+      <span
+        style="
+          margin-left:6px;
+          margin-right:6px;
+        "
+      >
+        ·
+      </span>
 
-        {{ link.title }}
 
-      {% endif %}
+      {% for tag in link.tag %}
 
-    </div>
 
+        {% assign tag_id = "" %}
 
 
-    <!-- AUTHORS -->
+        {% if tag == "Multi-Agent Learning & Reasoning" %}
 
-    <div
-      class="author"
-      style="
-        margin-bottom:6px;
-        line-height:1.5;
-      "
-    >
-      {{ link.authors }}
-    </div>
+          {% assign tag_id = "multi-agent" %}
 
+        {% elsif tag == "Model Interpretability, Representation & Evaluation" %}
 
+          {% assign tag_id = "interpretability" %}
 
-    <!-- YEAR + TOPICS -->
+        {% elsif tag == "AI for Investment" %}
 
-    <div
-      style="
-        margin-bottom:6px;
-        line-height:1.5;
-      "
-    >
+          {% assign tag_id = "investment" %}
 
-      {% if link.year %}
-        {{ link.year }}
-      {% endif %}
+        {% elsif tag == "AI for Regulatory Compliance" %}
 
+          {% assign tag_id = "compliance" %}
 
-      {% if link.tag %}
+        {% endif %}
 
-        <span
-          style="
-            margin-left:6px;
-            margin-right:6px;
-          "
-        >
-          ·
-        </span>
 
+        {% if tag_id != "" %}
 
-        {% for tag in link.tag %}
+          <a
+            href="javascript:void(0);"
+            class="publication-topic"
+            data-topic="{{ tag_id }}"
+            onclick="showPublicationTopic('{{ tag_id }}')"
+            style="
+              text-decoration:none;
+              cursor:pointer;
+              color:inherit;
+            "
+          >
+            {{ tag }}
+          </a>
 
-          {% assign tag_id = "" %}
+        {% else %}
 
+          <span>
+            {{ tag }}
+          </span>
 
-          {% if tag == "Multi-Agent Learning & Reasoning" %}
+        {% endif %}
 
-            {% assign tag_id = "multi-agent" %}
 
-          {% elsif tag == "Model Interpretability, Representation & Evaluation" %}
+        {% unless forloop.last %}
 
-            {% assign tag_id = "interpretability" %}
+          <span
+            style="
+              margin-left:6px;
+              margin-right:6px;
+            "
+          >
+            ·
+          </span>
 
-          {% elsif tag == "AI for Investment" %}
+        {% endunless %}
 
-            {% assign tag_id = "investment" %}
 
-          {% elsif tag == "AI for Regulatory Compliance" %}
+      {% endfor %}
 
-            {% assign tag_id = "compliance" %}
-
-          {% endif %}
-
-
-          {% if tag_id != "" %}
-
-            <a
-              href="javascript:void(0);"
-              class="publication-topic"
-              data-topic="{{ tag_id }}"
-              onclick="showPublicationTopic('{{ tag_id }}')"
-              style="
-                text-decoration:none;
-                cursor:pointer;
-                color:inherit;
-              "
-            >
-              {{ tag }}
-            </a>
-
-          {% else %}
-
-            <span>
-              {{ tag }}
-            </span>
-
-          {% endif %}
-
-
-          {% unless forloop.last %}
-
-            <span
-              style="
-                margin-left:6px;
-                margin-right:6px;
-              "
-            >
-              ·
-            </span>
-
-          {% endunless %}
-
-        {% endfor %}
-
-      {% endif %}
-
-    </div>
-
-
-
-    <!-- CONFERENCE + LINKS -->
-
-    <div
-      class="periodical"
-      style="
-        margin-bottom:10px;
-        line-height:1.5;
-      "
-    >
-
-      {% if link.conference_short %}
-
-        <strong>
-          {{ link.conference_short }}
-        </strong>
-
-      {% endif %}
-
-
-      {% if link.pdf %}
-
-        <span style="margin-left:8px;">
-          /
-        </span>
-
-        <a
-          href="{{ link.pdf }}"
-          target="_blank"
-          style="
-            margin-left:5px;
-            text-decoration:none;
-          "
-        >
-          PDF
-        </a>
-
-      {% endif %}
-
-
-      {% if link.web %}
-
-        <span style="margin-left:5px;">
-          /
-        </span>
-
-        <a
-          href="{{ link.web }}"
-          target="_blank"
-          style="
-            margin-left:5px;
-            text-decoration:none;
-          "
-        >
-          Website
-        </a>
-
-      {% endif %}
-
-
-      {% if link.code %}
-
-        <span style="margin-left:5px;">
-          /
-        </span>
-
-        <a
-          href="{{ link.code }}"
-          target="_blank"
-          style="
-            margin-left:5px;
-            text-decoration:none;
-          "
-        >
-          Code
-        </a>
-
-      {% endif %}
-
-
-      {% if link.bibtex %}
-
-        <span style="margin-left:5px;">
-          /
-        </span>
-
-        <a
-          href="{{ link.bibtex }}"
-          target="_blank"
-          style="
-            margin-left:5px;
-            text-decoration:none;
-          "
-        >
-          BibTeX
-        </a>
-
-      {% endif %}
-
-
-      {% if link.others %}
-
-        <span style="margin-left:8px;">
-          {{ link.others }}
-        </span>
-
-      {% endif %}
-
-    </div>
+    {% endif %}
 
   </div>
+
+
+  <!-- ================================================= -->
+  <!-- CONFERENCE + LINKS                                -->
+  <!-- ================================================= -->
+
+  <div
+    class="periodical"
+    style="
+      margin-bottom:10px;
+      line-height:1.5;
+    "
+  >
+
+    {% if link.conference_short %}
+
+      <strong>
+        {{ link.conference_short }}
+      </strong>
+
+    {% endif %}
+
+
+    {% if link.pdf %}
+
+      <span style="margin-left:8px;">
+        /
+      </span>
+
+      <a
+        href="{{ link.pdf }}"
+        target="_blank"
+        style="
+          margin-left:5px;
+          text-decoration:none;
+        "
+      >
+        PDF
+      </a>
+
+    {% endif %}
+
+
+    {% if link.web %}
+
+      <span style="margin-left:5px;">
+        /
+      </span>
+
+      <a
+        href="{{ link.web }}"
+        target="_blank"
+        style="
+          margin-left:5px;
+          text-decoration:none;
+        "
+      >
+        Website
+      </a>
+
+    {% endif %}
+
+
+    {% if link.code %}
+
+      <span style="margin-left:5px;">
+        /
+      </span>
+
+      <a
+        href="{{ link.code }}"
+        target="_blank"
+        style="
+          margin-left:5px;
+          text-decoration:none;
+        "
+      >
+        Code
+      </a>
+
+    {% endif %}
+
+
+    {% if link.bibtex %}
+
+      <span style="margin-left:5px;">
+        /
+      </span>
+
+      <a
+        href="{{ link.bibtex }}"
+        target="_blank"
+        style="
+          margin-left:5px;
+          text-decoration:none;
+        "
+      >
+        BibTeX
+      </a>
+
+    {% endif %}
+
+
+    {% if link.others %}
+
+      <span style="margin-left:8px;">
+        {{ link.others }}
+      </span>
+
+    {% endif %}
+
+  </div>
+
 
 </div>
 
@@ -569,356 +531,284 @@
 
 <script>
 
-(function () {
-
-  /*
-   * null means:
-   *
-   * NO TOPIC HAS BEEN SELECTED.
-   *
-   * Therefore the initial page shows
-   * ZERO publications.
-   */
-
-  var currentPublicationTopic = null;
-
+document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =====================================================
-     APPLY FILTERS
-     ===================================================== */
+   * GET ELEMENTS
+   * ===================================================== */
 
-  function applyPublicationFilters() {
+  const searchInput =
+    document.getElementById("publication-search");
 
-    var searchInput =
-      document.getElementById("publication-search");
+  const yearSelect =
+    document.getElementById("publication-year");
 
-    var yearSelect =
-      document.getElementById("publication-year");
+  const publications =
+    document.querySelectorAll(".publication-item");
 
-    if (!searchInput || !yearSelect) {
-      return;
-    }
+  const topicFilters =
+    document.querySelectorAll(".topic-filter");
 
 
-    var keyword =
+  /* =====================================================
+   * CURRENT TOPIC
+   *
+   * Topic is completely independent from Search.
+   * ===================================================== */
+
+  let currentTopic = "all";
+
+
+  /* =====================================================
+   * TOPIC FILTER
+   *
+   * This function ONLY handles Topic.
+   *
+   * Search is NOT involved here.
+   * Year is NOT involved here.
+   * ===================================================== */
+
+  window.showPublicationTopic = function (topic) {
+
+
+    currentTopic = topic;
+
+
+    publications.forEach(function (item) {
+
+
+      const topics =
+        (item.dataset.topics || "")
+          .trim()
+          .split(/\s+/)
+          .filter(Boolean);
+
+
+      if (topic === "all") {
+
+        item.style.display = "";
+
+      }
+
+      else if (topics.includes(topic)) {
+
+        item.style.display = "";
+
+      }
+
+      else {
+
+        item.style.display = "none";
+
+      }
+
+    });
+
+
+    /* =================================================
+     * UPDATE TOPIC VISUAL STATE
+     * ================================================= */
+
+    topicFilters.forEach(function (filter) {
+
+
+      const filterTopic =
+        filter.dataset.topic;
+
+
+      if (filterTopic === topic) {
+
+        filter.style.borderBottom =
+          "2px solid currentColor";
+
+      }
+
+      else {
+
+        filter.style.borderBottom =
+          "2px solid transparent";
+
+      }
+
+    });
+
+  };
+
+
+  /* =====================================================
+   * SEARCH + YEAR
+   *
+   * IMPORTANT:
+   *
+   * This function completely ignores currentTopic.
+   *
+   * It ALWAYS searches through ALL publications.
+   * ===================================================== */
+
+  function searchPublications() {
+
+
+    const query =
       searchInput.value
         .toLowerCase()
         .trim();
 
 
-    var selectedYear =
+    const selectedYear =
       yearSelect.value;
 
 
-    var items =
-      document.querySelectorAll(
-        ".publication-item"
-      );
+    /* =================================================
+     * SEARCH ALL PUBLICATIONS
+     * ================================================= */
 
-
-
-    /* ===================================================
-       CHECK EVERY PUBLICATION
-       =================================================== */
-
-    items.forEach(function (item) {
+    publications.forEach(function (item) {
 
 
       /*
-       * VERY IMPORTANT:
+       * Get the complete text of this publication.
        *
-       * If no topic has been selected,
-       * absolutely hide the paper.
+       * This includes:
+       * title
+       * authors
+       * year
+       * topics
+       * conference
+       * etc.
        */
 
-      if (currentPublicationTopic === null) {
+      const text =
+        item.textContent
+          .toLowerCase();
 
-        item.style.setProperty(
-          "display",
-          "none",
-          "important"
-        );
 
-        return;
-      }
-
+      const year =
+        item.dataset.year || "";
 
 
       /* ===============================================
-         GET DATA
-         =============================================== */
+       * SEARCH CONDITION
+       * =============================================== */
 
-      var title =
-        (
-          item.getAttribute("data-title") || ""
-        ).toLowerCase();
-
-
-      var year =
-        (
-          item.getAttribute("data-year") || ""
-        ).toLowerCase();
-
-
-      var topicString =
-        (
-          item.getAttribute("data-topics") || ""
-        ).toLowerCase().trim();
-
-
-      var topics =
-        topicString === ""
-          ? []
-          : topicString.split(/\s+/);
-
-
-      var fullText =
-        (
-          item.textContent || ""
-        ).toLowerCase();
-
+      const matchesSearch =
+        query === "" ||
+        text.includes(query);
 
 
       /* ===============================================
-         SEARCH
-         =============================================== */
+       * YEAR CONDITION
+       * =============================================== */
 
-      var matchesSearch =
-        keyword === "" ||
-        title.indexOf(keyword) !== -1 ||
-        fullText.indexOf(keyword) !== -1;
-
-
-
-      /* ===============================================
-         YEAR
-         =============================================== */
-
-      var matchesYear =
+      const matchesYear =
         selectedYear === "all" ||
         year === selectedYear;
 
 
-
       /* ===============================================
-         TOPIC
-         =============================================== */
-
-      var matchesTopic =
-        currentPublicationTopic === "all" ||
-        topics.indexOf(
-          currentPublicationTopic
-        ) !== -1;
-
-
-
-      /* ===============================================
-         SHOW / HIDE
-         =============================================== */
+       * DISPLAY
+       *
+       * NO currentTopic here.
+       * =============================================== */
 
       if (
         matchesSearch &&
-        matchesYear &&
-        matchesTopic
+        matchesYear
       ) {
 
-        item.style.setProperty(
-          "display",
-          "flex",
-          "important"
-        );
+        item.style.display = "";
 
-      } else {
+      }
 
-        item.style.setProperty(
-          "display",
-          "none",
-          "important"
-        );
+      else {
+
+        item.style.display = "none";
 
       }
 
     });
 
-  }
-
-
-
-  /* =====================================================
-     TOPIC BUTTON
-     ===================================================== */
-
-  window.showPublicationTopic =
-    function (topic) {
-
-
-      /*
-       * DIRECT REPLACEMENT.
-       *
-       * Clicking Investment after Multi-Agent
-       * does NOT combine the two.
-       *
-       * It simply changes:
-       *
-       * multi-agent
-       *
-       * into:
-       *
-       * investment
-       */
-
-      currentPublicationTopic = topic;
-
-
-
-      /* ===============================================
-         UPDATE BUTTON STYLE
-         =============================================== */
-
-      var topicButtons =
-        document.querySelectorAll(
-          ".topic-filter"
-        );
-
-
-      topicButtons.forEach(function (button) {
-
-        var buttonTopic =
-          button.getAttribute(
-            "data-topic"
-          );
-
-
-        if (buttonTopic === topic) {
-
-          button.style.fontWeight = "600";
-
-          button.style.borderBottom =
-            "2px solid currentColor";
-
-        } else {
-
-          button.style.fontWeight = "400";
-
-          button.style.borderBottom =
-            "2px solid transparent";
-
-        }
-
-      });
-
-
-
-      /* ===============================================
-         APPLY FILTER
-         =============================================== */
-
-      applyPublicationFilters();
-
-    };
-
-
-
-  /* =====================================================
-     INITIALIZATION
-     ===================================================== */
-
-  function initializePublicationFilters() {
-
 
     /*
-     * Make absolutely sure that every publication
-     * starts hidden.
+     * Search has now switched the display back to
+     * the ALL-publications search space.
+     *
+     * Therefore visually activate "All".
      */
 
-    var items =
-      document.querySelectorAll(
-        ".publication-item"
-      );
+    topicFilters.forEach(function (filter) {
 
 
-    items.forEach(function (item) {
+      if (
+        filter.dataset.topic === "all"
+      ) {
 
-      item.style.setProperty(
-        "display",
-        "none",
-        "important"
-      );
+        filter.style.borderBottom =
+          "2px solid currentColor";
+
+      }
+
+      else {
+
+        filter.style.borderBottom =
+          "2px solid transparent";
+
+      }
 
     });
 
 
-
-    /* ===============================================
-       SEARCH
-       =============================================== */
-
-    var searchInput =
-      document.getElementById(
-        "publication-search"
-      );
-
-
-    if (searchInput) {
-
-      searchInput.addEventListener(
-        "input",
-        function () {
-
-          applyPublicationFilters();
-
-        }
-      );
-
-    }
-
-
-
-    /* ===============================================
-       YEAR
-       =============================================== */
-
-    var yearSelect =
-      document.getElementById(
-        "publication-year"
-      );
-
-
-    if (yearSelect) {
-
-      yearSelect.addEventListener(
-        "change",
-        function () {
-
-          applyPublicationFilters();
-
-        }
-      );
-
-    }
-
-
-
     /*
-     * DO NOT call applyPublicationFilters()
-     * here with topic = all.
+     * Do NOT change currentTopic here.
      *
-     * currentPublicationTopic is null,
-     * so the page stays empty.
+     * The variable is intentionally left untouched.
+     *
+     * Search and Topic are logically independent.
      */
+
+  };
+
+
+  /* =====================================================
+   * SEARCH INPUT
+   * ===================================================== */
+
+  if (searchInput) {
+
+    searchInput.addEventListener(
+      "input",
+      searchPublications
+    );
 
   }
 
 
+  /* =====================================================
+   * YEAR SELECT
+   *
+   * Year follows the same logic as Search:
+   * it searches ALL publications.
+   * ===================================================== */
+
+  if (yearSelect) {
+
+    yearSelect.addEventListener(
+      "change",
+      searchPublications
+    );
+
+  }
+
 
   /* =====================================================
-     START
-     ===================================================== */
+   * INITIAL STATE
+   *
+   * Start with ALL publications.
+   * ===================================================== */
 
-  initializePublicationFilters();
+  window.showPublicationTopic("all");
 
 
-})();
+});
 
 </script>
