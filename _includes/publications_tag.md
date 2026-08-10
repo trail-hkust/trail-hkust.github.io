@@ -1,757 +1,675 @@
+---
+
+layout: page
+title: Publications
+permalink: /publications/
+-------------------------
+
 <h1 id="publications"></h1>
 
-<h2 style="margin: 30px 0px -5px;">
+<h2 style="margin: 30px 0px -15px;">
   Publications
+  <temp style="font-size:15px;">[</temp>
+  <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
+     target="_blank"
+     style="font-size:15px;">
+    Google Scholar
+  </a>
+  <temp style="font-size:15px;">]</temp>
 
-  <span style="font-size:15px; font-weight:normal; margin-left:10px;">
-    [
-    <a href="https://scholar.google.com/citations?user=lxrXMY0AAAAJ&hl=en&oi=ao"
-       target="_blank">
-      Google Scholar
-    </a>
-    ]
+<temp style="font-size:15px;">[</temp> <a href="https://www.researchgate.net/profile/Zixuan-Yuan"
+  target="_blank"
+  style="font-size:15px;">
+ResearchGate </a> <temp style="font-size:15px;">]</temp>
 
-```
-[
-
-<a href="https://www.researchgate.net/profile/Zixuan-Yuan"
-   target="_blank">
-  ResearchGate
-</a>
-]
-```
-
-  </span>
 </h2>
 
-<!-- =========================================================
-     PUBLICATION FILTERS
-     ========================================================= -->
+<br>
 
-<div style="
-    margin: 20px 0 25px 0;
-    font-size: 14px;
-    line-height: 2;
-">
+<!-- ========================= -->
 
-  <!-- Selected / All by date -->
+<!-- Publication Mode -->
 
-  <div style="margin-bottom: 5px;">
+<!-- ========================= -->
+
+<div style="margin-bottom: 10px;">
+
+<button
+ id="selected-btn"
+ class="publication-mode active"
+ onclick="setPublicationMode('selected')"
+ style="
+   border: none;
+   background: none;
+   padding: 0;
+   margin-right: 20px;
+   font-size: 15px;
+   font-weight: 600;
+   cursor: pointer;
+   color: #222;
+ ">
+Selected </button>
+
+<button
+ id="all-date-btn"
+ class="publication-mode"
+ onclick="setPublicationMode('all')"
+ style="
+   border: none;
+   background: none;
+   padding: 0;
+   font-size: 15px;
+   cursor: pointer;
+   color: #888;
+ ">
+All by date </button>
+
+</div>
+
+<!-- ========================= -->
+
+<!-- Selected Publications -->
+
+<!-- ========================= -->
+
+<div id="selected-publications">
+
+  <div style="margin: 12px 0 25px 0; font-size: 14px;">
 
 ```
-<strong style="margin-right: 15px;">
-  Publications
-</strong>
+<strong>Topics:</strong>
 
-<a href="javascript:void(0);"
-   onclick="showPublicationMode('selected')"
-   id="selected-tab"
+<a href="#multi-agent-learning-reasoning"
    style="
-     margin-right: 15px;
+     margin-left: 10px;
+     margin-right: 14px;
      text-decoration: none;
-     cursor: pointer;
    ">
-  Selected
-</a>
-
-<a href="javascript:void(0);"
-   onclick="showPublicationMode('all')"
-   id="all-date-tab"
-   style="
-     text-decoration: none;
-     cursor: pointer;
-   ">
-  All by date
-</a>
-```
-
-  </div>
-
-  <!-- Topics -->
-
-  <div id="topic-filters"
-       style="
-         margin-top: 5px;
-         display: none;
-       ">
-
-```
-<strong style="margin-right: 12px;">
-  Topics:
-</strong>
-
-
-<!-- All -->
-
-<a href="javascript:void(0);"
-   onclick="filterPublications('all')"
-   class="topic-link active-topic"
-   data-topic="all">
-  All
-</a>
-
-
-<span style="margin: 0 7px;">
-  |
-</span>
-
-
-<!-- Multi-Agent -->
-
-<a href="javascript:void(0);"
-   onclick="filterPublications('Multi-Agent Learning & Reasoning')"
-   class="topic-link"
-   data-topic="Multi-Agent Learning & Reasoning">
   Multi-Agent Learning &amp; Reasoning
 </a>
 
-
-<span style="margin: 0 7px;">
-  |
-</span>
-
-
-<!-- Model Interpretation -->
-
-<a href="javascript:void(0);"
-   onclick="filterPublications('Model Interpretation, Representation & Evaluation')"
-   class="topic-link"
-   data-topic="Model Interpretation, Representation & Evaluation">
-  Model Interpretation, Representation &amp; Evaluation
+<a href="#model-interpretability-representation-evaluation"
+   style="
+     margin-right: 14px;
+     text-decoration: none;
+   ">
+  Model Interpretability, Representation &amp; Evaluation
 </a>
 
-
-<span style="margin: 0 7px;">
-  |
-</span>
-
-
-<!-- AI Investment -->
-
-<a href="javascript:void(0);"
-   onclick="filterPublications('AI-driven investment')"
-   class="topic-link"
-   data-topic="AI-driven investment">
+<a href="#ai-for-investment"
+   style="
+     margin-right: 14px;
+     text-decoration: none;
+   ">
   AI for Investment
 </a>
 
-
-<span style="margin: 0 7px;">
-  |
-</span>
-
-
-<!-- Regulatory Compliance -->
-
-<a href="javascript:void(0);"
-   onclick="filterPublications('AI for regulatory compliance')"
-   class="topic-link"
-   data-topic="AI for Regulatory Compliance">
+<a href="#ai-for-regulatory-compliance"
+   style="
+     text-decoration: none;
+   ">
   AI for Regulatory Compliance
 </a>
 ```
 
   </div>
 
+{% assign categories = "Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI-driven investment|AI for regulatory compliance" | split: "|" %}
+
+{% for category in categories %}
+
+```
+{% assign category_id = category | slugify %}
+
+<h3 id="{{ category_id }}"
+    style="
+      margin-top: 35px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+      font-size: 20px;
+    ">
+  {{ category }}
+</h3>
+
+
+{% assign category_papers = site.data.publications_tag.main | where: "tag", category %}
+
+<ol class="bibliography">
+
+  {% for link in category_papers %}
+
+  <li style="margin-bottom: 35px;">
+
+    <div
+      class="publication-entry"
+      style="
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+      ">
+
+
+      <!-- ========================= -->
+      <!-- Image: 30% -->
+      <!-- ========================= -->
+
+      <div
+        style="
+          width: 30%;
+          flex: 0 0 30%;
+          padding-right: 20px;
+        ">
+
+        {% if link.image %}
+
+        <a href="{{ link.image }}"
+           target="_blank"
+           title="Click to view full-size image"
+           style="
+             display: block;
+             width: 100%;
+             height: 210px;
+             overflow: hidden;
+             border: 1px solid #e5e5e5;
+             background: #fafafa;
+             text-align: center;
+           ">
+
+          <img
+            src="{{ link.image }}"
+            alt="{{ link.title }}"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              display: block;
+            ">
+
+        </a>
+
+        {% endif %}
+
+      </div>
+
+
+      <!-- ========================= -->
+      <!-- Publication Info: 70% -->
+      <!-- ========================= -->
+
+      <div
+        style="
+          width: 70%;
+          flex: 0 0 70%;
+          padding-left: 5px;
+        ">
+
+
+        <!-- Title -->
+
+        <div
+          class="title"
+          style="
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.45;
+            margin-bottom: 8px;
+          ">
+
+          {% if link.pdf %}
+
+            <a href="{{ link.pdf }}"
+               target="_blank">
+              {{ link.title }}
+            </a>
+
+          {% else %}
+
+            {{ link.title }}
+
+          {% endif %}
+
+        </div>
+
+
+        <!-- Authors -->
+
+        <div
+          class="author"
+          style="
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 6px;
+          ">
+          {{ link.authors }}
+        </div>
+
+
+        <!-- Conference -->
+
+        <div
+          class="periodical"
+          style="
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+          ">
+
+          <em>{{ link.conference }}</em>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- Links -->
+        <!-- ========================= -->
+
+        <div class="links"
+             style="
+               margin-top: 8px;
+               display: flex;
+               flex-wrap: wrap;
+               align-items: center;
+               gap: 6px;
+             ">
+
+
+          {% if link.pdf %}
+
+          <a href="{{ link.pdf }}"
+             target="_blank"
+             style="
+               display: inline-block;
+               padding: 3px 9px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 12px;
+               text-decoration: none;
+               color: #555;
+               background: #fff;
+             ">
+            PDF
+          </a>
+
+          {% endif %}
+
+
+          {% if link.web %}
+
+          <a href="{{ link.web }}"
+             target="_blank"
+             style="
+               display: inline-block;
+               padding: 3px 9px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 12px;
+               text-decoration: none;
+               color: #555;
+               background: #fff;
+             ">
+            Website
+          </a>
+
+          {% endif %}
+
+
+          {% if link.code %}
+
+          <a href="{{ link.code }}"
+             target="_blank"
+             style="
+               display: inline-block;
+               padding: 3px 9px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 12px;
+               text-decoration: none;
+               color: #555;
+               background: #fff;
+             ">
+            Code
+          </a>
+
+          {% endif %}
+
+
+          {% if link.bibtex %}
+
+          <a href="{{ link.bibtex }}"
+             target="_blank"
+             style="
+               display: inline-block;
+               padding: 3px 9px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 12px;
+               text-decoration: none;
+               color: #555;
+               background: #fff;
+             ">
+            BibTeX
+          </a>
+
+          {% endif %}
+
+
+          {% if link.page %}
+
+          <a href="{{ link.page }}"
+             target="_blank"
+             style="
+               display: inline-block;
+               padding: 3px 9px;
+               border: 1px solid #ccc;
+               border-radius: 3px;
+               font-size: 12px;
+               text-decoration: none;
+               color: #555;
+               background: #fff;
+             ">
+            Project Page
+          </a>
+
+          {% endif %}
+
+
+          {% if link.notes %}
+
+          <span
+            style="
+              font-size: 12px;
+              color: #e74d3c;
+              margin-left: 3px;
+            ">
+            {{ link.notes }}
+          </span>
+
+          {% endif %}
+
+
+          {% if link.others %}
+
+            {{ link.others }}
+
+          {% endif %}
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </li>
+
+  {% endfor %}
+
+</ol>
+```
+
+{% endfor %}
+
 </div>
 
-<!-- =========================================================
-     CSS
-     ========================================================= -->
+<!-- ========================= -->
 
-<style>
+<!-- All Publications -->
 
-/* =========================================================
-   Publication layout
-   ========================================================= */
+<!-- ========================= -->
 
-.publication-item {
-    margin-bottom: 38px;
-}
+<div
+  id="all-publications"
+  style="display: none;">
 
-
-.publication-entry {
-
-    display: flex;
-
-    align-items: flex-start;
-
-    width: 100%;
-
-}
-
-
-/* =========================================================
-   LEFT: IMAGE
-   30%
-   ========================================================= */
-
-.publication-image {
-
-    width: 30%;
-
-    flex: 0 0 30%;
-
-    padding-right: 25px;
-
-    box-sizing: border-box;
-
-}
-
-
-/* =========================================================
-   RIGHT: INFORMATION
-   70%
-   ========================================================= */
-
-.publication-info {
-
-    width: 70%;
-
-    flex: 0 0 70%;
-
-    box-sizing: border-box;
-
-}
-
-
-/* =========================================================
-   IMAGE PREVIEW BOX
-   ========================================================= */
-
-.publication-image-container {
-
-    width: 100%;
-
-    height: 190px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    background: #f7f7f7;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 4px;
-
-    cursor: pointer;
-
-    box-sizing: border-box;
-
-}
-
-
-/*
- * The image fills the preview box.
- *
- * object-fit: cover
- *
- * means different aspect ratios are cropped
- * instead of changing the box size.
- */
-
-.publication-image-container img {
-
-    width: 100% !important;
-
-    height: 100% !important;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.2s ease;
-
-}
-
-
-/* Slight zoom on hover */
-
-.publication-image-container:hover img {
-
-    transform: scale(1.03);
-
-}
-
-
-/* =========================================================
-   FULL-SIZE IMAGE LIGHTBOX
-   ========================================================= */
-
-.image-lightbox {
-
-    display: none;
-
-    position: fixed;
-
-    z-index: 99999;
-
-    left: 0;
-
-    top: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.88);
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 30px;
-
-    box-sizing: border-box;
-
-    cursor: zoom-out;
-
-}
-
-
-.image-lightbox img {
-
-    max-width: 95vw;
-
-    max-height: 95vh;
-
-    width: auto;
-
-    height: auto;
-
-    object-fit: contain;
-
-    display: block;
-
-    cursor: default;
-
-}
-
-
-.image-lightbox-close {
-
-    position: fixed;
-
-    top: 20px;
-
-    right: 30px;
-
-    color: white;
-
-    font-size: 34px;
-
-    font-weight: normal;
-
-    cursor: pointer;
-
-    z-index: 100000;
-
-    line-height: 1;
-
-}
-
-
-.image-lightbox-close:hover {
-
-    opacity: 0.7;
-
-}
-
-
-/* =========================================================
-   TITLE
-   ========================================================= */
-
-.publication-title {
-
-    font-size: 17px;
-
-    line-height: 1.45;
-
-    margin-bottom: 8px;
-
-}
-
-
-.publication-title a {
-
-    text-decoration: none;
-
-}
-
-
-/* =========================================================
-   AUTHORS
-   ========================================================= */
-
-.publication-authors {
-
-    font-size: 14px;
-
-    line-height: 1.5;
-
-    margin-bottom: 7px;
-
-}
-
-
-/* =========================================================
-   CONFERENCE
-   ========================================================= */
-
-.publication-conference {
-
-    font-size: 14px;
-
-    line-height: 1.5;
-
-    margin-bottom: 10px;
-
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.publication-links {
-
-    margin-top: 8px;
-
-}
-
-
-.publication-button {
-
-    display: inline-block;
-
-    padding: 2px 8px;
-
-    margin-right: 5px;
-
-    margin-bottom: 5px;
-
-    border: 1px solid #aaa;
-
-    border-radius: 3px;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-
-    text-decoration: none !important;
-
-    background: transparent;
-
-}
-
-
-.publication-button:hover {
-
-    background: #f5f5f5;
-
-}
-
-
-/* =========================================================
-   PUBLISHED
-   ========================================================= */
-
-.publication-status {
-
-    font-size: 12px;
-
-    margin-left: 5px;
-
-    color: #e74d3c;
-
-}
-
-
-/* =========================================================
-   TOPICS
-   ========================================================= */
-
-.topic-link {
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-}
-
-
-.topic-link:hover {
-
-    text-decoration: underline;
-
-}
-
-
-.active-topic {
-
-    font-weight: bold;
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-
-    .publication-entry {
-
-        display: block;
-
-    }
-
-
-    .publication-image {
-
-        width: 100%;
-
-        padding-right: 0;
-
-        margin-bottom: 15px;
-
-    }
-
-
-    .publication-info {
-
-        width: 100%;
-
-    }
-
-
-    .publication-image-container {
-
-        height: 220px;
-
-    }
-
-}
-
-</style>
-
-<!-- =========================================================
-     PUBLICATIONS
-     ========================================================= -->
-
-<div class="publications">
-
-  <ol class="bibliography"
-      style="
-        padding-left: 0;
-        list-style: none;
-      ">
+  <ol class="bibliography">
 
 ```
 {% for link in site.data.publications_tag.main %}
 
+<li style="margin-bottom: 35px;">
 
-<li class="publication-item"
-    data-topic="{{ link.tag }}">
+  <div
+    class="publication-entry"
+    style="
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 20px;
+    ">
 
 
-  <div class="publication-entry">
+    <!-- Image -->
 
-
-    <!-- =================================================
-         LEFT IMAGE
-         ================================================= -->
-
-    <div class="publication-image">
-
+    <div
+      style="
+        width: 30%;
+        flex: 0 0 30%;
+        padding-right: 20px;
+      ">
 
       {% if link.image %}
 
+      <a href="{{ link.image }}"
+         target="_blank"
+         title="Click to view full-size image"
+         style="
+           display: block;
+           width: 100%;
+           height: 210px;
+           overflow: hidden;
+           border: 1px solid #e5e5e5;
+           background: #fafafa;
+           text-align: center;
+         ">
 
-      <div class="publication-image-container"
-           onclick="openImageLightbox('{{ link.image }}')">
+        <img
+          src="{{ link.image }}"
+          alt="{{ link.title }}"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+          ">
 
-
-        <img src="{{ link.image }}"
-             class="teaser img-fluid z-depth-1"
-             alt="{{ link.title }}">
-
-
-      </div>
-
+      </a>
 
       {% endif %}
-
 
     </div>
 
 
+    <!-- Publication Info -->
 
-    <!-- =================================================
-         RIGHT INFORMATION
-         ================================================= -->
+    <div
+      style="
+        width: 70%;
+        flex: 0 0 70%;
+        padding-left: 5px;
+      ">
 
-    <div class="publication-info">
 
+      <!-- Title -->
 
-      <!-- TITLE -->
-
-      <div class="publication-title">
-
+      <div
+        class="title"
+        style="
+          font-size: 17px;
+          font-weight: 600;
+          line-height: 1.45;
+          margin-bottom: 8px;
+        ">
 
         {% if link.pdf %}
 
-
-        <a href="{{ link.pdf }}"
-           target="_blank">
-
-          {{ link.title }}
-
-        </a>
-
+          <a href="{{ link.pdf }}"
+             target="_blank">
+            {{ link.title }}
+          </a>
 
         {% else %}
 
-
-        {{ link.title }}
-
+          {{ link.title }}
 
         {% endif %}
 
-
       </div>
 
 
+      <!-- Authors -->
 
-      <!-- AUTHORS -->
-
-      <div class="publication-authors">
-
+      <div
+        class="author"
+        style="
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 6px;
+        ">
         {{ link.authors }}
-
       </div>
 
 
+      <!-- Conference -->
 
-      <!-- CONFERENCE -->
-
-      <div class="publication-conference">
-
-        <em>
-          {{ link.conference }}
-        </em>
-
+      <div
+        class="periodical"
+        style="
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 12px;
+        ">
+        <em>{{ link.conference }}</em>
       </div>
 
 
+      <!-- Links -->
 
-      <!-- LINKS -->
+      <div
+        class="links"
+        style="
+          margin-top: 8px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 6px;
+        ">
 
-      <div class="publication-links">
-
-
-        <!-- PDF -->
 
         {% if link.pdf %}
 
         <a href="{{ link.pdf }}"
-           class="publication-button"
-           target="_blank">
-
+           target="_blank"
+           style="
+             display: inline-block;
+             padding: 3px 9px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+             font-size: 12px;
+             text-decoration: none;
+             color: #555;
+             background: #fff;
+           ">
           PDF
-
         </a>
 
         {% endif %}
 
-
-
-        <!-- WEBSITE -->
 
         {% if link.web %}
 
         <a href="{{ link.web }}"
-           class="publication-button"
-           target="_blank">
-
+           target="_blank"
+           style="
+             display: inline-block;
+             padding: 3px 9px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+             font-size: 12px;
+             text-decoration: none;
+             color: #555;
+             background: #fff;
+           ">
           Website
-
         </a>
 
         {% endif %}
 
-
-
-        <!-- CODE -->
 
         {% if link.code %}
 
         <a href="{{ link.code }}"
-           class="publication-button"
-           target="_blank">
-
+           target="_blank"
+           style="
+             display: inline-block;
+             padding: 3px 9px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+             font-size: 12px;
+             text-decoration: none;
+             color: #555;
+             background: #fff;
+           ">
           Code
-
         </a>
 
         {% endif %}
 
-
-
-        <!-- BIBTEX -->
 
         {% if link.bibtex %}
 
         <a href="{{ link.bibtex }}"
-           class="publication-button"
-           target="_blank">
-
-          BibTex
-
+           target="_blank"
+           style="
+             display: inline-block;
+             padding: 3px 9px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+             font-size: 12px;
+             text-decoration: none;
+             color: #555;
+             background: #fff;
+           ">
+          BibTeX
         </a>
 
         {% endif %}
 
-
-
-        <!-- PROJECT PAGE -->
 
         {% if link.page %}
 
         <a href="{{ link.page }}"
-           class="publication-button"
-           target="_blank">
-
+           target="_blank"
+           style="
+             display: inline-block;
+             padding: 3px 9px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+             font-size: 12px;
+             text-decoration: none;
+             color: #555;
+             background: #fff;
+           ">
           Project Page
-
         </a>
 
         {% endif %}
 
 
-
-        <!-- NOTES -->
-
         {% if link.notes %}
 
-        <span class="publication-status">
-
+        <span
+          style="
+            font-size: 12px;
+            color: #e74d3c;
+            margin-left: 3px;
+          ">
           {{ link.notes }}
-
         </span>
 
         {% endif %}
 
-
-
-        <!-- OTHERS -->
 
         {% if link.others %}
 
@@ -762,15 +680,11 @@
 
       </div>
 
-
     </div>
-
 
   </div>
 
-
 </li>
-
 
 {% endfor %}
 ```
@@ -779,355 +693,56 @@
 
 </div>
 
-<!-- =========================================================
-     IMAGE LIGHTBOX
-     ========================================================= -->
+<!-- ========================= -->
 
-<div id="imageLightbox"
-     class="image-lightbox"
-     onclick="closeImageLightbox(event)">
+<!-- JavaScript -->
 
-<span class="image-lightbox-close"
-     onclick="closeImageLightbox(event)">
-
-```
-&times;
-```
-
-  </span>
-
-<img id="lightboxImage"
-    src=""
-    alt="Full-size publication image"
-    onclick="event.stopPropagation();">
-
-</div>
-
-<!-- =========================================================
-     JAVASCRIPT
-     ========================================================= -->
+<!-- ========================= -->
 
 <script>
 
+function setPublicationMode(mode) {
 
-/* =========================================================
-   Current filter state
-   ========================================================= */
+  var selectedPublications =
+    document.getElementById("selected-publications");
 
-var currentMode = "selected";
+  var allPublications =
+    document.getElementById("all-publications");
 
-var currentTopic = "all";
+  var selectedButton =
+    document.getElementById("selected-btn");
 
-
-
-/* =========================================================
-   SELECTED / ALL BY DATE
-   ========================================================= */
-
-function showPublicationMode(mode) {
+  var allDateButton =
+    document.getElementById("all-date-btn");
 
 
-    currentMode = mode;
+  if (mode === "selected") {
+
+    selectedPublications.style.display = "block";
+    allPublications.style.display = "none";
+
+    selectedButton.style.color = "#222";
+    selectedButton.style.fontWeight = "600";
+
+    allDateButton.style.color = "#888";
+    allDateButton.style.fontWeight = "400";
+
+  }
 
 
-    var topicFilters =
-        document.getElementById("topic-filters");
+  if (mode === "all") {
 
+    selectedPublications.style.display = "none";
+    allPublications.style.display = "block";
 
-    var selectedTab =
-        document.getElementById("selected-tab");
+    selectedButton.style.color = "#888";
+    selectedButton.style.fontWeight = "400";
 
+    allDateButton.style.color = "#222";
+    allDateButton.style.fontWeight = "600";
 
-    var allDateTab =
-        document.getElementById("all-date-tab");
-
-
-
-    if (mode === "selected") {
-
-
-        /* Show Topics */
-
-        topicFilters.style.display = "block";
-
-
-        /* Highlight Selected */
-
-        selectedTab.style.fontWeight = "bold";
-
-        allDateTab.style.fontWeight = "normal";
-
-
-        /* Apply current topic */
-
-        filterPublications(currentTopic);
-
-
-    }
-
-
-    else {
-
-
-        /* Hide Topics */
-
-        topicFilters.style.display = "none";
-
-
-        /* Highlight All by date */
-
-        selectedTab.style.fontWeight = "normal";
-
-        allDateTab.style.fontWeight = "bold";
-
-
-        /* Show all publications */
-
-        var papers =
-            document.querySelectorAll(".publication-item");
-
-
-        papers.forEach(function(paper) {
-
-            paper.style.display = "";
-
-        });
-
-
-    }
+  }
 
 }
-
-
-
-/* =========================================================
-   TOPIC FILTER
-   ========================================================= */
-
-function filterPublications(topic) {
-
-
-    currentTopic = topic;
-
-
-    currentMode = "selected";
-
-
-    var papers =
-        document.querySelectorAll(".publication-item");
-
-
-    papers.forEach(function(paper) {
-
-
-        var paperTopic =
-            paper.getAttribute("data-topic");
-
-
-        if (
-            topic === "all" ||
-            paperTopic === topic
-        ) {
-
-
-            paper.style.display = "";
-
-
-        }
-
-
-        else {
-
-
-            paper.style.display = "none";
-
-
-        }
-
-
-    });
-
-
-
-    /* Update active topic */
-
-    var topicLinks =
-        document.querySelectorAll(".topic-link");
-
-
-    topicLinks.forEach(function(link) {
-
-
-        var linkTopic =
-            link.getAttribute("data-topic");
-
-
-        if (linkTopic === topic) {
-
-
-            link.classList.add("active-topic");
-
-
-        }
-
-
-        else {
-
-
-            link.classList.remove("active-topic");
-
-
-        }
-
-
-    });
-
-
-
-    /* Make sure Selected is active */
-
-    document.getElementById(
-        "selected-tab"
-    ).style.fontWeight = "bold";
-
-
-    document.getElementById(
-        "all-date-tab"
-    ).style.fontWeight = "normal";
-
-
-    document.getElementById(
-        "topic-filters"
-    ).style.display = "block";
-
-}
-
-
-
-/* =========================================================
-   IMAGE LIGHTBOX
-   ========================================================= */
-
-function openImageLightbox(imageSrc) {
-
-
-    var lightbox =
-        document.getElementById("imageLightbox");
-
-
-    var image =
-        document.getElementById("lightboxImage");
-
-
-    image.src = imageSrc;
-
-
-    lightbox.style.display = "flex";
-
-
-    /* Prevent background scrolling */
-
-    document.body.style.overflow = "hidden";
-
-}
-
-
-
-/* =========================================================
-   CLOSE LIGHTBOX
-   ========================================================= */
-
-function closeImageLightbox(event) {
-
-
-    var lightbox =
-        document.getElementById("imageLightbox");
-
-
-    /*
-     * Close if:
-     *
-     * 1. background is clicked
-     * 2. × is clicked
-     */
-
-    if (
-        event.target.id === "imageLightbox" ||
-        event.target.classList.contains(
-            "image-lightbox-close"
-        )
-    ) {
-
-
-        lightbox.style.display = "none";
-
-
-        document.getElementById(
-            "lightboxImage"
-        ).src = "";
-
-
-        document.body.style.overflow = "";
-
-    }
-
-}
-
-
-
-/* =========================================================
-   ESC KEY
-   ========================================================= */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-
-        if (event.key === "Escape") {
-
-
-            var lightbox =
-                document.getElementById(
-                    "imageLightbox"
-                );
-
-
-            if (
-                lightbox.style.display === "flex"
-            ) {
-
-
-                lightbox.style.display = "none";
-
-
-                document.getElementById(
-                    "lightboxImage"
-                ).src = "";
-
-
-                document.body.style.overflow = "";
-
-            }
-
-        }
-
-    }
-);
-
-
-
-/* =========================================================
-   INITIAL STATE
-   ========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-
-        showPublicationMode("selected");
-
-    }
-);
 
 </script>
