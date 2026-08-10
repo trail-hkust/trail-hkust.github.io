@@ -21,12 +21,23 @@
 
 <br>
 
+
 <!-- ========================================================= -->
-<!-- Topics -->
+<!-- Contribution Notes -->
+<!-- ========================================================= -->
+
+<div style="margin-bottom: 15px;">
+  * means equal contribution.<br>
+  † means corresponding authors.
+</div>
+
+
+<!-- ========================================================= -->
+<!-- Topics Navigation -->
 <!-- ========================================================= -->
 
 <div style="
-    margin: 10px 0 30px 0;
+    margin: 20px 0 35px 0;
     font-size: 15px;
     line-height: 1.8;
 ">
@@ -58,12 +69,8 @@
 </div>
 
 
-- means equal contribution.
-† means corresponding authors.
-
-
 <!-- ========================================================= -->
-<!-- Publications by Topic -->
+<!-- Category List -->
 <!-- ========================================================= -->
 
 {% assign categories =
@@ -75,7 +82,7 @@
 {% for category in categories %}
 
   <!-- ======================================================= -->
-  <!-- Topic Header -->
+  <!-- Category Title -->
   <!-- ======================================================= -->
 
   <h3 id="topic-{{ category | slugify }}"
@@ -91,7 +98,7 @@
 
 
   <!-- ======================================================= -->
-  <!-- Get papers belonging to this topic -->
+  <!-- Publications under this category -->
   <!-- ======================================================= -->
 
   {% assign category_papers =
@@ -102,9 +109,14 @@
 
   <ol class="bibliography">
 
+
   {% for link in category_papers %}
 
-    <li style="margin-bottom: 45px;">
+    <li style="
+          margin-bottom: 50px;
+          list-style-position: outside;
+        ">
+
 
       <div class="publication-entry"
            style="
@@ -121,12 +133,13 @@
 
         <div style="
             width: 100%;
-            height: 360px;
+            min-height: 300px;
+            max-height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin: 0 auto 25px auto;
         ">
 
           <img src="{{ link.image }}"
@@ -134,7 +147,7 @@
                style="
                  display: block;
                  max-width: 100%;
-                 max-height: 360px;
+                 max-height: 400px;
                  width: auto;
                  height: auto;
                  object-fit: contain;
@@ -189,7 +202,7 @@
 
           <div class="author"
                style="
-                 margin-bottom: 6px;
+                 margin-bottom: 7px;
                  line-height: 1.5;
                ">
 
@@ -218,91 +231,151 @@
 
 
           <!-- =============================================== -->
-          <!-- Links -->
+          <!-- Publication Links -->
           <!-- =============================================== -->
 
           <div class="links"
                style="
-                 margin-top: 8px;
+                 margin-top: 10px;
                  line-height: 2;
                ">
 
 
+            <!-- PDF -->
+
             {% if link.pdf %}
 
             <a href="{{ link.pdf }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
                target="_blank"
-               style="font-size:12px;">
+               style="
+                 display: inline-block;
+                 padding: 3px 9px;
+                 margin: 2px 3px;
+                 border: 1px solid #bbb;
+                 border-radius: 3px;
+                 font-size: 12px;
+                 text-decoration: none;
+                 color: #555;
+                 background: #fff;
+               ">
               PDF
             </a>
 
             {% endif %}
 
 
+            <!-- Website -->
+
             {% if link.web %}
 
             <a href="{{ link.web }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
                target="_blank"
-               style="font-size:12px;">
+               style="
+                 display: inline-block;
+                 padding: 3px 9px;
+                 margin: 2px 3px;
+                 border: 1px solid #bbb;
+                 border-radius: 3px;
+                 font-size: 12px;
+                 text-decoration: none;
+                 color: #555;
+                 background: #fff;
+               ">
               Website
             </a>
 
             {% endif %}
 
 
+            <!-- Code -->
+
             {% if link.code %}
 
             <a href="{{ link.code }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
                target="_blank"
-               style="font-size:12px;">
+               style="
+                 display: inline-block;
+                 padding: 3px 9px;
+                 margin: 2px 3px;
+                 border: 1px solid #bbb;
+                 border-radius: 3px;
+                 font-size: 12px;
+                 text-decoration: none;
+                 color: #555;
+                 background: #fff;
+               ">
               Code
             </a>
 
             {% endif %}
 
 
+            <!-- Project Page -->
+
             {% if link.page %}
 
             <a href="{{ link.page }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
                target="_blank"
-               style="font-size:12px;">
+               style="
+                 display: inline-block;
+                 padding: 3px 9px;
+                 margin: 2px 3px;
+                 border: 1px solid #bbb;
+                 border-radius: 3px;
+                 font-size: 12px;
+                 text-decoration: none;
+                 color: #555;
+                 background: #fff;
+               ">
               Project Page
             </a>
 
             {% endif %}
 
 
+            <!-- BibTex -->
+
             {% if link.bibtex %}
 
             <a href="{{ link.bibtex }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
                target="_blank"
-               style="font-size:12px;">
+               style="
+                 display: inline-block;
+                 padding: 3px 9px;
+                 margin: 2px 3px;
+                 border: 1px solid #bbb;
+                 border-radius: 3px;
+                 font-size: 12px;
+                 text-decoration: none;
+                 color: #555;
+                 background: #fff;
+               ">
               BibTex
             </a>
 
             {% endif %}
 
 
+            <!-- Notes -->
+
             {% if link.notes %}
 
-            <strong style="margin-left: 5px;">
-              <i style="color:#e74d3c;">
+            <strong style="
+                margin-left: 5px;
+              ">
+
+              <i style="
+                  color:#e74d3c;
+                ">
                 {{ link.notes }}
               </i>
+
             </strong>
 
             {% endif %}
 
+
+            <!-- Other Links -->
 
             {% if link.others %}
 
@@ -312,6 +385,7 @@
 
 
           </div>
+
 
         </div>
 
