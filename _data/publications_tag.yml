@@ -24,7 +24,9 @@ main:
     bibtex:
     image: ./assets/files/MAP_EBM_KDD_2026.png
     notes: "Published"
-    tag: "AI-driven Investment"
+    tag:
+      - "AI for Investment"
+      - "Model Interpretability, Representation & Evaluation"
     selected: true
     year: 2026
     code: 
