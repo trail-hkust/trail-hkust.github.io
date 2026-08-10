@@ -26,7 +26,7 @@ Zixuan Yuan is currently an Assistant Professor at the FinTech Thrust and the AI
 
 {% include_relative _includes/news.md %}
 
-{% include_relative _includes/publications.md %}
+{% include_relative _includes/publications_tag.md %}
 
 {% include_relative _includes/students.md %}
 
