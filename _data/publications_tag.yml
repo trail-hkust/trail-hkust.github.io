@@ -147,6 +147,7 @@ main:
     
     tag: 
       - "Multi-Agent Learning & Reasoning"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2024
@@ -310,8 +311,9 @@ main:
     image: ./assets/files/self-supervised.jpg
     notes: Published
     
-    tag: 
+    tag:
       - "AI for Investment"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2022
@@ -369,6 +371,7 @@ main:
     
     tag: 
       - "AI for Investment"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2021
