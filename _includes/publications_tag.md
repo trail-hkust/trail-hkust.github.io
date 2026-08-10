@@ -42,37 +42,6 @@
 
 <br>
 
-<!-- ===================================================== -->
-
-<!-- SELECTED / ALL BY DATE -->
-
-<!-- ===================================================== -->
-
-<div style="
-     margin-bottom:8px;
-     font-size:14px;
-     ">
-
-<a href="javascript:void(0);"
-  id="selected-btn"
-  onclick="setPublicationMode('selected')"
-  style="
-    margin-right:18px;
-    text-decoration:none;
-    font-weight:600;
-  ">
-Selected </a>
-
-<a href="javascript:void(0);"
-  id="all-date-btn"
-  onclick="setPublicationMode('all')"
-  style="
-    text-decoration:none;
-    font-weight:400;
-  ">
-All by date </a>
-
-</div>
 
 <!-- ===================================================== -->
 
