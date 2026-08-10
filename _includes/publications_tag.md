@@ -460,34 +460,6 @@ AI for Regulatory Compliance </a>
   </div>
 
 
-  <!-- =================================================== -->
-  <!-- NOTES                                               -->
-  <!-- =================================================== -->
-
-  {% if link.notes %}
-
-    <div style="margin-top:4px;">
-
-      <strong>
-        <i style="color:#e74d3c;">
-          {{ link.notes }}
-        </i>
-      </strong>
-
-    </div>
-
-  {% endif %}
-
-
-</div>
-```
-
-  </div>
-
-{% endfor %}
-
-</div>
-
 <!-- ========================================================= -->
 
 <!-- JAVASCRIPT                                                -->
