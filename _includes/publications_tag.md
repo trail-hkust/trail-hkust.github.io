@@ -221,7 +221,7 @@ AI for Regulatory Compliance </a>
       box-sizing:border-box;
     ">
 
-```
+
 {% if link.image %}
 
   <a
@@ -256,7 +256,7 @@ AI for Regulatory Compliance </a>
   </a>
 
 {% endif %}
-```
+
 
   </div>
 
@@ -274,7 +274,7 @@ AI for Regulatory Compliance </a>
       padding:0;
     ">
 
-```
+
 <!-- ================================================= -->
 <!-- TITLE                                             -->
 <!-- ================================================= -->
