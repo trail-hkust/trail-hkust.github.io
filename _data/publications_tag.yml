@@ -21,7 +21,7 @@ main:
     bibtex:
     image: ./assets/files/MAP_EBM_KDD_2026.png
     notes: "Published"
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
     
 
@@ -89,7 +89,7 @@ main:
     bibtex:
     image: ./assets/files/frame_wine2024.png
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
   - title: Killing Two Birds with One Stone：Cross-modal Reinforced Prompting for Graph and Language Tasks
@@ -112,7 +112,7 @@ main:
     bibtex:
     image: ./assets/files/OP.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
 
@@ -149,7 +149,7 @@ main:
     bibtex: ./assets/files/lever.txt
     image: ./assets/files/lever.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
 
@@ -162,7 +162,7 @@ main:
     bibtex: ./assets/files/multi-domain.txt
     image: ./assets/files/multi-domain.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
   - title: AlphaVC：A Reinforcement Learning-based Venture Capital Investment Strategy
@@ -174,7 +174,7 @@ main:
     bibtex: ./assets/files/vc.txt
     image: ./assets/files/RL.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
   - title: Learning to Walk with Dual Agents for Knowledge Graph Reasoning
@@ -212,7 +212,7 @@ main:
     bibtex: ./assets/files/self-supervised.txt
     image: ./assets/files/self-supervised.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
   - title: Incremental Spatio-Temporal Graph Learning for Online Query-POI Matching
@@ -251,7 +251,7 @@ main:
     bibtex: ./assets/files/scalable.txt
     image: ./assets/files/scalable.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
   - title: Learning Graph Structures with Transformer for Multivariate Time Series Anomaly Detection in IOT
@@ -277,7 +277,7 @@ main:
     bibtex: ./assets/files/ebert.txt
     image: ./assets/files/ebert.jpg
     notes: Published
-    tag: "AI-driven investment"
+    tag: "AI-driven Investment"
 
 
 
