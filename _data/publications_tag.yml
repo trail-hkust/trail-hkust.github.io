@@ -11,7 +11,7 @@ main:
     notes: "Published"
     
     tag: 
-      -"AI for Regulatory Compliance"
+      - "AI for Regulatory Compliance"
       
     selected: true
     year: 2026
@@ -51,7 +51,7 @@ main:
     notes: "Published"
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2026
@@ -71,7 +71,7 @@ main:
     notes: "Published"
     
     tag: 
-      -"AI for Regulatory Compliance"
+      - "AI for Regulatory Compliance"
       
     selected: true
     year: 2026
@@ -90,7 +90,7 @@ main:
     notes: Published
     
     tag: 
-      -"Multi-Agent Learning & Reasoning"
+      - "Multi-Agent Learning & Reasoning"
       
     selected: true
     year: 2025
@@ -109,7 +109,7 @@ main:
     notes: Published
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2025
@@ -128,7 +128,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
     
     selected: true
     year: 2024
@@ -146,7 +146,7 @@ main:
     notes: Published
     
     tag: 
-      -"Multi-Agent Learning & Reasoning"
+      - "Multi-Agent Learning & Reasoning"
       
     selected: true
     year: 2024
@@ -163,7 +163,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
       
     selected: true
     year: 2024
@@ -182,7 +182,7 @@ main:
     notes: Published
     
     tag: 
-      -"Multi-Agent Learning & Reasoning"
+      - "Multi-Agent Learning & Reasoning"
       
     selected: true
     year: 2024
@@ -200,7 +200,7 @@ main:
     notes: Published
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2024
@@ -218,7 +218,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
       
     selected: true
     year: 2023
@@ -237,7 +237,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
       
     selected: true
     year: 2023
@@ -255,7 +255,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
       
     selected: true
     year: 2022
@@ -273,7 +273,7 @@ main:
     notes: Published
     
     tag: 
-      -"Multi-Agent Learning & Reasoning"
+      - "Multi-Agent Learning & Reasoning"
       
     selected: true
     year: 2022
@@ -292,7 +292,7 @@ main:
     notes: Published
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
     
     selected: true
     year: 2022
@@ -311,7 +311,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
       
     selected: true
     year: 2022
@@ -330,7 +330,7 @@ main:
     notes: Published
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2021
@@ -349,7 +349,7 @@ main:
     notes: Published
 
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
     
     selected: true
     year: 2021
@@ -368,7 +368,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
       
     selected: true
     year: 2021
@@ -387,7 +387,7 @@ main:
     notes: Published
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2021
@@ -406,7 +406,7 @@ main:
     notes: Published
     
     tag: 
-      -"AI-driven Investment"
+      - "AI-driven Investment"
     
     selected: true
     year: 2021
@@ -426,7 +426,7 @@ main:
     notes: Published
     
     tag: 
-      -"Model Interpretability, Representation & Evaluation"
+      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2020
