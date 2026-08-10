@@ -210,7 +210,7 @@ main:
     conference: INFORMS Workshop on Data Science 2022 (INFORMS 2022)
     pdf: https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/203473b6-7ebe-4a1a-bc06-0a1883bab60f/content
     web: https://scholarspace.manoa.hawaii.edu/items/8ba36c1d-9603-4eae-af06-95d52d57b1ce
-    bibtex: ./assets/files/vc.txt
+    bibtex: 
     image: ./assets/files/RL.jpg
     notes: Published
     tag: "AI-driven Investment"
@@ -225,7 +225,7 @@ main:
     conference: In Proceedings of the Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI 2022)
     pdf: https://arxiv.org/pdf/2112.12876
     web: https://arxiv.org/abs/2112.12876
-    bibtex: ./assets/files/learning.txt
+    bibtex: 
     image: ./assets/files/two.jpg
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
@@ -241,7 +241,7 @@ main:
     #abstract: ……
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9869708
     web: https://ieeexplore.ieee.org/document/9869708
-    bibtex: ./assets/files/multi-faceted.txt
+    bibtex: 
     image: ./assets/files/multi-faceted.jpg
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
@@ -257,7 +257,7 @@ main:
     #abstract: ……
     pdf: ./assets/files/self-supervised.pdf
     web: https://ojs.aaai.org/index.php/AAAI/article/view/16594
-    bibtex: ./assets/files/self-supervised.txt
+    bibtex: 
     image: ./assets/files/self-supervised.jpg
     notes: Published
     tag: "AI-driven Investment"
@@ -273,7 +273,7 @@ main:
     #abstract: ……
     pdf: https://dl.acm.org/doi/pdf/10.1145/3442381.3449810
     web: https://dl.acm.org/doi/abs/10.1145/3442381.3449810?casa_token=B8b8_rGOp9oAAAAA:DL3l8hOiyYSZyCub3raogjFgotfGwTQ8B30nWIq2jYV66F0rSBR3313GAzPvNfOJXckPn9Pjbduc
-    bibtex: ./assets/files/STGL.txt
+    bibtex: 
     image: ./assets/files/STGL.jpg
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
@@ -289,7 +289,7 @@ main:
     #abstract: ……
     pdf: https://dl.acm.org/doi/pdf/10.1145/3447548.3467215
     web: https://dl.acm.org/doi/abs/10.1145/3447548.3467215?casa_token=vVhtjEfms0MAAAAA:zR_x1a4Ccil2l-296TCSdd0YqVFNV09bzXJlq_2ZSdOgKknefyq80ZXZqClpbzuP5rY6wgITpoQt
-    bibtex: ./assets/files/domain.txt
+    bibtex: 
     image: ./assets/files/domain.jpg
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
@@ -305,7 +305,7 @@ main:
     #abstract: ……
     pdf: https://dl.acm.org/doi/pdf/10.1145/3447548.3467383
     web: https://dl.acm.org/doi/abs/10.1145/3447548.3467383?casa_token=sckoE4LzrGMAAAAA:A9lF2JzD_0vp-mMo2ela7PRHKB96ueUUwynBY8iUawoMmxlVcUBWCtVYdwWqiNiFtuqBqXeVRwpD
-    bibtex: ./assets/files/scalable.txt
+    bibtex: 
     image: ./assets/files/scalable.jpg
     notes: Published
     tag: "AI-driven Investment"
@@ -321,7 +321,7 @@ main:
     #abstract: ……
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9497343
     web: https://ieeexplore.ieee.org/abstract/document/9497343
-    bibtex: ./assets/files/LG.txt
+    bibtex: 
     image: ./assets/files/LG.jpg
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
@@ -337,7 +337,7 @@ main:
     #abstract: ……
     pdf: https://arxiv.org/pdf/2009.02835
     web: https://arxiv.org/abs/2009.02835
-    bibtex: ./assets/files/ebert.txt
+    bibtex: 
     image: ./assets/files/ebert.jpg
     notes: Published
     tag: "AI-driven Investment"
@@ -354,7 +354,7 @@ main:
     #abstract: ……
     pdf: ./assets/files/STDGAT.pdf
     web: https://www.researchgate.net/publication/342215590_Spatio-Temporal_Dual_Graph_Attention_Network_for_Query-POI_Matching
-    bibtex: ./assets/files/STDGAT.txt
+    bibtex: 
     image: ./assets/files/STDGAT2.jpg
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
