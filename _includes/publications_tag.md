@@ -1,10 +1,3 @@
----
-
-layout: page
-title: Publications
-permalink: /publications/
--------------------------
-
 <h1 id="publications"></h1>
 
 <h2 style="margin: 30px 0px -15px;">
@@ -26,723 +19,651 @@ ResearchGate </a> <temp style="font-size:15px;">]</temp>
 
 <br>
 
-<!-- ========================= -->
+<!-- ===================================================== -->
 
 <!-- Publication Mode -->
 
-<!-- ========================= -->
+<!-- ===================================================== -->
 
-<div style="margin-bottom: 10px;">
+<div style="margin-bottom: 12px;">
 
 <button
  id="selected-btn"
  class="publication-mode active"
- onclick="setPublicationMode('selected')"
- style="
-   border: none;
-   background: none;
-   padding: 0;
-   margin-right: 20px;
-   font-size: 15px;
-   font-weight: 600;
-   cursor: pointer;
-   color: #222;
- ">
+ onclick="setPublicationMode('selected')">
 Selected </button>
 
 <button
  id="all-date-btn"
  class="publication-mode"
- onclick="setPublicationMode('all')"
- style="
-   border: none;
-   background: none;
-   padding: 0;
-   font-size: 15px;
-   cursor: pointer;
-   color: #888;
- ">
+ onclick="setPublicationMode('all')">
 All by date </button>
 
 </div>
 
-<!-- ========================= -->
+<!-- ===================================================== -->
 
-<!-- Selected Publications -->
+<!-- Topics -->
 
-<!-- ========================= -->
+<!-- ===================================================== -->
 
-<div id="selected-publications">
+<div id="publication-topics"
+     style="margin-bottom: 25px;">
 
-  <div style="margin: 12px 0 25px 0; font-size: 14px;">
+<strong style="margin-right: 8px;">Topics:</strong>
 
-```
-<strong>Topics:</strong>
+<a href="#topic-all"
+  class="topic-link active"
+  onclick="showTopic('all'); return false;">
+All </a>
 
-<a href="#multi-agent-learning-reasoning"
-   style="
-     margin-left: 10px;
-     margin-right: 14px;
-     text-decoration: none;
-   ">
-  Multi-Agent Learning &amp; Reasoning
-</a>
+<a href="#topic-multi-agent"
+  class="topic-link"
+  onclick="showTopic('multi-agent'); return false;">
+Multi-Agent Learning & Reasoning </a>
 
-<a href="#model-interpretability-representation-evaluation"
-   style="
-     margin-right: 14px;
-     text-decoration: none;
-   ">
-  Model Interpretability, Representation &amp; Evaluation
-</a>
+<a href="#topic-model"
+  class="topic-link"
+  onclick="showTopic('model'); return false;">
+Model Interpretability, Representation & Evaluation </a>
 
-<a href="#ai-for-investment"
-   style="
-     margin-right: 14px;
-     text-decoration: none;
-   ">
-  AI for Investment
-</a>
+<a href="#topic-investment"
+  class="topic-link"
+  onclick="showTopic('investment'); return false;">
+AI for Investment </a>
 
-<a href="#ai-for-regulatory-compliance"
-   style="
-     text-decoration: none;
-   ">
-  AI for Regulatory Compliance
-</a>
-```
+<a href="#topic-compliance"
+  class="topic-link"
+  onclick="showTopic('compliance'); return false;">
+AI for Regulatory Compliance </a>
 
-  </div>
+</div>
 
-{% assign categories = "Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI-driven investment|AI for regulatory compliance" | split: "|" %}
+<!-- ===================================================== -->
+
+<!-- Notes -->
+
+<!-- ===================================================== -->
+
+<div style="margin-bottom: 20px;">
+  * means equal contribution.
+  † means corresponding authors.
+</div>
+
+<!-- ===================================================== -->
+
+<!-- Publication List -->
+
+<!-- ===================================================== -->
+
+<div class="publications">
+
+{% assign categories =
+"Multi-Agent Learning & Reasoning|
+Model Interpretability, Representation & Evaluation|
+AI-driven investment|
+AI for regulatory compliance"
+| split: "|" %}
 
 {% for category in categories %}
 
+{% assign category_papers =
+site.data.publications_tag.main
+| where: "tag", category %}
+
+{% for link in category_papers %}
+
+  <div
+    class="publication-item"
+    data-tag="{{ link.tag }}"
+    data-mode="selected"
+    style="display: flex;
+           width: 100%;
+           margin-bottom: 35px;
+           padding-bottom: 25px;
+           border-bottom: 1px solid #eeeeee;
+           align-items: flex-start;">
+
 ```
-{% assign category_id = category | slugify %}
+<!-- ================================================= -->
+<!-- LEFT: IMAGE 30% -->
+<!-- ================================================= -->
 
-<h3 id="{{ category_id }}"
-    style="
-      margin-top: 35px;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #ddd;
-      font-size: 20px;
-    ">
-  {{ category }}
-</h3>
+<div
+  style="width: 30%;
+         flex: 0 0 30%;
+         padding-right: 25px;
+         box-sizing: border-box;">
 
+  {% if link.image %}
 
-{% assign category_papers = site.data.publications_tag.main | where: "tag", category %}
+  <a href="{{ link.image }}"
+     target="_blank"
+     style="display: block;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #f5f5f5;
+            border: 1px solid #eeeeee;
+            text-decoration: none;">
 
-<ol class="bibliography">
-
-  {% for link in category_papers %}
-
-  <li style="margin-bottom: 35px;">
-
-    <div
-      class="publication-entry"
-      style="
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 20px;
-      ">
-
-
-      <!-- ========================= -->
-      <!-- Image: 30% -->
-      <!-- ========================= -->
-
-      <div
-        style="
-          width: 30%;
-          flex: 0 0 30%;
-          padding-right: 20px;
-        ">
-
-        {% if link.image %}
-
-        <a href="{{ link.image }}"
-           target="_blank"
-           title="Click to view full-size image"
-           style="
-             display: block;
+    <img
+      src="{{ link.image }}"
+      alt="{{ link.title }}"
+      style="display: block;
              width: 100%;
-             height: 210px;
-             overflow: hidden;
-             border: 1px solid #e5e5e5;
-             background: #fafafa;
-             text-align: center;
-           ">
+             height: 100%;
+             object-fit: cover;
+             object-position: center;">
 
-          <img
-            src="{{ link.image }}"
-            alt="{{ link.title }}"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: contain;
-              display: block;
-            ">
+  </a>
 
-        </a>
-
-        {% endif %}
-
-      </div>
-
-
-      <!-- ========================= -->
-      <!-- Publication Info: 70% -->
-      <!-- ========================= -->
-
-      <div
-        style="
-          width: 70%;
-          flex: 0 0 70%;
-          padding-left: 5px;
-        ">
-
-
-        <!-- Title -->
-
-        <div
-          class="title"
-          style="
-            font-size: 17px;
-            font-weight: 600;
-            line-height: 1.45;
-            margin-bottom: 8px;
-          ">
-
-          {% if link.pdf %}
-
-            <a href="{{ link.pdf }}"
-               target="_blank">
-              {{ link.title }}
-            </a>
-
-          {% else %}
-
-            {{ link.title }}
-
-          {% endif %}
-
-        </div>
-
-
-        <!-- Authors -->
-
-        <div
-          class="author"
-          style="
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 6px;
-          ">
-          {{ link.authors }}
-        </div>
-
-
-        <!-- Conference -->
-
-        <div
-          class="periodical"
-          style="
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 12px;
-          ">
-
-          <em>{{ link.conference }}</em>
-
-        </div>
-
-
-        <!-- ========================= -->
-        <!-- Links -->
-        <!-- ========================= -->
-
-        <div class="links"
-             style="
-               margin-top: 8px;
-               display: flex;
-               flex-wrap: wrap;
-               align-items: center;
-               gap: 6px;
-             ">
-
-
-          {% if link.pdf %}
-
-          <a href="{{ link.pdf }}"
-             target="_blank"
-             style="
-               display: inline-block;
-               padding: 3px 9px;
-               border: 1px solid #ccc;
-               border-radius: 3px;
-               font-size: 12px;
-               text-decoration: none;
-               color: #555;
-               background: #fff;
-             ">
-            PDF
-          </a>
-
-          {% endif %}
-
-
-          {% if link.web %}
-
-          <a href="{{ link.web }}"
-             target="_blank"
-             style="
-               display: inline-block;
-               padding: 3px 9px;
-               border: 1px solid #ccc;
-               border-radius: 3px;
-               font-size: 12px;
-               text-decoration: none;
-               color: #555;
-               background: #fff;
-             ">
-            Website
-          </a>
-
-          {% endif %}
-
-
-          {% if link.code %}
-
-          <a href="{{ link.code }}"
-             target="_blank"
-             style="
-               display: inline-block;
-               padding: 3px 9px;
-               border: 1px solid #ccc;
-               border-radius: 3px;
-               font-size: 12px;
-               text-decoration: none;
-               color: #555;
-               background: #fff;
-             ">
-            Code
-          </a>
-
-          {% endif %}
-
-
-          {% if link.bibtex %}
-
-          <a href="{{ link.bibtex }}"
-             target="_blank"
-             style="
-               display: inline-block;
-               padding: 3px 9px;
-               border: 1px solid #ccc;
-               border-radius: 3px;
-               font-size: 12px;
-               text-decoration: none;
-               color: #555;
-               background: #fff;
-             ">
-            BibTeX
-          </a>
-
-          {% endif %}
-
-
-          {% if link.page %}
-
-          <a href="{{ link.page }}"
-             target="_blank"
-             style="
-               display: inline-block;
-               padding: 3px 9px;
-               border: 1px solid #ccc;
-               border-radius: 3px;
-               font-size: 12px;
-               text-decoration: none;
-               color: #555;
-               background: #fff;
-             ">
-            Project Page
-          </a>
-
-          {% endif %}
-
-
-          {% if link.notes %}
-
-          <span
-            style="
-              font-size: 12px;
-              color: #e74d3c;
-              margin-left: 3px;
-            ">
-            {{ link.notes }}
-          </span>
-
-          {% endif %}
-
-
-          {% if link.others %}
-
-            {{ link.others }}
-
-          {% endif %}
-
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </li>
-
-  {% endfor %}
-
-</ol>
-```
-
-{% endfor %}
+  {% endif %}
 
 </div>
 
-<!-- ========================= -->
 
-<!-- All Publications -->
-
-<!-- ========================= -->
+<!-- ================================================= -->
+<!-- RIGHT: INFORMATION 70% -->
+<!-- ================================================= -->
 
 <div
-  id="all-publications"
-  style="display: none;">
+  style="width: 70%;
+         flex: 0 0 70%;
+         padding-left: 0;
+         box-sizing: border-box;">
 
-  <ol class="bibliography">
 
-```
-{% for link in site.data.publications_tag.main %}
-
-<li style="margin-bottom: 35px;">
+  <!-- Title -->
 
   <div
-    class="publication-entry"
-    style="
-      display: flex;
-      align-items: flex-start;
-      width: 100%;
-      margin-bottom: 20px;
-    ">
+    class="title"
+    style="font-size: 17px;
+           font-weight: 600;
+           line-height: 1.45;
+           margin-bottom: 8px;">
 
+    {% if link.pdf %}
 
-    <!-- Image -->
-
-    <div
-      style="
-        width: 30%;
-        flex: 0 0 30%;
-        padding-right: 20px;
-      ">
-
-      {% if link.image %}
-
-      <a href="{{ link.image }}"
-         target="_blank"
-         title="Click to view full-size image"
-         style="
-           display: block;
-           width: 100%;
-           height: 210px;
-           overflow: hidden;
-           border: 1px solid #e5e5e5;
-           background: #fafafa;
-           text-align: center;
-         ">
-
-        <img
-          src="{{ link.image }}"
-          alt="{{ link.title }}"
-          style="
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-          ">
-
+      <a href="{{ link.pdf }}"
+         target="_blank">
+        {{ link.title }}
       </a>
 
-      {% endif %}
+    {% else %}
 
-    </div>
+      {{ link.title }}
 
-
-    <!-- Publication Info -->
-
-    <div
-      style="
-        width: 70%;
-        flex: 0 0 70%;
-        padding-left: 5px;
-      ">
-
-
-      <!-- Title -->
-
-      <div
-        class="title"
-        style="
-          font-size: 17px;
-          font-weight: 600;
-          line-height: 1.45;
-          margin-bottom: 8px;
-        ">
-
-        {% if link.pdf %}
-
-          <a href="{{ link.pdf }}"
-             target="_blank">
-            {{ link.title }}
-          </a>
-
-        {% else %}
-
-          {{ link.title }}
-
-        {% endif %}
-
-      </div>
-
-
-      <!-- Authors -->
-
-      <div
-        class="author"
-        style="
-          font-size: 14px;
-          line-height: 1.5;
-          margin-bottom: 6px;
-        ">
-        {{ link.authors }}
-      </div>
-
-
-      <!-- Conference -->
-
-      <div
-        class="periodical"
-        style="
-          font-size: 14px;
-          line-height: 1.5;
-          margin-bottom: 12px;
-        ">
-        <em>{{ link.conference }}</em>
-      </div>
-
-
-      <!-- Links -->
-
-      <div
-        class="links"
-        style="
-          margin-top: 8px;
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          gap: 6px;
-        ">
-
-
-        {% if link.pdf %}
-
-        <a href="{{ link.pdf }}"
-           target="_blank"
-           style="
-             display: inline-block;
-             padding: 3px 9px;
-             border: 1px solid #ccc;
-             border-radius: 3px;
-             font-size: 12px;
-             text-decoration: none;
-             color: #555;
-             background: #fff;
-           ">
-          PDF
-        </a>
-
-        {% endif %}
-
-
-        {% if link.web %}
-
-        <a href="{{ link.web }}"
-           target="_blank"
-           style="
-             display: inline-block;
-             padding: 3px 9px;
-             border: 1px solid #ccc;
-             border-radius: 3px;
-             font-size: 12px;
-             text-decoration: none;
-             color: #555;
-             background: #fff;
-           ">
-          Website
-        </a>
-
-        {% endif %}
-
-
-        {% if link.code %}
-
-        <a href="{{ link.code }}"
-           target="_blank"
-           style="
-             display: inline-block;
-             padding: 3px 9px;
-             border: 1px solid #ccc;
-             border-radius: 3px;
-             font-size: 12px;
-             text-decoration: none;
-             color: #555;
-             background: #fff;
-           ">
-          Code
-        </a>
-
-        {% endif %}
-
-
-        {% if link.bibtex %}
-
-        <a href="{{ link.bibtex }}"
-           target="_blank"
-           style="
-             display: inline-block;
-             padding: 3px 9px;
-             border: 1px solid #ccc;
-             border-radius: 3px;
-             font-size: 12px;
-             text-decoration: none;
-             color: #555;
-             background: #fff;
-           ">
-          BibTeX
-        </a>
-
-        {% endif %}
-
-
-        {% if link.page %}
-
-        <a href="{{ link.page }}"
-           target="_blank"
-           style="
-             display: inline-block;
-             padding: 3px 9px;
-             border: 1px solid #ccc;
-             border-radius: 3px;
-             font-size: 12px;
-             text-decoration: none;
-             color: #555;
-             background: #fff;
-           ">
-          Project Page
-        </a>
-
-        {% endif %}
-
-
-        {% if link.notes %}
-
-        <span
-          style="
-            font-size: 12px;
-            color: #e74d3c;
-            margin-left: 3px;
-          ">
-          {{ link.notes }}
-        </span>
-
-        {% endif %}
-
-
-        {% if link.others %}
-
-          {{ link.others }}
-
-        {% endif %}
-
-
-      </div>
-
-    </div>
+    {% endif %}
 
   </div>
 
-</li>
 
-{% endfor %}
+  <!-- Authors -->
+
+  <div
+    class="author"
+    style="margin-bottom: 6px;
+           line-height: 1.5;">
+
+    {{ link.authors }}
+
+  </div>
+
+
+  <!-- Conference -->
+
+  <div
+    class="periodical"
+    style="margin-bottom: 10px;
+           line-height: 1.5;">
+
+    <em>{{ link.conference }}</em>
+
+  </div>
+
+
+  <!-- ================================================= -->
+  <!-- Links -->
+  <!-- ================================================= -->
+
+  <div class="links"
+       style="margin-top: 8px;">
+
+
+    {% if link.pdf %}
+
+    <a href="{{ link.pdf }}"
+       target="_blank"
+       style="display: inline-block;
+              padding: 3px 8px;
+              margin-right: 5px;
+              border: 1px solid #cccccc;
+              border-radius: 3px;
+              font-size: 12px;
+              text-decoration: none;">
+      PDF
+    </a>
+
+    {% endif %}
+
+
+    {% if link.web %}
+
+    <a href="{{ link.web }}"
+       target="_blank"
+       style="display: inline-block;
+              padding: 3px 8px;
+              margin-right: 5px;
+              border: 1px solid #cccccc;
+              border-radius: 3px;
+              font-size: 12px;
+              text-decoration: none;">
+      Website
+    </a>
+
+    {% endif %}
+
+
+    {% if link.code %}
+
+    <a href="{{ link.code }}"
+       target="_blank"
+       style="display: inline-block;
+              padding: 3px 8px;
+              margin-right: 5px;
+              border: 1px solid #cccccc;
+              border-radius: 3px;
+              font-size: 12px;
+              text-decoration: none;">
+      Code
+    </a>
+
+    {% endif %}
+
+
+    {% if link.bibtex %}
+
+    <a href="{{ link.bibtex }}"
+       target="_blank"
+       style="display: inline-block;
+              padding: 3px 8px;
+              margin-right: 5px;
+              border: 1px solid #cccccc;
+              border-radius: 3px;
+              font-size: 12px;
+              text-decoration: none;">
+      BibTeX
+    </a>
+
+    {% endif %}
+
+
+    {% if link.notes %}
+
+    <strong style="margin-left: 5px;">
+      <i style="color:#e74d3c;">
+        {{ link.notes }}
+      </i>
+    </strong>
+
+    {% endif %}
+
+
+    {% if link.others %}
+
+      {{ link.others }}
+
+    {% endif %}
+
+  </div>
+
+</div>
 ```
 
-  </ol>
+  </div>
+
+{% endfor %}
+
+{% endfor %}
 
 </div>
 
-<!-- ========================= -->
+<!-- ===================================================== -->
+
+<!-- CSS -->
+
+<!-- ===================================================== -->
+
+<style>
+
+.publication-mode {
+  background: none;
+  border: none;
+  padding: 5px 12px;
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #777;
+}
+
+.publication-mode.active {
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+}
+
+
+.topic-link {
+  margin-right: 14px;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+}
+
+.topic-link:hover {
+  color: #000;
+}
+
+.topic-link.active {
+  color: #000;
+  font-weight: 600;
+}
+
+
+/* ========================================= */
+/* Mobile */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  .publication-item {
+    display: block !important;
+  }
+
+  .publication-item > div:first-child {
+    width: 100% !important;
+    padding-right: 0 !important;
+    margin-bottom: 15px;
+  }
+
+  .publication-item > div:last-child {
+    width: 100% !important;
+  }
+
+  .publication-item img {
+    height: auto !important;
+    max-height: 250px;
+    object-fit: contain !important;
+  }
+
+}
+
+</style>
+
+<!-- ===================================================== -->
 
 <!-- JavaScript -->
 
-<!-- ========================= -->
+<!-- ===================================================== -->
 
 <script>
 
+function showTopic(topic) {
+
+  var items = document.querySelectorAll(".publication-item");
+
+  var links = document.querySelectorAll(".topic-link");
+
+  /*
+   * Reset topic link appearance
+   */
+
+  links.forEach(function(link) {
+    link.classList.remove("active");
+  });
+
+
+  /*
+   * Activate selected topic
+   */
+
+  if (topic === "all") {
+
+    links[0].classList.add("active");
+
+  }
+
+  else if (topic === "multi-agent") {
+
+    links[1].classList.add("active");
+
+  }
+
+  else if (topic === "model") {
+
+    links[2].classList.add("active");
+
+  }
+
+  else if (topic === "investment") {
+
+    links[3].classList.add("active");
+
+  }
+
+  else if (topic === "compliance") {
+
+    links[4].classList.add("active");
+
+  }
+
+
+  /*
+   * Show / hide publications
+   */
+
+  items.forEach(function(item) {
+
+    var tag = item.getAttribute("data-tag");
+
+    if (topic === "all") {
+
+      item.style.display = "flex";
+
+    }
+
+    else if (
+      topic === "multi-agent" &&
+      tag === "Multi-Agent Learning & Reasoning"
+    ) {
+
+      item.style.display = "flex";
+
+    }
+
+    else if (
+      topic === "model" &&
+      tag === "Model Interpretation, Representation & Evaluation"
+    ) {
+
+      item.style.display = "flex";
+
+    }
+
+    else if (
+      topic === "investment" &&
+      tag === "AI-driven investment"
+    ) {
+
+      item.style.display = "flex";
+
+    }
+
+    else if (
+      topic === "compliance" &&
+      tag === "AI for regulatory compliance"
+    ) {
+
+      item.style.display = "flex";
+
+    }
+
+    else {
+
+      item.style.display = "none";
+
+    }
+
+  });
+
+}
+
+
+/* ========================================= */
+/* Selected / All by date */
+/* ========================================= */
+
 function setPublicationMode(mode) {
-
-  var selectedPublications =
-    document.getElementById("selected-publications");
-
-  var allPublications =
-    document.getElementById("all-publications");
 
   var selectedButton =
     document.getElementById("selected-btn");
 
-  var allDateButton =
+  var allButton =
     document.getElementById("all-date-btn");
-
 
   if (mode === "selected") {
 
-    selectedPublications.style.display = "block";
-    allPublications.style.display = "none";
+    selectedButton.classList.add("active");
+    allButton.classList.remove("active");
 
-    selectedButton.style.color = "#222";
-    selectedButton.style.fontWeight = "600";
+    document
+      .querySelectorAll(".publication-item")
+      .forEach(function(item) {
 
-    allDateButton.style.color = "#888";
-    allDateButton.style.fontWeight = "400";
+        item.setAttribute("data-mode", "selected");
+
+        item.style.display = "flex";
+
+      });
+
+    /*
+     * Re-apply current topic
+     */
+
+    var activeTopic =
+      document.querySelector(".topic-link.active");
+
+    if (activeTopic) {
+
+      if (activeTopic.textContent.trim() === "All") {
+        showTopic("all");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("Multi-Agent") !== -1
+      ) {
+        showTopic("multi-agent");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("Model Interpretation") !== -1
+      ) {
+        showTopic("model");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("AI-driven") !== -1
+      ) {
+        showTopic("investment");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("Regulatory") !== -1
+      ) {
+        showTopic("compliance");
+      }
+
+    }
 
   }
 
+  else {
 
-  if (mode === "all") {
+    selectedButton.classList.remove("active");
+    allButton.classList.add("active");
 
-    selectedPublications.style.display = "none";
-    allPublications.style.display = "block";
+    /*
+     * Show every publication.
+     *
+     * Because publications_tag.yml contains
+     * all publications, All by date simply
+     * displays them in YAML order.
+     */
 
-    selectedButton.style.color = "#888";
-    selectedButton.style.fontWeight = "400";
+    document
+      .querySelectorAll(".publication-item")
+      .forEach(function(item) {
 
-    allDateButton.style.color = "#222";
-    allDateButton.style.fontWeight = "600";
+        item.setAttribute("data-mode", "all");
+
+        item.style.display = "flex";
+
+      });
+
+    /*
+     * Keep current topic filter
+     */
+
+    var activeTopic =
+      document.querySelector(".topic-link.active");
+
+    if (activeTopic) {
+
+      if (activeTopic.textContent.trim() === "All") {
+        showTopic("all");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("Multi-Agent") !== -1
+      ) {
+        showTopic("multi-agent");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("Model Interpretation") !== -1
+      ) {
+        showTopic("model");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("AI-driven") !== -1
+      ) {
+        showTopic("investment");
+      }
+
+      else if (
+        activeTopic.textContent.indexOf("Regulatory") !== -1
+      ) {
+        showTopic("compliance");
+      }
+
+    }
 
   }
 
 }
+
+
+/* ========================================= */
+/* Initial state */
+/* ========================================= */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  showTopic("all");
+
+});
 
 </script>
