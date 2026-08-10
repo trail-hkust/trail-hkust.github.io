@@ -1,4 +1,4 @@
-<h1 id="publications"></h1>
+<!-- ==================== Publications ==================== -->
 
 <h2 style="margin: 30px 0px -15px;">
   Publications
@@ -21,199 +21,737 @@
 
 <br>
 
-<div style="margin: 20px 0 25px 0;">
 
-  {% assign categories = "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance" | split: "|" %}
+<!-- ==================== Tag Navigation ==================== -->
 
-  {% for category in categories %}
+<div style="
+    margin: 20px 0 35px 0;
+    text-align: left;
+">
 
-    <a href="#{{ category | slugify }}"
-       style="display: inline-block;
-              margin: 5px 6px 5px 0;
-              padding: 6px 12px;
-              border: 1px solid #ccc;
-              border-radius: 15px;
-              font-size: 13px;
-              text-decoration: none;">
-      {{ category }}
-    </a>
+  <a href="#investment"
+     style="
+       display: inline-block;
+       margin: 5px 6px 5px 0;
+       padding: 7px 14px;
+       border: 1px solid #ccc;
+       border-radius: 16px;
+       font-size: 13px;
+       text-decoration: none;
+     ">
+    AI-driven investment
+  </a>
 
-  {% endfor %}
+  <a href="#multi-agent"
+     style="
+       display: inline-block;
+       margin: 5px 6px 5px 0;
+       padding: 7px 14px;
+       border: 1px solid #ccc;
+       border-radius: 16px;
+       font-size: 13px;
+       text-decoration: none;
+     ">
+    Multi-Agent Learning &amp; Reasoning
+  </a>
+
+  <a href="#representation"
+     style="
+       display: inline-block;
+       margin: 5px 6px 5px 0;
+       padding: 7px 14px;
+       border: 1px solid #ccc;
+       border-radius: 16px;
+       font-size: 13px;
+       text-decoration: none;
+     ">
+    Model Interpretation, Representation &amp; Evaluation
+  </a>
+
+  <a href="#compliance"
+     style="
+       display: inline-block;
+       margin: 5px 6px 5px 0;
+       padding: 7px 14px;
+       border: 1px solid #ccc;
+       border-radius: 16px;
+       font-size: 13px;
+       text-decoration: none;
+     ">
+    AI for regulatory compliance
+  </a>
 
 </div>
 
-* means equal contribution.<br>
-† means corresponding authors.
 
-<div class="publications">
+<!-- ==================== Notes ==================== -->
 
-{% assign categories = "AI-driven investment|Multi-Agent Learning & Reasoning|Model Interpretation, Representation & Evaluation|AI for regulatory compliance" | split: "|" %}
-
-{% for category in categories %}
-
-  <!-- Category title -->
-  <h3 class="publication-category">
-    {{ category }}
-  </h3>
-
-  <!-- Get publications belonging to this category -->
-  {% assign category_papers = site.data.publications_tag.main | where: "tag", category %}
-
-  <ol class="bibliography">
-
-  {% for link in category_papers %}
-
-    <li>
-      <div class="publication-entry">
-
-        <!-- Image -->
-        <div class="col-sm-12 abbr"
-             style="position: relative; text-align: center; padding: 15px;">
-
-          {% if link.image %}
-          <div style="
-              width: 100%;
-              height: 360px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              overflow: hidden;
-              margin: 0 auto 25px auto;
-          ">
-          
-            <img src="{{ link.image }}"
-                 style="
-                    display: block;
-                    max-width: 95%;
-                    max-height: 360px;
-                    width: auto !important;
-                    height: auto !important;
-                    object-fit: contain;
-                    margin: 0 auto;
-                 ">
-          
-          </div>
-          
-          {% endif %}
-
-          <!-- Conference badge -->
-          {% if link.conference_short %}
-          <abbr class="badge"
-                style="position: absolute;
-                       top: 10px;
-                       left: 10px;">
-            {{ link.conference_short }}
-          </abbr>
-          {% endif %}
-
-        </div>
+<div style="margin-bottom: 20px;">
+  * means equal contribution.
+  † means corresponding authors.
+</div>
 
 
-        <!-- Publication information -->
-        <div class="col-sm-12"
-             style="padding: 15px;
-                    text-align: center;
-                    margin-top: 15px;">
+<!-- ========================================================= -->
+<!-- AI-driven investment -->
+<!-- ========================================================= -->
 
-          <!-- Title -->
-          <div class="title">
-            {% if link.pdf %}
-              <a href="{{ link.pdf }}">
-                {{ link.title }}
-              </a>
-            {% else %}
-              {{ link.title }}
-            {% endif %}
-          </div>
+<h3 id="investment"
+    style="
+      margin-top: 40px;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eaeaea;
+    ">
+  AI-driven investment
+</h3>
 
-          <!-- Authors -->
-          <div class="author">
-            {{ link.authors }}
-          </div>
 
-          <!-- Conference / Journal -->
-          <div class="periodical">
-            <em>{{ link.conference }}</em>
-          </div>
+{% assign category_papers = site.data.publications_tag.main
+   | where: "tag", "AI-driven investment" %}
 
-          <!-- Links -->
-          <div class="links">
+{% for link in category_papers %}
 
-            {% if link.pdf %}
-            <a href="{{ link.pdf }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
-               target="_blank"
-               style="font-size:12px;">
-              PDF
-            </a>
-            {% endif %}
+<li style="margin-bottom: 45px;">
 
-            {% if link.code %}
-            <a href="{{ link.code }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
-               target="_blank"
-               style="font-size:12px;">
-              Code
-            </a>
-            {% endif %}
+  <div class="publication-entry">
 
-            {% if link.page %}
-            <a href="{{ link.page }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
-               target="_blank"
-               style="font-size:12px;">
-              Project Page
-            </a>
-            {% endif %}
+    <!-- ================= IMAGE ================= -->
 
-            {% if link.bibtex %}
-            <a href="{{ link.bibtex }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
-               target="_blank"
-               style="font-size:12px;">
-              BibTex
-            </a>
-            {% endif %}
+    {% if link.image %}
 
-            {% if link.web %}
-            <a href="{{ link.web }}"
-               class="btn btn-sm z-depth-0"
-               role="button"
-               target="_blank"
-               style="font-size:12px;">
-              Website
-            </a>
-            {% endif %}
+    <div style="
+        width: 100%;
+        height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 auto 20px auto;
+    ">
 
-            {% if link.notes %}
-            <strong>
-              <i style="color:#e74d3c">
-                {{ link.notes }}
-              </i>
-            </strong>
-            {% endif %}
+      <img src="{{ link.image }}"
+           alt="{{ link.title }}"
+           style="
+             display: block;
+             max-width: 100%;
+             max-height: 340px;
+             width: auto;
+             height: auto;
+             object-fit: contain;
+           ">
 
-            {% if link.others %}
-              {{ link.others }}
-            {% endif %}
+    </div>
 
-          </div>
+    {% endif %}
 
-        </div>
+
+    <!-- ================= TEXT ================= -->
+
+    <div style="
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    ">
+
+      <!-- Conference -->
+      {% if link.conference_short %}
+      <div style="
+          margin-bottom: 8px;
+          font-size: 13px;
+          font-weight: 600;
+      ">
+        {{ link.conference_short }}
+      </div>
+      {% endif %}
+
+
+      <!-- Title -->
+      <div class="title"
+           style="margin-bottom: 8px;">
+
+        {% if link.pdf %}
+          <a href="{{ link.pdf }}"
+             target="_blank">
+            {{ link.title }}
+          </a>
+        {% else %}
+          {{ link.title }}
+        {% endif %}
 
       </div>
-    </li>
 
-    <br>
 
-  {% endfor %}
+      <!-- Authors -->
+      <div class="author"
+           style="margin-bottom: 6px;">
+        {{ link.authors }}
+      </div>
 
-  </ol>
+
+      <!-- Conference / Journal -->
+      <div class="periodical"
+           style="margin-bottom: 10px;">
+        <em>{{ link.conference }}</em>
+      </div>
+
+
+      <!-- Links -->
+      <div class="links">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          PDF
+        </a>
+        {% endif %}
+
+
+        {% if link.code %}
+        <a href="{{ link.code }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Code
+        </a>
+        {% endif %}
+
+
+        {% if link.page %}
+        <a href="{{ link.page }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Project Page
+        </a>
+        {% endif %}
+
+
+        {% if link.bibtex %}
+        <a href="{{ link.bibtex }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          BibTex
+        </a>
+        {% endif %}
+
+
+        {% if link.web %}
+        <a href="{{ link.web }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Website
+        </a>
+        {% endif %}
+
+
+        {% if link.notes %}
+        <strong>
+          <i style="color:#e74d3c;">
+            {{ link.notes }}
+          </i>
+        </strong>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
 
 {% endfor %}
 
-</div>
+
+
+<!-- ========================================================= -->
+<!-- Multi-Agent Learning & Reasoning -->
+<!-- ========================================================= -->
+
+<h3 id="multi-agent"
+    style="
+      margin-top: 50px;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eaeaea;
+    ">
+  Multi-Agent Learning &amp; Reasoning
+</h3>
+
+
+{% assign category_papers = site.data.publications_tag.main
+   | where: "tag", "Multi-Agent Learning & Reasoning" %}
+
+{% for link in category_papers %}
+
+<li style="margin-bottom: 45px;">
+
+  <div class="publication-entry">
+
+    {% if link.image %}
+
+    <div style="
+        width: 100%;
+        height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 auto 20px auto;
+    ">
+
+      <img src="{{ link.image }}"
+           alt="{{ link.title }}"
+           style="
+             display: block;
+             max-width: 100%;
+             max-height: 340px;
+             width: auto;
+             height: auto;
+             object-fit: contain;
+           ">
+
+    </div>
+
+    {% endif %}
+
+
+    <div style="
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    ">
+
+      {% if link.conference_short %}
+      <div style="
+          margin-bottom: 8px;
+          font-size: 13px;
+          font-weight: 600;
+      ">
+        {{ link.conference_short }}
+      </div>
+      {% endif %}
+
+
+      <div class="title"
+           style="margin-bottom: 8px;">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           target="_blank">
+          {{ link.title }}
+        </a>
+        {% else %}
+          {{ link.title }}
+        {% endif %}
+
+      </div>
+
+
+      <div class="author"
+           style="margin-bottom: 6px;">
+        {{ link.authors }}
+      </div>
+
+
+      <div class="periodical"
+           style="margin-bottom: 10px;">
+        <em>{{ link.conference }}</em>
+      </div>
+
+
+      <div class="links">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          PDF
+        </a>
+        {% endif %}
+
+        {% if link.code %}
+        <a href="{{ link.code }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Code
+        </a>
+        {% endif %}
+
+        {% if link.page %}
+        <a href="{{ link.page }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Project Page
+        </a>
+        {% endif %}
+
+        {% if link.bibtex %}
+        <a href="{{ link.bibtex }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          BibTex
+        </a>
+        {% endif %}
+
+        {% if link.web %}
+        <a href="{{ link.web }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Website
+        </a>
+        {% endif %}
+
+        {% if link.notes %}
+        <strong>
+          <i style="color:#e74d3c;">
+            {{ link.notes }}
+          </i>
+        </strong>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
+
+{% endfor %}
+
+
+
+<!-- ========================================================= -->
+<!-- Model Interpretation, Representation & Evaluation -->
+<!-- ========================================================= -->
+
+<h3 id="representation"
+    style="
+      margin-top: 50px;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eaeaea;
+    ">
+  Model Interpretation, Representation &amp; Evaluation
+</h3>
+
+
+{% assign category_papers = site.data.publications_tag.main
+   | where: "tag", "Model Interpretation, Representation & Evaluation" %}
+
+{% for link in category_papers %}
+
+<li style="margin-bottom: 45px;">
+
+  <div class="publication-entry">
+
+    {% if link.image %}
+
+    <div style="
+        width: 100%;
+        height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 auto 20px auto;
+    ">
+
+      <img src="{{ link.image }}"
+           alt="{{ link.title }}"
+           style="
+             display: block;
+             max-width: 100%;
+             max-height: 340px;
+             width: auto;
+             height: auto;
+             object-fit: contain;
+           ">
+
+    </div>
+
+    {% endif %}
+
+
+    <div style="
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    ">
+
+      {% if link.conference_short %}
+      <div style="
+          margin-bottom: 8px;
+          font-size: 13px;
+          font-weight: 600;
+      ">
+        {{ link.conference_short }}
+      </div>
+      {% endif %}
+
+
+      <div class="title"
+           style="margin-bottom: 8px;">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           target="_blank">
+          {{ link.title }}
+        </a>
+        {% else %}
+          {{ link.title }}
+        {% endif %}
+
+      </div>
+
+
+      <div class="author"
+           style="margin-bottom: 6px;">
+        {{ link.authors }}
+      </div>
+
+
+      <div class="periodical"
+           style="margin-bottom: 10px;">
+        <em>{{ link.conference }}</em>
+      </div>
+
+
+      <div class="links">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          PDF
+        </a>
+        {% endif %}
+
+        {% if link.code %}
+        <a href="{{ link.code }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Code
+        </a>
+        {% endif %}
+
+        {% if link.page %}
+        <a href="{{ link.page }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Project Page
+        </a>
+        {% endif %}
+
+        {% if link.bibtex %}
+        <a href="{{ link.bibtex }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          BibTex
+        </a>
+        {% endif %}
+
+        {% if link.web %}
+        <a href="{{ link.web }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Website
+        </a>
+        {% endif %}
+
+        {% if link.notes %}
+        <strong>
+          <i style="color:#e74d3c;">
+            {{ link.notes }}
+          </i>
+        </strong>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
+
+{% endfor %}
+
+
+
+<!-- ========================================================= -->
+<!-- AI for regulatory compliance -->
+<!-- ========================================================= -->
+
+<h3 id="compliance"
+    style="
+      margin-top: 50px;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eaeaea;
+    ">
+  AI for regulatory compliance
+</h3>
+
+
+{% assign category_papers = site.data.publications_tag.main
+   | where: "tag", "AI for regulatory compliance" %}
+
+{% for link in category_papers %}
+
+<li style="margin-bottom: 45px;">
+
+  <div class="publication-entry">
+
+    {% if link.image %}
+
+    <div style="
+        width: 100%;
+        height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 auto 20px auto;
+    ">
+
+      <img src="{{ link.image }}"
+           alt="{{ link.title }}"
+           style="
+             display: block;
+             max-width: 100%;
+             max-height: 340px;
+             width: auto;
+             height: auto;
+             object-fit: contain;
+           ">
+
+    </div>
+
+    {% endif %}
+
+
+    <div style="
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    ">
+
+      {% if link.conference_short %}
+      <div style="
+          margin-bottom: 8px;
+          font-size: 13px;
+          font-weight: 600;
+      ">
+        {{ link.conference_short }}
+      </div>
+      {% endif %}
+
+
+      <div class="title"
+           style="margin-bottom: 8px;">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           target="_blank">
+          {{ link.title }}
+        </a>
+        {% else %}
+          {{ link.title }}
+        {% endif %}
+
+      </div>
+
+
+      <div class="author"
+           style="margin-bottom: 6px;">
+        {{ link.authors }}
+      </div>
+
+
+      <div class="periodical"
+           style="margin-bottom: 10px;">
+        <em>{{ link.conference }}</em>
+      </div>
+
+
+      <div class="links">
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          PDF
+        </a>
+        {% endif %}
+
+        {% if link.code %}
+        <a href="{{ link.code }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Code
+        </a>
+        {% endif %}
+
+        {% if link.page %}
+        <a href="{{ link.page }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Project Page
+        </a>
+        {% endif %}
+
+        {% if link.bibtex %}
+        <a href="{{ link.bibtex }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          BibTex
+        </a>
+        {% endif %}
+
+        {% if link.web %}
+        <a href="{{ link.web }}"
+           class="btn btn-sm z-depth-0"
+           target="_blank"
+           style="font-size:12px;">
+          Website
+        </a>
+        {% endif %}
+
+        {% if link.notes %}
+        <strong>
+          <i style="color:#e74d3c;">
+            {{ link.notes }}
+          </i>
+        </strong>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
+
+{% endfor %}
