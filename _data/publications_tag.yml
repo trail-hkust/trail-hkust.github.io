@@ -11,6 +11,7 @@ main:
     notes: "Published"
     tag: "AI for Regulatory Compliance"
     selected: true
+    year: 2026
 
 
   - title: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
@@ -24,6 +25,7 @@ main:
     notes: "Published"
     tag: "AI-driven Investment"
     selected: true
+    year: 2026
 
     
 
@@ -40,6 +42,7 @@ main:
     notes: "Published"
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2026
 
 
 
@@ -55,6 +58,7 @@ main:
     notes: "Published"
     tag: "AI for Regulatory Compliance"
     selected: true
+    year: 2026
 
 
 
@@ -69,6 +73,7 @@ main:
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
     selected: true
+    year: 2025
 
 
 
@@ -83,6 +88,7 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2025
 
 
 
@@ -97,6 +103,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2024
 
 
   - title: Killing Two Birds with One Stone：Cross-modal Reinforced Prompting for Graph and Language Tasks
@@ -110,6 +117,7 @@ main:
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
     selected: true
+    year: 2024
 
   - title: Optimized Cost Per Click in Online Advertising：A Theoretical Analysis
     authors: Kaichen Zhang, <strong>Zixuan Yuan</strong>, Hui Xiong†
@@ -122,6 +130,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2024
 
 
 
@@ -136,6 +145,7 @@ main:
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
     selected: true
+    year: 2024
 
 
   - title: Self-Paced Unified Representation Learning for Hierarchical Multi-Label Classification
@@ -149,6 +159,7 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2024
 
 
   - title: LEVER：Online Adaptive Sequence Learning Framework for High-Frequency Trading
@@ -162,6 +173,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2023
 
 
 
@@ -176,6 +188,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2023
 
 
   - title: AlphaVC：A Reinforcement Learning-based Venture Capital Investment Strategy
@@ -189,6 +202,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2022
 
 
   - title: Learning to Walk with Dual Agents for Knowledge Graph Reasoning
@@ -202,6 +216,7 @@ main:
     notes: Published
     tag: "Multi-Agent Learning & Reasoning"
     selected: true
+    year: 2022
 
 
   - title: Multi-Faceted Knowledge-Driven Pre-training for Product Representation Learning
@@ -216,6 +231,7 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2022
 
 
   - title: Self-Supervised Prototype Representation Learning for Event-Based Corporate Profiling
@@ -230,6 +246,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2022
 
 
   - title: Incremental Spatio-Temporal Graph Learning for Online Query-POI Matching
@@ -244,6 +261,7 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2021
 
 
   - title: Domain-oriented Language Modeling with Adaptive Hybrid Masking and Optimal Transport Alignment
@@ -258,6 +276,7 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2021
 
 
   - title: Scalable Heterogeneous Graph Neural Networks for Predicting High-potential Early-stage Startups
@@ -272,6 +291,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2021
 
 
   - title: Learning Graph Structures with Transformer for Multivariate Time Series Anomaly Detection in IOT
@@ -286,6 +306,7 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2021
 
 
   - title: E-BERT：Adapting BERT to E-commerce with Adaptive Hybrid Masking and Neighbor Product Reconstruction
@@ -300,6 +321,7 @@ main:
     notes: Published
     tag: "AI-driven Investment"
     selected: true
+    year: 2021
 
 
 
@@ -315,3 +337,4 @@ main:
     notes: Published
     tag: "Model Interpretability, Representation & Evaluation"
     selected: true
+    year: 2020
