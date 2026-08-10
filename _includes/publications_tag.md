@@ -143,7 +143,7 @@
     id="publication-search"
     placeholder="Search publications..."
     style="
-      width:300px;
+      width:350px;
       padding:7px 10px;
       font-size:14px;
       border:1px solid #cccccc;
