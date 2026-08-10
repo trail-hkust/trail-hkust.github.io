@@ -466,20 +466,15 @@ AI for Regulatory Compliance </a>
 
 <script>
 
-/* =========================================================
-   TOPIC FILTER
-   ========================================================= */
-
 function showPublicationTopic(topic) {
 
   var items = document.querySelectorAll(".publication-item");
-
   var topicButtons = document.querySelectorAll(".topic-filter");
 
 
-  /* -------------------------------------------------------
-     Filter publications
-     ------------------------------------------------------- */
+  /* =======================================================
+     FILTER PUBLICATIONS
+     ======================================================= */
 
   items.forEach(function(item) {
 
@@ -487,40 +482,36 @@ function showPublicationTopic(topic) {
 
       item.style.display = "flex";
 
+    } else if (item.getAttribute("data-topic") === topic) {
+
+      item.style.display = "flex";
+
     } else {
 
-      if (item.getAttribute("data-topic") === topic) {
-
-        item.style.display = "flex";
-
-      } else {
-
-        item.style.display = "none";
-
-      }
+      item.style.display = "none";
 
     }
 
   });
 
 
-  /* -------------------------------------------------------
-     Update selected topic appearance
-     ------------------------------------------------------- */
+  /* =======================================================
+     UPDATE TOPIC APPEARANCE
+     ======================================================= */
 
   topicButtons.forEach(function(button) {
 
     if (button.getAttribute("data-topic") === topic) {
 
       button.style.fontWeight = "600";
-
       button.style.borderBottom = "2px solid currentColor";
+      button.style.paddingBottom = "2px";
 
     } else {
 
       button.style.fontWeight = "400";
-
       button.style.borderBottom = "2px solid transparent";
+      button.style.paddingBottom = "2px";
 
     }
 
@@ -530,91 +521,38 @@ function showPublicationTopic(topic) {
 
 
 /* =========================================================
-   SELECTED / ALL BY DATE
+   INITIAL STATE
    ========================================================= */
 
-function setPublicationMode(mode) {
+document.addEventListener("DOMContentLoaded", function() {
 
   var items = document.querySelectorAll(".publication-item");
-
-  var selectedButton =
-    document.getElementById("selected-btn");
-
-  var allDateButton =
-    document.getElementById("all-date-btn");
+  var topicButtons = document.querySelectorAll(".topic-filter");
 
 
-  /* -------------------------------------------------------
-     SELECTED
-     ------------------------------------------------------- */
+  /* -----------------------------------------
+     Hide ALL publications initially
+     ----------------------------------------- */
 
-  if (mode === "selected") {
+  items.forEach(function(item) {
 
-    items.forEach(function(item) {
+    item.style.display = "none";
 
-      if (
-        item.getAttribute("data-selected") === "true"
-      ) {
-
-        item.style.display = "flex";
-
-      } else {
-
-        item.style.display = "none";
-
-      }
-
-    });
+  });
 
 
-    selectedButton.style.fontWeight = "600";
+  /* -----------------------------------------
+     No topic selected initially
+     ----------------------------------------- */
 
-    allDateButton.style.fontWeight = "400";
+  topicButtons.forEach(function(button) {
 
-  }
+    button.style.fontWeight = "400";
+    button.style.borderBottom = "2px solid transparent";
+    button.style.paddingBottom = "2px";
 
+  });
 
-  /* -------------------------------------------------------
-     ALL BY DATE
-     ------------------------------------------------------- */
-
-  if (mode === "all") {
-
-    items.forEach(function(item) {
-
-      item.style.display = "flex";
-
-    });
-
-
-    selectedButton.style.fontWeight = "400";
-
-    allDateButton.style.fontWeight = "600";
-
-  }
-
-}
-
-
-/* =========================================================
-   DEFAULT STATE
-   ========================================================= */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-
-    /*
-     * Default:
-     * Selected publications
-     * All topics
-     */
-
-    setPublicationMode("selected");
-
-    showPublicationTopic("all");
-
-  }
-);
+});
 
 </script>
