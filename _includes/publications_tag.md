@@ -1,4 +1,4 @@
-```html
+```liquid
 <h1 id="publications"></h1>
 
 <h2 style="margin: 30px 0px 20px;">
@@ -170,9 +170,7 @@
     "
   >
 
-    <option value="all">
-      Year: All
-    </option>
+    <option value="all">Year: All</option>
 
     <option value="2026">2026</option>
     <option value="2025">2025</option>
@@ -194,26 +192,34 @@
 
 {% for link in site.data.publications_tag.main %}
 
-{% assign topic_id = "" %}
 
-{% if link.tag == "Multi-Agent Learning & Reasoning" %}
+<!-- ===================================================== -->
+<!-- CONVERT MULTIPLE TAGS INTO TOPIC IDS                  -->
+<!-- ===================================================== -->
 
-  {% assign topic_id = "multi-agent" %}
+{% assign topic_ids = "" %}
 
-{% elsif link.tag == "Model Interpretability, Representation & Evaluation" %}
+{% for tag in link.tag %}
 
-  {% assign topic_id = "interpretability" %}
+  {% if tag == "Multi-Agent Learning & Reasoning" %}
 
-{% elsif link.tag == "AI-driven Investment" %}
+    {% assign topic_ids = topic_ids | append: "multi-agent " %}
 
-  {% assign topic_id = "investment" %}
+  {% elsif tag == "Model Interpretability, Representation & Evaluation" %}
 
-{% elsif link.tag == "AI for Regulatory Compliance" %}
+    {% assign topic_ids = topic_ids | append: "interpretability " %}
 
-  {% assign topic_id = "compliance" %}
+  {% elsif tag == "AI for Investment" %}
 
-{% endif %}
+    {% assign topic_ids = topic_ids | append: "investment " %}
 
+  {% elsif tag == "AI for Regulatory Compliance" %}
+
+    {% assign topic_ids = topic_ids | append: "compliance " %}
+
+  {% endif %}
+
+{% endfor %}
 
 
 <!-- ===================================================== -->
@@ -227,7 +233,7 @@
 
   data-year="{{ link.year }}"
 
-  data-topic="{{ topic_id }}"
+  data-topics="{{ topic_ids | strip }}"
 
   style="
     display:flex;
@@ -361,7 +367,7 @@
 
 
     <!-- ================================================= -->
-    <!-- YEAR + TOPIC                                      -->
+    <!-- YEAR + MULTIPLE TOPICS                            -->
     <!-- ================================================= -->
 
     <div
@@ -378,7 +384,7 @@
       {% endif %}
 
 
-      {% if topic_id != "" %}
+      {% if link.tag %}
 
         <span
           style="
@@ -390,19 +396,83 @@
         </span>
 
 
-        <a
-          href="javascript:void(0);"
-          class="publication-topic"
-          data-topic="{{ topic_id }}"
-          onclick="showPublicationTopic('{{ topic_id }}')"
-          style="
-            text-decoration:none;
-            cursor:pointer;
-            color:inherit;
-          "
-        >
-          {{ link.tag }}
-        </a>
+        {% for tag in link.tag %}
+
+
+          <!-- ------------------------------------------- -->
+          <!-- CONVERT TAG TO TOPIC ID                     -->
+          <!-- ------------------------------------------- -->
+
+          {% assign tag_id = "" %}
+
+
+          {% if tag == "Multi-Agent Learning & Reasoning" %}
+
+            {% assign tag_id = "multi-agent" %}
+
+          {% elsif tag == "Model Interpretability, Representation & Evaluation" %}
+
+            {% assign tag_id = "interpretability" %}
+
+          {% elsif tag == "AI for Investment" %}
+
+            {% assign tag_id = "investment" %}
+
+          {% elsif tag == "AI for Regulatory Compliance" %}
+
+            {% assign tag_id = "compliance" %}
+
+          {% endif %}
+
+
+          <!-- ------------------------------------------- -->
+          <!-- DISPLAY TAG                                 -->
+          <!-- ------------------------------------------- -->
+
+          {% if tag_id != "" %}
+
+            <a
+              href="javascript:void(0);"
+              class="publication-topic"
+              data-topic="{{ tag_id }}"
+              onclick="showPublicationTopic('{{ tag_id }}')"
+              style="
+                text-decoration:none;
+                cursor:pointer;
+                color:inherit;
+              "
+            >
+              {{ tag }}
+            </a>
+
+          {% else %}
+
+            <span>
+              {{ tag }}
+            </span>
+
+          {% endif %}
+
+
+          <!-- ------------------------------------------- -->
+          <!-- SEPARATOR                                    -->
+          <!-- ------------------------------------------- -->
+
+          {% unless forloop.last %}
+
+            <span
+              style="
+                margin-left:6px;
+                margin-right:6px;
+              "
+            >
+              /
+            </span>
+
+          {% endunless %}
+
+
+        {% endfor %}
 
       {% endif %}
 
@@ -537,11 +607,13 @@
 
 (function () {
 
+
   /* =======================================================
      CURRENT TOPIC
      ======================================================= */
 
   var currentPublicationTopic = "all";
+
 
 
   /* =======================================================
@@ -550,17 +622,38 @@
 
   function applyPublicationFilters() {
 
+
+    /* -----------------------------------------------------
+       Get search input
+       ----------------------------------------------------- */
+
     var searchInput =
-      document.getElementById("publication-search");
+      document.getElementById(
+        "publication-search"
+      );
+
+
+    /* -----------------------------------------------------
+       Get year selector
+       ----------------------------------------------------- */
 
     var yearSelect =
-      document.getElementById("publication-year");
+      document.getElementById(
+        "publication-year"
+      );
 
 
-    if (!searchInput || !yearSelect) {
+    /* -----------------------------------------------------
+       Safety check
+       ----------------------------------------------------- */
+
+    if (
+      !searchInput ||
+      !yearSelect
+    ) {
 
       console.log(
-        "Publication search elements not found."
+        "Publication filter elements not found."
       );
 
       return;
@@ -568,9 +661,9 @@
     }
 
 
-    /* -----------------------------------------------------
-       Search keyword
-       ----------------------------------------------------- */
+    /* =====================================================
+       SEARCH KEYWORD
+       ===================================================== */
 
     var keyword =
       searchInput.value
@@ -578,17 +671,19 @@
         .trim();
 
 
-    /* -----------------------------------------------------
-       Selected year
-       ----------------------------------------------------- */
+
+    /* =====================================================
+       SELECTED YEAR
+       ===================================================== */
 
     var selectedYear =
       yearSelect.value;
 
 
-    /* -----------------------------------------------------
-       Publications
-       ----------------------------------------------------- */
+
+    /* =====================================================
+       PUBLICATION ITEMS
+       ===================================================== */
 
     var items =
       document.querySelectorAll(
@@ -596,126 +691,150 @@
       );
 
 
-    /* -----------------------------------------------------
-       Filter every publication
-       ----------------------------------------------------- */
 
-    items.forEach(function (item) {
+    /* =====================================================
+       FILTER EACH PUBLICATION
+       ===================================================== */
 
-
-      /* ===================================================
-         TITLE
-         =================================================== */
-
-      var title =
-        (
-          item.getAttribute(
-            "data-title"
-          ) || ""
-        ).toLowerCase();
+    items.forEach(
+      function (item) {
 
 
+        /* ================================================
+           TITLE
+           ================================================ */
 
-      /* ===================================================
-         YEAR
-         =================================================== */
-
-      var year =
-        (
-          item.getAttribute(
-            "data-year"
-          ) || ""
-        ).toLowerCase();
+        var title =
+          (
+            item.getAttribute(
+              "data-title"
+            ) || ""
+          )
+          .toLowerCase();
 
 
 
-      /* ===================================================
-         TOPIC
-         =================================================== */
+        /* ================================================
+           YEAR
+           ================================================ */
 
-      var topic =
-        (
-          item.getAttribute(
-            "data-topic"
-          ) || ""
-        ).toLowerCase();
-
-
-
-      /* ===================================================
-         FULL TEXT
-         =================================================== */
-
-      /*
-       * Search the complete publication text.
-       *
-       * This includes:
-       *
-       * - title
-       * - authors
-       * - year
-       * - topic
-       * - conference
-       * - other displayed information
-       */
-
-      var fullText =
-        (
-          item.textContent || ""
-        ).toLowerCase();
+        var year =
+          (
+            item.getAttribute(
+              "data-year"
+            ) || ""
+          )
+          .toLowerCase();
 
 
 
-      /* ===================================================
-         SEARCH MATCH
-         =================================================== */
+        /* ================================================
+           MULTIPLE TOPICS
+           ================================================ */
 
-      var matchesSearch =
-        keyword === "" ||
-        title.indexOf(keyword) !== -1 ||
-        fullText.indexOf(keyword) !== -1;
-
-
-
-      /* ===================================================
-         YEAR MATCH
-         =================================================== */
-
-      var matchesYear =
-        selectedYear === "all" ||
-        year === selectedYear;
+        var topicString =
+          (
+            item.getAttribute(
+              "data-topics"
+            ) || ""
+          )
+          .toLowerCase()
+          .trim();
 
 
+        /*
+         * Example:
+         *
+         * data-topics="investment interpretability"
+         *
+         * becomes:
+         *
+         * ["investment", "interpretability"]
+         */
 
-      /* ===================================================
-         TOPIC MATCH
-         =================================================== */
-
-      var matchesTopic =
-        currentPublicationTopic === "all" ||
-        topic === currentPublicationTopic;
+        var topics =
+          topicString === ""
+            ? []
+            : topicString.split(/\s+/);
 
 
 
-      /* ===================================================
-         FINAL MATCH
-         =================================================== */
+        /* ================================================
+           FULL TEXT
+           ================================================ */
 
-      if (
-        matchesSearch &&
-        matchesYear &&
-        matchesTopic
-      ) {
+        /*
+         * Search all visible publication information:
+         *
+         * - title
+         * - authors
+         * - year
+         * - topics
+         * - conference
+         * - links
+         */
 
-        item.style.display = "flex";
+        var fullText =
+          (
+            item.textContent || ""
+          )
+          .toLowerCase();
 
-      } else {
 
-        item.style.display = "none";
+
+        /* ================================================
+           SEARCH MATCH
+           ================================================ */
+
+        var matchesSearch =
+          keyword === "" ||
+          title.indexOf(keyword) !== -1 ||
+          fullText.indexOf(keyword) !== -1;
+
+
+
+        /* ================================================
+           YEAR MATCH
+           ================================================ */
+
+        var matchesYear =
+          selectedYear === "all" ||
+          year === selectedYear;
+
+
+
+        /* ================================================
+           TOPIC MATCH
+           ================================================ */
+
+        var matchesTopic =
+          currentPublicationTopic === "all" ||
+          topics.indexOf(
+            currentPublicationTopic
+          ) !== -1;
+
+
+
+        /* ================================================
+           FINAL RESULT
+           ================================================ */
+
+        if (
+          matchesSearch &&
+          matchesYear &&
+          matchesTopic
+        ) {
+
+          item.style.display = "flex";
+
+        } else {
+
+          item.style.display = "none";
+
+        }
 
       }
-
-    });
+    );
 
   }
 
@@ -737,8 +856,9 @@
         topic;
 
 
+
       /* ---------------------------------------------------
-         Update topic buttons
+         Update topic button appearance
          --------------------------------------------------- */
 
       var topicButtons =
@@ -758,7 +878,9 @@
           ) {
 
 
-            /* Selected */
+            /* ---------------------------------------------
+               Selected
+               --------------------------------------------- */
 
             button.style.fontWeight =
               "600";
@@ -773,7 +895,9 @@
           } else {
 
 
-            /* Not selected */
+            /* ---------------------------------------------
+               Not selected
+               --------------------------------------------- */
 
             button.style.fontWeight =
               "400";
@@ -790,8 +914,9 @@
       );
 
 
+
       /* ---------------------------------------------------
-         Apply all filters again
+         Apply topic + search + year together
          --------------------------------------------------- */
 
       applyPublicationFilters();
@@ -825,9 +950,10 @@
     );
 
 
-    /* -----------------------------------------------------
-       Search input
-       ----------------------------------------------------- */
+
+    /* =====================================================
+       SEARCH INPUT
+       ===================================================== */
 
     var searchInput =
       document.getElementById(
@@ -850,9 +976,9 @@
 
 
 
-    /* -----------------------------------------------------
-       Year selector
-       ----------------------------------------------------- */
+    /* =====================================================
+       YEAR SELECT
+       ===================================================== */
 
     var yearSelect =
       document.getElementById(
@@ -875,9 +1001,9 @@
 
 
 
-    /* -----------------------------------------------------
-       Initial topic button state
-       ----------------------------------------------------- */
+    /* =====================================================
+       INITIAL TOPIC BUTTON STATE
+       ===================================================== */
 
     var topicButtons =
       document.querySelectorAll(
@@ -902,9 +1028,9 @@
 
 
 
-    /* -----------------------------------------------------
-       Initially show all publications
-       ----------------------------------------------------- */
+    /* =====================================================
+       INITIAL PUBLICATION STATE
+       ===================================================== */
 
     var items =
       document.querySelectorAll(
@@ -930,8 +1056,8 @@
      ======================================================= */
 
   /*
-   * The script is located AFTER the publications,
-   * so the DOM already exists.
+   * This script appears after all publication items,
+   * so the DOM is already available.
    */
 
   initializePublicationFilters();
