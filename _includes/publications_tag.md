@@ -106,47 +106,46 @@ AI for Investment </a>
 
 </div>
 
+
 <!-- ===================================================== -->
-<!-- SEARCH + YEAR FILTER                                  -->
+<!-- PUBLICATION SEARCH                                   -->
 <!-- ===================================================== -->
 
 <div
   style="
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:12px;
     margin-left:20px;
     margin-bottom:25px;
   ">
 
-  <!-- Search -->
   <input
     type="text"
     id="publication-search"
     placeholder="Search publications..."
-    onkeyup="updatePublicationList()"
+    oninput="searchPublications()"
     style="
-      width:100%;
-      max-width:500px;
-      padding:8px 12px;
+      width:300px;
+      padding:7px 10px;
       font-size:14px;
       border:1px solid #cccccc;
       border-radius:4px;
       box-sizing:border-box;
     ">
 
-  <!-- Year -->
   <select
     id="publication-year"
-    onchange="updatePublicationList()"
+    onchange="searchPublications()"
     style="
-      padding:8px 10px;
+      padding:7px 10px;
       font-size:14px;
       border:1px solid #cccccc;
       border-radius:4px;
       background:white;
       cursor:pointer;
     ">
+
     <option value="all">Year: All</option>
     <option value="2026">2026</option>
     <option value="2025">2025</option>
@@ -155,6 +154,7 @@ AI for Investment </a>
     <option value="2022">2022</option>
     <option value="2021">2021</option>
     <option value="2020">2020</option>
+
   </select>
 
 </div>
@@ -165,6 +165,16 @@ AI for Investment </a>
 <!-- ===================================================== -->
 
 {% for link in site.data.publications_tag.main %}
+
+<div
+  class="publication-item"
+  data-title="{{ link.title | escape | downcase }}"
+  data-year="{{ link.year }}"
+  data-topic="{{ link.tag }}"
+  data-selected="{{ link.selected | default: false }}"
+  style="display:flex; margin-bottom:30px;"
+>
+
 
 <!-- ===================================================== -->
 
@@ -190,7 +200,7 @@ AI for Investment </a>
 
 {% assign topic_id = "compliance" %}
 
-{% endif %}
+
 
 <!-- ===================================================== -->
 
@@ -257,7 +267,7 @@ AI for Investment </a>
 
   </a>
 
-{% endif %}
+
 
 
   </div>
@@ -305,7 +315,7 @@ AI for Investment </a>
 
     {{ link.title }}
 
-  {% endif %}
+  
 
 </div>
 
@@ -343,7 +353,7 @@ AI for Investment </a>
       {{ link.year }}
   
 
-  {% endif %}
+  
 
 
   {% if topic_id != "" %}
@@ -495,6 +505,7 @@ AI for Investment </a>
 
   </div>
 
+</div>
 </div>
 
 {% endfor %}
