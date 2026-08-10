@@ -27,7 +27,7 @@ ResearchGate
     display:flex;
     align-items:baseline;
     flex-wrap:wrap;
-    margin-bottom:15px;
+    margin-bottom:20px;
     padding-left:10px;
     line-height:1.8;
   ">
@@ -68,6 +68,22 @@ All </a>
  ">
 Multi-Agent Learning & Reasoning </a>
 
+  <!-- COMPLIANCE -->
+
+<a
+ href="javascript:void(0);"
+ class="topic-filter"
+ data-topic="compliance"
+ onclick="showPublicationTopic('compliance')"
+ style="
+   text-decoration:none;
+   cursor:pointer;
+   border-bottom:2px solid transparent;
+   padding-bottom:2px;
+ ">
+AI for Regulatory Compliance </a>
+
+
   <!-- INTERPRETABILITY -->
 
 <a
@@ -100,20 +116,7 @@ Model Interpretability, Representation & Evaluation </a>
  ">
 AI for Investment </a>
 
-  <!-- COMPLIANCE -->
 
-<a
- href="javascript:void(0);"
- class="topic-filter"
- data-topic="compliance"
- onclick="showPublicationTopic('compliance')"
- style="
-   text-decoration:none;
-   cursor:pointer;
-   border-bottom:2px solid transparent;
-   padding-bottom:2px;
- ">
-AI for Regulatory Compliance </a>
 
 </div>
 
