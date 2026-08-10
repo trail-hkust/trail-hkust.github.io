@@ -32,7 +32,7 @@
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Siyuan LI</strong>, in coming PhD Student (Fall 2026)<br>
+    <strong>Siyuan LI</strong>, Ph.D. Student (Fall 2026)<br>
     Research Area: LLM in finance, LLM agents for investment, regulation technology.<br>
     Undergraduate from Sun Yat-sen University, M.Phil. from HKUST(GZ).
   </li>
