@@ -58,8 +58,8 @@ main:
     authors: Jian Chen, Zhenyan Chen, Xuming Hu, Peilin Zhou, Yining Hua, Han Fang, Cissy Hing Yee Choy, Xinmei Ke, Jingfeng Luo, <strong>Zixuan Yuan†</strong>
     conference_short: EMNLP 2025
     conference: Findings of the Association for Computational Linguistics：EMNLP 2025
-    pdf: https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.1312.pdf
-    web:
+    pdf: https://aclanthology.org/2025.findings-emnlp.1312.pdf
+    web: https://aclanthology.org/2025.findings-emnlp.1312/
     bibtex:
     image: ./assets/files/DeKeyNLU.jpg
     notes: Published
@@ -71,7 +71,7 @@ main:
     authors: Jian Chen, Peilin Zhou, Yining Hua, Dading Chong, Meng Cao, Yaowei Li, Wei Chen, Bing Zhu, Junwei Liang†, <strong>Zixuan Yuan†</strong>
     conference_short: KDD 2025 (Datasets and Benchmarks Track)
     conference: The 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2025)
-    pdf:
+    pdf: https://dl.acm.org/doi/epdf/10.1145/3711896.3737406
     web: https://dl.acm.org/doi/10.1145/3711896.3737406
     bibtex:
     image: ./assets/files/climateqa.jpg
@@ -85,7 +85,7 @@ main:
     conference_short: WINE 2024
     conference: The 20th Conference on Web and Internet Economics (WINE 2024)
     pdf: https://arxiv.org/abs/2311.07071
-    web:
+    web: https://link.springer.com/chapter/10.1007/978-3-032-08560-3_34
     bibtex:
     image: ./assets/files/frame_wine2024.png
     notes: Published
@@ -96,7 +96,7 @@ main:
     authors: Wenyuan Jiang*, Wenwei Wu*, Le Zhang*, <strong>Zixuan Yuan†</strong>, Jian Xiang, Jingbo Zhou, Hui Xiong†
     conference_short: KDD 2024 (Research Track)
     conference: The 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2024)
-    pdf:
+    pdf: https://dl.acm.org/doi/epdf/10.1145/3637528.3671742
     web: https://dl.acm.org/doi/10.1145/3637528.3671742
     bibtex:
     image: ./assets/files/frame.png
@@ -107,8 +107,8 @@ main:
     authors: Kaichen Zhang, <strong>Zixuan Yuan</strong>, Hui Xiong†
     conference_short: KDD 2024 (Research Track)
     conference: The 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2024)
-    pdf:
-    web:
+    pdf: https://dl.acm.org/doi/epdf/10.1145/3637528.3671767
+    web: https://dl.acm.org/doi/10.1145/3637528.3671767
     bibtex:
     image: ./assets/files/OP.jpg
     notes: Published
@@ -120,8 +120,8 @@ main:
     authors: Nengjun Zhu, Jieyun Huang, Jian Cao, Liang Hu, <strong>Zixuan Yuan</strong>, Huanjing Gao
     conference_short: IJCAI 2024
     conference: The 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024)
-    pdf:
-    web:
+    pdf: https://www.ijcai.org/proceedings/2024/0291.pdf
+    web: https://www.ijcai.org/proceedings/2024/291
     bibtex:
     image: ./assets/files/IJCAI.png
     notes: Published
