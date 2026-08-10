@@ -15,8 +15,8 @@
     display:flex;
     align-items:baseline;
     flex-wrap:wrap;
-    margin-bottom:20px;
-    padding-left:10px;
+    margin-bottom:25px;
+    padding-left:15px;
     line-height:1.8;
   ">
 
