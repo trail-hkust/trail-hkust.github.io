@@ -25,9 +25,10 @@ ResearchGate
 <div
   style="
     display:flex;
-    align-items:center;
+    align-items:baseline;
     flex-wrap:wrap;
     margin-bottom:15px;
+    padding-left:10px;
     line-height:1.8;
   ">
 
