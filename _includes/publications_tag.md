@@ -158,6 +158,7 @@
     style="
       padding:7px 10px;
       font-size:14px;
+      color:inherit;
       border:1px solid #cccccc;
       border-radius:4px;
       background:white;
