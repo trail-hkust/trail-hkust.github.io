@@ -273,6 +273,8 @@
         <img
           src="{{ link.image }}"
           alt="{{ link.title }}"
+          loading="lazy"
+          decoding="async"
           style="
             display:block;
             width:100%;
