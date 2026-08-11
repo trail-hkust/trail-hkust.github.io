@@ -41,7 +41,7 @@ main:
 
   - title: Accelerating LLM Fine-Tuning via Embedding Knowledge Transfer
     authors: Meishu Peng*, Ziyue Zhang*, Yi Zhang, Pengyang Wang, <strong>Zixuan Yuan†</strong>, Denghui Zhang†
-    conference_short: ACL 2026
+    conference_short: ACL 2026 (Findings)
     conference: "Findings of the Association for Computational Linguistics: ACL 2026"
     #abstract: ……
     pdf: https://aclanthology.org/2026.findings-acl.5.pdf
@@ -81,7 +81,7 @@ main:
 
   - title: DeKeyNLU：Enhancing Natural Language to SQL Generation through Task Decomposition and Keyword Extraction
     authors: Jian Chen, Zhenyan Chen, Xuming Hu, Peilin Zhou, Yining Hua, Han Fang, Cissy Hing Yee Choy, Xinmei Ke, Jingfeng Luo, <strong>Zixuan Yuan†</strong>
-    conference_short: EMNLP 2025
+    conference_short: EMNLP 2025 (Findings)
     conference: Findings of the Association for Computational Linguistics：EMNLP 2025
     pdf: https://aclanthology.org/2025.findings-emnlp.1312.pdf
     web: https://aclanthology.org/2025.findings-emnlp.1312/
