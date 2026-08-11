@@ -278,7 +278,8 @@
             max-height:100%;
             width:auto;
             height:auto;
-            object-fit:contain;
+            object-fit:cover;
+            object-position:center;
           "
         >
 
