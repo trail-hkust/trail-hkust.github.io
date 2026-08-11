@@ -231,8 +231,8 @@
   style="
     display:none !important;
     width:100%;
-    margin-bottom:30px;
-    padding-bottom:25px;
+    margin-bottom:20px;
+    padding-bottom:20px;
     box-sizing:border-box;
     border-bottom:1px solid #e8e8e8;
   "
