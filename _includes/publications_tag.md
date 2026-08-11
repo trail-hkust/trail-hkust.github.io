@@ -579,7 +579,7 @@
    * ZERO publications.
    */
 
-  var currentPublicationTopic = null;
+  var currentPublicationTopic = "all";
 
 
 
@@ -966,6 +966,8 @@
      ===================================================== */
 
   initializePublicationFilters();
+  
+  showPublicationTopic("all");
 
 
 })();
