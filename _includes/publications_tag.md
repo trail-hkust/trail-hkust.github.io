@@ -147,7 +147,7 @@
       padding:7px 10px;
       font-size:14px;
       border:1px solid #cccccc;
-      border-radius:8px;
+      border-radius:4px;
       box-sizing:border-box;
     "
   >
@@ -263,7 +263,7 @@
           overflow:hidden;
           background:#f7f7f7;
           border:1px solid #e5e5e5;
-          border-radius:4px;
+          border-radius:8px;
           text-decoration:none;
           box-sizing:border-box;
         "
