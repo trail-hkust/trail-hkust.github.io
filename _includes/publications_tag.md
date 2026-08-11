@@ -147,7 +147,7 @@
       padding:7px 10px;
       font-size:14px;
       border:1px solid #cccccc;
-      border-radius:4px;
+      border-radius:8px;
       box-sizing:border-box;
     "
   >
