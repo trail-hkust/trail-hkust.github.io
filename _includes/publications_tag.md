@@ -257,7 +257,7 @@
         style="
           display:flex;
           width:100%;
-          height:180px;
+          height:160px;
           align-items:center;
           justify-content:center;
           overflow:hidden;
@@ -274,10 +274,8 @@
           alt="{{ link.title }}"
           style="
             display:block;
-            max-width:100%;
-            max-height:100%;
-            width:auto;
-            height:auto;
+            width:100%;
+            height:100%;
             object-fit:cover;
             object-position:center;
           "
