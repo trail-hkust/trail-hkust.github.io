@@ -28,7 +28,7 @@
   <li style="margin-bottom:20px;">
     <strong>Youhang LI</strong>, Ph.D. Student (Fall 2025)<br>
     Research Area: Agentic Retrieval-Augmented Generation, Post-Training for Long-Horizon LLM Agents<br>
-    M.S. from Renmin University of China.
+    B.S. from Harbin Institute of Technology, M.S. from Renmin University of China.
   </li>
 
   <li style="margin-bottom:20px;">
