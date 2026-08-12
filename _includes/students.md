@@ -16,7 +16,7 @@
   <li style="margin-bottom:20px;">
     <strong>Jian CHEN</strong>, Ph.D. Student (Fall 2024)<br>
     Research Area: Regulatory Technology (Regtech).<br>
-    M.Phil. from HKUST(GZ).
+    B.S from Macau University of Science and Technology, M.Phil. from HKUST(GZ).
   </li>
 
   <li style="margin-bottom:20px;">
