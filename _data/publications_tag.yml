@@ -30,7 +30,6 @@ main:
     
     tag:
       - "AI for Investment"
-      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2026
@@ -147,8 +146,7 @@ main:
     
     tag: 
       - "Multi-Agent Learning & Reasoning"
-      - "Model Interpretability, Representation & Evaluation"
-      
+     
     selected: true
     year: 2024
     code: https://github.com/trail-lab-hkust/CMRP
@@ -313,7 +311,6 @@ main:
     
     tag:
       - "AI for Investment"
-      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2022
@@ -371,7 +368,6 @@ main:
     
     tag: 
       - "AI for Investment"
-      - "Model Interpretability, Representation & Evaluation"
       
     selected: true
     year: 2021
