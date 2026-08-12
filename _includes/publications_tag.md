@@ -63,23 +63,6 @@
   </a>
 
 
-  <!-- COMPLIANCE -->
-
-  <a
-    href="javascript:void(0);"
-    class="topic-filter"
-    data-topic="compliance"
-    onclick="showPublicationTopic('compliance')"
-    style="
-      margin-right:15px;
-      text-decoration:none;
-      cursor:pointer;
-      border-bottom:2px solid transparent;
-      padding-bottom:2px;
-    "
-  >
-    AI for Regulatory Compliance
-  </a>
 
 
   <!-- INTERPRETABILITY -->
@@ -118,6 +101,26 @@
   >
     AI for Investment
   </a>
+
+
+  <!-- COMPLIANCE -->
+
+  <a
+    href="javascript:void(0);"
+    class="topic-filter"
+    data-topic="compliance"
+    onclick="showPublicationTopic('compliance')"
+    style="
+      margin-right:15px;
+      text-decoration:none;
+      cursor:pointer;
+      border-bottom:2px solid transparent;
+      padding-bottom:2px;
+    "
+  >
+    AI for Regulatory Compliance
+  </a>
+
 
 </div>
 
