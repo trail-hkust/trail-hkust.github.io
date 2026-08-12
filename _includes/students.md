@@ -46,18 +46,18 @@
 <ul>
 
   <li style="margin-bottom:20px;">
-    <strong>Yidan SHEN</strong>, MPhil. Student (Fall 2024)<br>
+    <strong>Yidan SHEN</strong>, M.Phil. Student (Fall 2024)<br>
     Research Areas: Fake News Detection, Natural Language Processing (NLP)<br>
     M.S. from HKUST.
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Binghao LIU</strong>, MPhil. Student (Fall 2025)<br>
+    <strong>Binghao LIU</strong>, M.Phil. Student (Fall 2025)<br>
     Research Area: AI-Driven Market Digital Twins for Sector-Level Portfolio Allocation with Graph-Quality-Aware Multimodal Reinforcement Learning.<br>
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Yuhan XU</strong>, MPhil. Student (Fall 2025)<br>
+    <strong>Yuhan XU</strong>, M.Phil. Student (Fall 2025)<br>
     Research Area: TMT Investment.<br>
     Previous Internship: Investment Associate Intern, Industrial Capital Management Co., Ltd.
   </li>
@@ -71,19 +71,19 @@
 <ul>
 
   <li style="margin-bottom:20px;">
-    <strong>Ziyue ZHANG</strong>, MPhil. (Fall 2023)<br>
+    <strong>Ziyue ZHANG</strong>, M.Phil. (Fall 2023)<br>
     Research Area: AI-driven Startup Success Prediction.<br>
     Placement: Quant at Beijing Pufeng Private Equity Fund Management Co., Ltd.
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Xin QING</strong>, MPhil. (Fall 2023)<br>
+    <strong>Xin QING</strong>, M.Phil. (Fall 2023)<br>
     Research Area: Aligned LSTM Temporal Topic Modeling for Analyzing BCI TechnologyCommercialization.<br>
     Placement: Risk analyst, Zangge Mining Investment (Chengdu) Co., Ltd.
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Runhao SHA</strong>, MPhil. (Fall 2023)<br>
+    <strong>Runhao SHA</strong>, M.Phil. (Fall 2023)<br>
     Research Area: Agentic RAG, LLMs Memory, Responsible LLMs.<br>
     Placement: AI Product Manager, JD.com
   </li>
