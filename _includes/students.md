@@ -22,7 +22,7 @@
   <li style="margin-bottom:20px;">
     <strong>Meishu PENG</strong>, Ph.D. Student (Fall 2024)<br>
     Research Area:LLM Fine-Tuning, Mechanistic Interpretability.<br>
-    M.S. from Shenzhen University.
+    B.S. and M.S. from Shenzhen University.
   </li>
 
   <li style="margin-bottom:20px;">
@@ -34,7 +34,7 @@
   <li style="margin-bottom:20px;">
     <strong>Siyuan LI</strong>, Ph.D. Student (Fall 2026)<br>
     Research Area: LLM in Finance, LLM Agents for Investment, Regulation Technology.<br>
-    Undergraduate from Sun Yat-sen University, M.Phil. from HKUST(GZ).
+    B.S. from Sun Yat-sen University, M.Phil. from HKUST(GZ).
   </li>
 
 </ul>
