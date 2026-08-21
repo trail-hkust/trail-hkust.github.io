@@ -1,5 +1,26 @@
 
 main:
+
+  - title: "Teach a Man to Fish: Self-Adaptive Reinforced Distillation for In-Context Reasoning-based Reranker"
+    authors: "Wenwei Wu*, Youhang Li*, Mingyang Chen, Jie Yang, Xiaofeng Gu, Duyi Pan, Yiwen Wu, Kaichen Zhang, Wei Wang, <strong>Zixuan Yuan†</strong>"
+    conference_short: "EMNLP 2026 (Findings)"
+    conference: "Findings of the Association for Computational Linguistics：EMNLP 2026"
+    pdf: 
+    web: 
+    bibtex:
+    image: ./assets/files/emnlp2026.png
+    notes: "Accpeted"
+    
+    tag: 
+      - "Multi-Agent Learning & Reasoning"
+      
+    selected: true
+    year: 2026
+    code: 
+
+
+
+
   - title: "From Statute to Control Flow: Span-Grounded Deontic Trees for Defeasible Scope Parsing"
     authors: "Jian Chen*, Siyuan Li*, Chucheng Wan, <strong>Zixuan Yuan†</strong>"
     conference_short: "KDD 2026 (Datasets and Benchmarks Track)"
