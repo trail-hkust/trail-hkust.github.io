@@ -229,8 +229,8 @@ main:
 
   - title: LEVER：Online Adaptive Sequence Learning Framework for High-Frequency Trading
     authors: <strong>Zixuan Yuan</strong>, Junming Liu, Haoyi Zhou, Denghui Zhang, Hao Liu, Nengjun Zhu, Hui Xiong†
-    conference_short: TKDE 2023
-    conference: IEEE Transactions on Knowledge and Data Engineering (TKDE 2023)
+    conference_short: TKDE 2024
+    conference: IEEE Transactions on Knowledge and Data Engineering (TKDE 2024)
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10345772
     web: https://ieeexplore.ieee.org/document/10345772
     bibtex: ./assets/files/lever.txt
@@ -302,8 +302,8 @@ main:
 
   - title: Multi-Faceted Knowledge-Driven Pre-training for Product Representation Learning
     authors: Denghui Zhang*, Yanchi Liu†, <strong>Zixuan Yuan</strong>, Yanjie Fu, Haifeng Chen, Hui Xiong†
-    conference_short: TKDE 2022
-    conference: IEEE Transactions on Knowledge and Data Engineering (TKDE 2022)
+    conference_short: TKDE 2023
+    conference: IEEE Transactions on Knowledge and Data Engineering (TKDE 2023)
     #abstract: ……
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9869708
     web: https://ieeexplore.ieee.org/document/9869708
