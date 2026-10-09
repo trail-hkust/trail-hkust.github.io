@@ -16,7 +16,7 @@ main:
       
     selected: true
     year: 2026
-    code: 
+    code: https://github.com/trail-lab-hkust/SARD
 
 
 
@@ -36,7 +36,7 @@ main:
       
     selected: true
     year: 2026
-    code: 
+    code: https://github.com/trail-lab-hkust/NormBench
 
 
   - title: "Beyond Black Boxes: An Energy-Based Unified Framework for Interpretable Stock Selection"
