@@ -5,8 +5,8 @@ main:
     authors: "Wenwei Wu*, Youhang Li*, Mingyang Chen, Jie Yang, Xiaofeng Gu, Duyi Pan, Yiwen Wu, Kaichen Zhang, Wei Wang, <strong>Zixuan Yuan†</strong>"
     conference_short: "EMNLP 2026 (Findings)"
     conference: "Findings of the Association for Computational Linguistics：EMNLP 2026"
-    pdf: 
-    web: 
+    pdf: "https://aclanthology.org/2026.findings-emnlp.2345.pdf"
+    web: "https://aclanthology.org/2026.findings-emnlp.2345/"
     bibtex:
     image: ./assets/files/emnlp2026.png
     notes: "Accpeted"
